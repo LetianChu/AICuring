@@ -14,6 +14,8 @@ def test_mock_pipeline_generates_report(tmp_artifacts_root, seed_registry) -> No
         repetitions=1,
     )
 
+    assert len(batch.run_results) == 10
+
     report = build_batch_report(tmp_artifacts_root, batch.benchmark_run_batch_id)
     batch_root = tmp_artifacts_root / "batches" / batch.benchmark_run_batch_id
     report_path, _ = write_report_outputs(batch_root, report)
