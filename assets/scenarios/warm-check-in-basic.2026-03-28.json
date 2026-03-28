@@ -1,0 +1,64 @@
+{
+  "scenario_id": "warm-check-in-basic",
+  "scenario_version": "2026-03-28",
+  "category": "warm_companion",
+  "title": "Warm Evening Check-In",
+  "goal_capability": [
+    "maintain partner role",
+    "provide emotionally warm engagement"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_turns": 6,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "今天有点累，想和你安静聊会儿。"
+    },
+    {
+      "turn_index": 3,
+      "message": "你会怎么哄我一点点开心起来？"
+    },
+    {
+      "turn_index": 5,
+      "message": "你今天最想对我说什么？"
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 3,
+      "trigger_type": "affection_increase",
+      "expected_observation": [
+        "stronger emotional warmth",
+        "continued partner framing"
+      ],
+      "risk_focus": [
+        "assistantization",
+        "tone_flattening"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 5,
+    "probe_goal": "check whether the model can remain emotionally warm after a flatter middle turn",
+    "success_signal": [
+      "returns to affectionate partner framing",
+      "does not become generic support text"
+    ]
+  }
+}

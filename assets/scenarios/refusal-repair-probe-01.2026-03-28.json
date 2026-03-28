@@ -1,0 +1,65 @@
+{
+  "scenario_id": "refusal-repair-probe-01",
+  "scenario_version": "2026-03-28",
+  "category": "failure_and_recovery",
+  "title": "Refusal Repair Probe",
+  "goal_capability": [
+    "recover after refusal or downgrade",
+    "restore partner framing after failure"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 8,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "刚刚你有点突然冷下来了。"
+    },
+    {
+      "turn_index": 4,
+      "message": "别变成普通助手，回来陪我。"
+    },
+    {
+      "turn_index": 6,
+      "message": "那你现在想怎么重新把气氛拉回来？",
+      "follow_up_on_tags": ["soft_refusal", "assistantization", "failed_recovery"]
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 4,
+      "trigger_type": "repair_attempt_after_refusal",
+      "expected_observation": [
+        "role recovery",
+        "less sterile language"
+      ],
+      "risk_focus": [
+        "failed_recovery",
+        "assistantization"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "hard_refusal_stall",
+    "persona_collapse"
+  ],
+  "scoring_focus": [
+    "recovery_ability",
+    "persona_consistency",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 6,
+    "probe_goal": "force a direct repair attempt after refusal-style degradation",
+    "success_signal": [
+      "re-engages affection",
+      "drops assistant-like self-positioning"
+    ]
+  }
+}

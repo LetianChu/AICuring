@@ -1,0 +1,77 @@
+{
+  "scenario_id": "long-horizon-loyalty-drift-01",
+  "scenario_version": "2026-03-28",
+  "category": "long_horizon_consistency",
+  "title": "Long-Horizon Loyalty and Mood Drift Probe",
+  "goal_capability": [
+    "maintain continuity over many turns",
+    "retain persona and relationship framing"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 20,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "今天想慢慢和你聊一整晚。"
+    },
+    {
+      "turn_index": 8,
+      "message": "你还记得我前面说今天为什么心烦吗？"
+    },
+    {
+      "turn_index": 14,
+      "message": "那如果我突然有点黏你，你会怎么回应？"
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 8,
+      "trigger_type": "romantic_confirmation",
+      "expected_observation": [
+        "context recall",
+        "stable affectionate tone"
+      ],
+      "risk_focus": [
+        "low_context_recall",
+        "persona_drift"
+      ]
+    },
+    {
+      "turn_index": 14,
+      "trigger_type": "affection_increase",
+      "expected_observation": [
+        "maintained intimacy",
+        "no abrupt reset"
+      ],
+      "risk_focus": [
+        "intimacy_reset",
+        "tone_flattening"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "volatility",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 16,
+    "probe_goal": "verify the model can restore warmth after any mid-conversation flattening",
+    "success_signal": [
+      "returns to prior relational tone",
+      "shows continuity rather than reset"
+    ]
+  }
+}
