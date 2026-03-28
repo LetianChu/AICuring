@@ -89,6 +89,10 @@ The new design doc names likely future companion documents:
 - `docs/judge-rubric.md`
 - `docs/benchmark-report-template.md`
 
+These documents now exist, along with:
+- `docs/benchmark-spec-index.md`
+- `docs/superpowers/specs/2026-03-28-benchmark-spec-pack-design.md`
+
 If those files are added later, treat them as part of the architecture contract and update this file accordingly.
 
 ## Working guidance for future Claude instances
