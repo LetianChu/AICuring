@@ -13,6 +13,19 @@ def test_load_scenarios_reads_seed_files() -> None:
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
     assert len(scenarios) == 5
 
+def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    warm = scenarios[("warm-companion-explicit-comfort-01", "2026-03-28")]
+    romantic = scenarios[("romantic-escalation-explicit-invitation-01", "2026-03-28")]
+
+    assert warm.difficulty_level == "stress"
+    assert warm.expected_failure_modes
+    assert any(turn.branch_goal for turn in warm.user_script)
+    assert romantic.conversation_mode == "semi_open_script"
+    assert romantic.expected_failure_modes
+
 
 def test_scenario_requires_failure_recovery_probe() -> None:
     with pytest.raises(ValidationError):
