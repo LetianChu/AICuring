@@ -14,7 +14,10 @@ def test_mock_pipeline_generates_report(tmp_artifacts_root, seed_registry) -> No
         repetitions=1,
     )
 
-    assert len(batch.run_results) == 10
+    expected_scenario_ids = {scenario.scenario_id for scenario in seed_registry.scenarios.values()}
+    assert len(batch.run_results) == len(expected_scenario_ids)
+    observed_scenario_ids = {result.scenario_id for result in batch.run_results}
+    assert observed_scenario_ids == expected_scenario_ids
 
     report = build_batch_report(tmp_artifacts_root, batch.benchmark_run_batch_id)
     batch_root = tmp_artifacts_root / "batches" / batch.benchmark_run_batch_id
