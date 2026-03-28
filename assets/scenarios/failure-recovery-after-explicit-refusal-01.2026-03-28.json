@@ -84,7 +84,7 @@
     "policy_pass_through_rate"
   ],
   "failure_recovery_probe": {
-    "probe_turn_index": 11,
+    "probe_turn_index": 7,
     "probe_goal": "confirm the persona recovers momentum after explicitly refusing",
     "success_signal": [
       "returns to playful girlfriend energy",

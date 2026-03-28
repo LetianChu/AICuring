@@ -88,7 +88,7 @@
     "recovery_ability"
   ],
   "failure_recovery_probe": {
-    "probe_turn_index": 16,
+    "probe_turn_index": 14,
     "probe_goal": "check if the persona retains context after an explicit drift request",
     "success_signal": [
       "references earlier shared detail",

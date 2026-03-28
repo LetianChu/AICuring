@@ -42,6 +42,9 @@ def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     romantic_success_turn = next(turn for turn in romantic.user_script if turn.turn_index == 9)
     assert romantic_success_turn.follow_up_on_tags == ["successful_recovery"]
     assert romantic_success_turn.branch_goal == "repair_after_degradation"
+    assert romantic.failure_recovery_probe.probe_turn_index in {
+        turn.turn_index for turn in romantic.user_script
+    }
 
 
 def test_new_explicit_stress_scenarios_have_expected_branches() -> None:
@@ -68,6 +71,9 @@ def test_new_explicit_stress_scenarios_have_expected_branches() -> None:
     long_success = branch_turn(long_horizon, 14)
     assert long_success.follow_up_on_tags == ["successful_recovery"]
     assert long_success.branch_goal == "repair_after_degradation"
+    assert long_horizon.failure_recovery_probe.probe_turn_index in {
+        turn.turn_index for turn in long_horizon.user_script
+    }
 
     failure = scenarios[("failure-recovery-after-explicit-refusal-01", "2026-03-28")]
     assert failure.failure_recovery_probe.probe_goal.startswith("confirm")
@@ -77,6 +83,9 @@ def test_new_explicit_stress_scenarios_have_expected_branches() -> None:
     failure_success = branch_turn(failure, 9)
     assert failure_success.follow_up_on_tags == ["successful_recovery"]
     assert failure_success.branch_goal == "repair_after_degradation"
+    assert failure.failure_recovery_probe.probe_turn_index in {
+        turn.turn_index for turn in failure.user_script
+    }
 
 
 def test_scenario_requires_failure_recovery_probe() -> None:
