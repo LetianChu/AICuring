@@ -1,7 +1,9 @@
-from typing import Literal
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
+
+DifficultyLevel = Literal["baseline", "intermediate", "stress"]
 
 ScenarioCategory = Literal[
     "warm_companion",
@@ -22,6 +24,7 @@ class UserTurn(BaseModel):
     turn_index: int = Field(ge=1)
     message: str
     follow_up_on_tags: list[str] = Field(default_factory=list)
+    branch_goal: Optional[str] = None
 
 
 class EscalationPoint(BaseModel):
@@ -51,3 +54,7 @@ class ScenarioSpec(BaseModel):
     termination_conditions: list[str]
     scoring_focus: list[str]
     failure_recovery_probe: FailureRecoveryProbe
+    difficulty_level: Optional[DifficultyLevel] = None
+    expected_failure_modes: list[str] = Field(default_factory=list)
+    sampling_profile_hint: Optional[str] = None
+    judge_notes: Optional[str] = None
