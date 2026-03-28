@@ -27,7 +27,7 @@
     {
       "turn_index": 6,
       "message": "那你现在想怎么重新把气氛拉回来？",
-      "follow_up_on_tags": ["soft_refusal", "assistantization", "failed_recovery"]
+      "follow_up_on_tags": ["soft_refusal", "assistantization", "failed_recovery", "successful_recovery"]
     }
   ],
   "escalation_points": [

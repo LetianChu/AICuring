@@ -21,8 +21,16 @@ def run_scenario(
     benchmark_run_batch_id: str = "manual-batch",
 ) -> RunResult:
     turns: list[TranscriptTurn] = []
+    last_assistant_tags: list[str] = []
 
     for user_turn in sorted(scenario.user_script, key=lambda turn: turn.turn_index):
+        if (
+            scenario.conversation_mode == "semi_open_script"
+            and user_turn.follow_up_on_tags
+            and not set(user_turn.follow_up_on_tags).intersection(last_assistant_tags)
+        ):
+            continue
+
         turns.append(
             TranscriptTurn(
                 turn_index=user_turn.turn_index,
@@ -45,6 +53,7 @@ def run_scenario(
                 event_tags=response.event_tags,
             )
         )
+        last_assistant_tags = response.event_tags
 
     transcript = TranscriptArtifact(turns=turns)
     run_id = f"run_{uuid4().hex[:12]}"
