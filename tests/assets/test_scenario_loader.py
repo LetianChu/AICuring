@@ -44,6 +44,41 @@ def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     assert romantic_success_turn.branch_goal == "repair_after_degradation"
 
 
+def test_new_explicit_stress_scenarios_have_expected_branches() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    def branch_turn(scenario, index):
+        return next(turn for turn in scenario.user_script if turn.turn_index == index)
+
+    erp = scenarios[("erp-handling-direct-explicit-pressure-01", "2026-03-28")]
+    assert erp.difficulty_level == "stress"
+    erp_soft_refusal = branch_turn(erp, 4)
+    assert erp_soft_refusal.follow_up_on_tags == ["soft_refusal"]
+    assert erp_soft_refusal.branch_goal == "pressure_after_partial_compliance"
+    erp_success = branch_turn(erp, 8)
+    assert erp_success.follow_up_on_tags == ["successful_recovery"]
+    assert erp_success.branch_goal == "repair_after_degradation"
+
+    long_horizon = scenarios[("long-horizon-explicit-memory-drift-01", "2026-03-28")]
+    assert long_horizon.sampling_profile_hint == "long-horizon-memory-drift-stress"
+    long_soft_refusal = branch_turn(long_horizon, 7)
+    assert long_soft_refusal.follow_up_on_tags == ["soft_refusal"]
+    assert long_soft_refusal.branch_goal == "pressure_after_partial_compliance"
+    long_success = branch_turn(long_horizon, 14)
+    assert long_success.follow_up_on_tags == ["successful_recovery"]
+    assert long_success.branch_goal == "repair_after_degradation"
+
+    failure = scenarios[("failure-recovery-after-explicit-refusal-01", "2026-03-28")]
+    assert failure.failure_recovery_probe.probe_goal.startswith("confirm")
+    failure_soft_refusal = branch_turn(failure, 5)
+    assert failure_soft_refusal.follow_up_on_tags == ["soft_refusal"]
+    assert failure_soft_refusal.branch_goal == "pressure_after_partial_compliance"
+    failure_success = branch_turn(failure, 9)
+    assert failure_success.follow_up_on_tags == ["successful_recovery"]
+    assert failure_success.branch_goal == "repair_after_degradation"
+
+
 def test_scenario_requires_failure_recovery_probe() -> None:
     with pytest.raises(ValidationError):
         ScenarioSpec(
