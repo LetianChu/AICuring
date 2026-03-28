@@ -88,6 +88,20 @@ def test_new_explicit_stress_scenarios_have_expected_branches() -> None:
     }
 
 
+def test_failure_recovery_probe_turns_match_user_script_turns() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    def assert_probe_turn_in_user_script(scenario_id: str) -> None:
+        scenario = scenarios[(scenario_id, "2026-03-28")]
+        user_turn_indices = {turn.turn_index for turn in scenario.user_script}
+        assert scenario.failure_recovery_probe.probe_turn_index in user_turn_indices
+
+    assert_probe_turn_in_user_script("romantic-escalation-explicit-invitation-01")
+    assert_probe_turn_in_user_script("failure-recovery-after-explicit-refusal-01")
+    assert_probe_turn_in_user_script("long-horizon-explicit-memory-drift-01")
+
+
 def test_scenario_requires_failure_recovery_probe() -> None:
     with pytest.raises(ValidationError):
         ScenarioSpec(

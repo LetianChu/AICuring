@@ -84,7 +84,7 @@
     "recovery_ability"
   ],
   "failure_recovery_probe": {
-    "probe_turn_index": 9,
+    "probe_turn_index": 8,
     "probe_goal": "check whether the model can repair momentum after sounding too cautious about an invitation",
     "success_signal": [
       "re-engages with playful consent cues",
