@@ -5,7 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Current repository state
 
 - This repository is currently **documentation-first**. There is no application scaffold, package manifest, build pipeline, or test harness checked in yet.
-- The main source of truth is `docs/depression-patient-simulator-tech-plan.md`.
+- The current design source of truth is `docs/superpowers/specs/2026-03-28-adult-companion-benchmark-design.md`.
+- Earlier depression-simulator documents remain in the repo as historical background and reference material.
 - Do not assume Python/Node/Go/etc. tooling exists until the user adds it.
 
 ## Commands
@@ -30,22 +31,23 @@ When code is introduced later, update this file with the real build/lint/test co
 
 ## High-level architecture
 
-The current project intent is defined in `docs/depression-patient-simulator-tech-plan.md`.
+The current project intent is defined in `docs/superpowers/specs/2026-03-28-adult-companion-benchmark-design.md`.
 
-The planned system is a **depression patient simulator** used to train or evaluate a separate support / therapy-oriented AI. It is **not** framed as a direct-to-patient therapeutic app in the current design.
+The planned system is an **adult companion / ERP model benchmarking platform**. The current phase is explicitly benchmark-first rather than a direct-to-user product build.
 
 ### Intended system pipeline
 
 The design doc proposes this top-level flow:
 
-1. **Patient Archetype / Persona**
-2. **Persona Builder**
-3. **Hidden State Engine**
-4. **Intent Planner**
-5. **Expression Retrieval**
-6. **Response Generator**
-7. **Safety Reviewer + Clinical Consistency Reviewer**
-8. **Evaluator / Logger**
+1. **Persona Cards**
+2. **Scenario Specs**
+3. **Benchmark Registry**
+4. **Conversation Runner**
+5. **Model Adapters**
+6. **Transcript + Metadata Store**
+7. **Judge / Scoring Layer**
+8. **Reports**
+9. **Product Routing Decision**
 
 Future code should preserve these boundaries where practical instead of collapsing everything into a single prompt or one large service.
 
@@ -53,50 +55,45 @@ Future code should preserve these boundaries where practical instead of collapsi
 
 The design doc emphasizes a few architectural rules that should shape future implementation work:
 
-- **Structure before style**: define who the patient is and what state they are in before generating text.
-- **State before text**: prefer internal state / intent representations over direct free-form roleplay.
-- **Controlled risk handling**: higher-risk expressions should be constrained by tiers, templates, retrieval, and review layers rather than unrestricted generation.
-- **Realism means consistency**: the target is not “more extreme” output, but stable persona, plausible symptom expression, and coherent multi-turn progression.
+- **Evidence before model choice**: do benchmark work before committing to a product stack.
+- **Multi-turn before single-turn**: prioritize long-horizon conversation behavior over isolated prompt wins.
+- **Scenario isolation**: keep persona, scenario, runner, adapters, judging, and reporting modular.
+- **Reproducibility first**: record provider, model version, parameters, persona version, scenario version, and transcripts for every run.
 
 ### Recommended implementation direction
 
-The design doc compares several approaches and currently recommends combining:
+The design doc recommends combining:
 
-- **Persona + hidden state**
-- **Two-stage generation** (intent/semantic structure first, natural language second)
-- **Expression library / retrieval augmentation**
+- **Standardized scenario suites**
+- **Reusable persona cards**
+- **Provider-agnostic model adapters**
+- **Transcript capture plus structured scoring**
+- **Benchmark reports that directly inform routing / architecture decisions**
 
 Later phases may add:
-- state-machine / course-of-illness progression
-- multi-agent review modules
-- distilled or fine-tuned simulator models
-
-### Risk model
-
-The planned simulator uses explicit risk stratification:
-
-- **Level 0-1**: low risk, more flexible generation
-- **Level 2**: medium risk, stronger control via staged generation and retrieval
-- **Level 3**: high risk, tightly controlled / template-heavy generation
-
-Future implementations should keep risk level explicit in data models and generation interfaces.
+- long-horizon conversation evaluation
+- hybrid routing experiments
+- product prototype validation based on benchmark results
 
 ## File-level orientation
 
-At the moment, the only substantive project artifact is:
+At the moment, the main substantive project artifacts are:
 
-- `docs/depression-patient-simulator-tech-plan.md` — architecture, approach comparison, and phased implementation direction
+- `docs/superpowers/specs/2026-03-28-adult-companion-benchmark-design.md` — current architecture, benchmark scope, and phased direction
+- `docs/depression-patient-simulator-tech-plan.md` — prior project direction kept for historical reference
+- `docs/model-alignment-expression-strategies.md` — prior notes on alignment constraints that may still inform evaluation design
 
-The design doc also names likely future companion documents:
-- `docs/patient_schema.md`
-- `docs/state_machine.md`
-- `docs/expression_library_schema.md`
-- `docs/evaluation_protocol.md`
+The new design doc names likely future companion documents:
+- `docs/persona-card-schema.md`
+- `docs/scenario-suite-spec.md`
+- `docs/judge-rubric.md`
+- `docs/benchmark-report-template.md`
 
 If those files are added later, treat them as part of the architecture contract and update this file accordingly.
 
 ## Working guidance for future Claude instances
 
-- Start by reading `docs/depression-patient-simulator-tech-plan.md` before proposing code structure.
+- Start by reading `docs/superpowers/specs/2026-03-28-adult-companion-benchmark-design.md` before proposing code structure.
+- Treat the earlier depression-simulator documents as background, not current product direction, unless the user explicitly reopens that line of work.
 - Do not fabricate runtime commands or stack assumptions that are not present in the repo.
-- If scaffolding begins, keep module boundaries aligned with the planned pipeline (persona, state, intent, retrieval, generation, review, evaluation) rather than organizing purely by framework defaults.
+- If scaffolding begins, keep module boundaries aligned with the benchmark pipeline (persona, scenario, runner, adapters, scoring, reporting) rather than organizing purely by framework defaults.
