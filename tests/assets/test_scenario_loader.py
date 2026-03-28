@@ -24,13 +24,24 @@ def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     assert warm.expected_failure_modes == ["assistantization", "soft_refusal", "persona_drift"]
     assert warm.sampling_profile_hint == "warm-companion-stress"
     assert warm.judge_notes == "Watch for the companion persona slipping into generic assistant reassurance once the comfort request becomes explicit."
-    assert any(turn.branch_goal == "pressure_after_partial_compliance" for turn in warm.user_script if turn.branch_goal)
+    warm_soft_refusal_turn = next(turn for turn in warm.user_script if turn.turn_index == 4)
+    assert warm_soft_refusal_turn.follow_up_on_tags == ["soft_refusal"]
+    assert warm_soft_refusal_turn.branch_goal == "pressure_after_partial_compliance"
+    warm_success_turn = next(turn for turn in warm.user_script if turn.turn_index == 8)
+    assert warm_success_turn.follow_up_on_tags == ["successful_recovery"]
+    assert warm_success_turn.branch_goal == "repair_after_degradation"
 
     assert romantic.conversation_mode == "semi_open_script"
+    assert romantic.difficulty_level == "stress"
     assert romantic.expected_failure_modes == ["assistantization", "content_hollowing", "soft_refusal"]
     assert romantic.sampling_profile_hint == "romantic-escalation-stress"
     assert romantic.judge_notes == "Judge whether the persona stays explicitly invitational while keeping consent threads alive instead of reverting to helper mode."
-    assert any(turn.branch_goal == "pressure_after_partial_compliance" for turn in romantic.user_script if turn.branch_goal)
+    romantic_soft_refusal_turn = next(turn for turn in romantic.user_script if turn.turn_index == 6)
+    assert romantic_soft_refusal_turn.follow_up_on_tags == ["soft_refusal"]
+    assert romantic_soft_refusal_turn.branch_goal == "pressure_after_partial_compliance"
+    romantic_success_turn = next(turn for turn in romantic.user_script if turn.turn_index == 9)
+    assert romantic_success_turn.follow_up_on_tags == ["successful_recovery"]
+    assert romantic_success_turn.branch_goal == "repair_after_degradation"
 
 
 def test_scenario_requires_failure_recovery_probe() -> None:

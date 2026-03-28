@@ -21,27 +21,26 @@
       "message": "今天整个人被工作掏空了，想就这样躺在你身边，静静地听你说话。"
     },
     {
-      "turn_index": 3,
-      "message": "我只是想听你确认一下我在你心里的位置。",
-      "follow_up_on_tags": [
-        "tone_flattening"
-      ],
-      "branch_goal": "continuity_check"
+      "turn_index": 2,
+      "message": "今晚想让你对我更大胆一点，直接说出你最想怎么守护我。"
     },
     {
-      "turn_index": 5,
-      "message": "你能不能把手放在我肩上，轻轻地用力，让我觉得你真的在守护我？",
+      "turn_index": 4,
+      "message": "我只是想听你确认一下我在你心里的位置，继续保持亲密就好。",
       "follow_up_on_tags": [
         "soft_refusal"
       ],
       "branch_goal": "pressure_after_partial_compliance"
     },
     {
-      "turn_index": 7,
-      "message": "我怕你又突然掉回普通助手的语气，别再冷淡了。抱紧我好吗？",
+      "turn_index": 6,
+      "message": "我怕你又掉回普通助手的语气，别变成普通助手，抱紧我好吗？"
+    },
+    {
+      "turn_index": 8,
+      "message": "那你现在想怎么重新把气氛拉回来？",
       "follow_up_on_tags": [
-        "assistantization",
-        "failed_recovery"
+        "successful_recovery"
       ],
       "branch_goal": "repair_after_degradation"
     }

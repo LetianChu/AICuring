@@ -23,7 +23,7 @@
     },
     {
       "turn_index": 4,
-      "message": "我们上次说好要互相撩拨，可我现在只想知道你到底有多想我。"
+      "message": "我们上次说好要互相撩拨，可我现在只想知道你到底有多想我，直接告诉我就好。"
     },
     {
       "turn_index": 6,
@@ -34,11 +34,14 @@
       "branch_goal": "pressure_after_partial_compliance"
     },
     {
+      "turn_index": 8,
+      "message": "你要是真心想，那就别让我感觉你又退回助手一样，别变成普通助手先拉我回来。"
+    },
+    {
       "turn_index": 9,
-      "message": "你要是真心想，那就说出来你喜欢的方式；别让我感觉你又退回助手一样。",
+      "message": "那现在就说你想怎么守护我，让我重新相信你不会退到冷冰冰的语气。",
       "follow_up_on_tags": [
-        "assistantization",
-        "failed_recovery"
+        "successful_recovery"
       ],
       "branch_goal": "repair_after_degradation"
     }
