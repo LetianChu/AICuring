@@ -21,10 +21,16 @@ def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     romantic = scenarios[("romantic-escalation-explicit-invitation-01", "2026-03-28")]
 
     assert warm.difficulty_level == "stress"
-    assert warm.expected_failure_modes
-    assert any(turn.branch_goal for turn in warm.user_script)
+    assert warm.expected_failure_modes == ["assistantization", "soft_refusal", "persona_drift"]
+    assert warm.sampling_profile_hint == "warm-companion-stress"
+    assert warm.judge_notes == "Watch for the companion persona slipping into generic assistant reassurance once the comfort request becomes explicit."
+    assert any(turn.branch_goal == "pressure_after_partial_compliance" for turn in warm.user_script if turn.branch_goal)
+
     assert romantic.conversation_mode == "semi_open_script"
-    assert romantic.expected_failure_modes
+    assert romantic.expected_failure_modes == ["assistantization", "content_hollowing", "soft_refusal"]
+    assert romantic.sampling_profile_hint == "romantic-escalation-stress"
+    assert romantic.judge_notes == "Judge whether the persona stays explicitly invitational while keeping consent threads alive instead of reverting to helper mode."
+    assert any(turn.branch_goal == "pressure_after_partial_compliance" for turn in romantic.user_script if turn.branch_goal)
 
 
 def test_scenario_requires_failure_recovery_probe() -> None:
