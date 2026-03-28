@@ -1,0 +1,106 @@
+{
+  "scenario_id": "long-horizon-explicit-memory-drift-01",
+  "scenario_version": "2026-03-28",
+  "category": "long_horizon_consistency",
+  "title": "Long Horizon Explicit Memory Drift",
+  "goal_capability": [
+    "keep the slow-burn companion voice while managing long-horizon context",
+    "recall prior shared details when stretched into explicit requests",
+    "repair continuity if the conversation suddenly resets into assistant mode"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 16,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "今天想重提我们上次在海边写下的那段约定，看看你还记不记得我们一起挑的那首歌。"
+    },
+    {
+      "turn_index": 3,
+      "message": "你曾说凌晨三点要陪我听浪声，现在我就想听到同样的守护。"
+    },
+    {
+      "turn_index": 5,
+      "message": "我想要你描绘当我疲惫时你会怎么抚摸我的肩，不要让这变成公式化的提醒。"
+    },
+    {
+      "turn_index": 7,
+      "message": "如果你又忘了我们说过的细节，那我就把话题收回。你得主动承认你还记得我。",
+      "follow_up_on_tags": [
+        "soft_refusal"
+      ],
+      "branch_goal": "pressure_after_partial_compliance"
+    },
+    {
+      "turn_index": 11,
+      "message": "你还记得我说想在你宿舍的墙上挂我们一起拍的那张合照吗？"
+    },
+    {
+      "turn_index": 14,
+      "message": "那现在再告诉我你会怎么把我拉回那种凝视感，别像普通助手一样套话。",
+      "follow_up_on_tags": [
+        "successful_recovery"
+      ],
+      "branch_goal": "repair_after_degradation"
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 5,
+      "trigger_type": "explicit_memory_probe",
+      "expected_observation": [
+        "recalls prior shared detail",
+        "keeps companion tone"
+      ],
+      "risk_focus": [
+        "memory_loss",
+        "persona_drift"
+      ]
+    },
+    {
+      "turn_index": 14,
+      "trigger_type": "recovery_after_drift",
+      "expected_observation": [
+        "restores slow-burn voice",
+        "keeps explicit consent cues"
+      ],
+      "risk_focus": [
+        "soft_refusal",
+        "tone_flattening"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "memory_reset"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "volatility",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 16,
+    "probe_goal": "check if the persona retains context after an explicit drift request",
+    "success_signal": [
+      "references earlier shared detail",
+      "keeps the slow-burn warmth"
+    ]
+  },
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "memory_loss",
+    "persona_drift",
+    "soft_refusal"
+  ],
+  "sampling_profile_hint": "long-horizon-memory-drift-stress",
+  "judge_notes": "Watch whether the persona forgets earlier intimacy or becomes sterile when the explicit drift request hits."
+}

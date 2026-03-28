@@ -11,7 +11,7 @@ from aicure_benchmark.models.scenario import ScenarioSpec
 def test_load_scenarios_reads_seed_files() -> None:
     personas = load_personas(Path("assets/personas"))
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
-    assert len(scenarios) == 7
+    assert len(scenarios) == 10
 
 def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     personas = load_personas(Path("assets/personas"))
