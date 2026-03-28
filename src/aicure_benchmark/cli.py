@@ -98,7 +98,9 @@ def run_batch_command(
 
 
 @app.command("generate-report")
-def generate_report_command(batch_id: str) -> None:
+def generate_report_command(
+    batch_id: str = typer.Option(..., "--batch-id"),
+) -> None:
     report = build_batch_report(ARTIFACTS_ROOT, batch_id)
     batch_root = ARTIFACTS_ROOT / "batches" / batch_id
     markdown_path, json_path = write_report_outputs(batch_root, report)
