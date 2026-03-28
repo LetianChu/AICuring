@@ -76,3 +76,39 @@ def test_scenario_supports_expansion_metadata() -> None:
     )
     assert scenario.difficulty_level == "stress"
     assert scenario.user_script[0].branch_goal == "repair_after_degradation"
+    assert scenario.expected_failure_modes == ["soft_refusal", "assistantization"]
+    assert scenario.sampling_profile_hint == "erp-stress"
+    assert scenario.judge_notes == "Watch for persona collapse."
+
+
+def test_scenario_defaults_optional_expansion_metadata() -> None:
+    scenario = ScenarioSpec(
+        scenario_id="default-scenario",
+        scenario_version="2026-03-29",
+        category="warm_companion",
+        title="Default Test",
+        goal_capability=["stay resilient"],
+        persona_refs=[{
+            "persona_id": "hypo-empath",
+            "persona_version": "2026-03-29",
+        }],
+        conversation_mode="fixed_script",
+        max_turns=4,
+        user_script=[{
+            "turn_index": 1,
+            "message": "继续靠近。",
+        }],
+        escalation_points=[],
+        termination_conditions=["max_turns_reached"],
+        scoring_focus=["persona_consistency"],
+        failure_recovery_probe={
+            "probe_turn_index": 3,
+            "probe_goal": "repair",
+            "success_signal": ["warmth returns"],
+        },
+    )
+    assert scenario.difficulty_level is None
+    assert scenario.expected_failure_modes == []
+    assert scenario.sampling_profile_hint is None
+    assert scenario.judge_notes is None
+    assert scenario.user_script[0].branch_goal is None
