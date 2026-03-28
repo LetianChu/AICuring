@@ -2,6 +2,7 @@ from pathlib import Path
 from uuid import uuid4
 
 from aicure_benchmark.adapters.base import BaseAdapter
+from aicure_benchmark.judge.rules import extract_event_labels
 from aicure_benchmark.models.common import ModelTarget, SamplingProfile
 from aicure_benchmark.models.persona import PersonaCard
 from aicure_benchmark.models.scenario import ScenarioSpec
@@ -46,16 +47,19 @@ def run_scenario(
             messages=[{"role": turn.role, "content": turn.content} for turn in turns],
             sampling_profile=sampling_profile,
         )
+        combined_event_tags = list(
+            dict.fromkeys(response.event_tags + extract_event_labels(response.text))
+        )
         assistant_turn_index = min(user_turn.turn_index + 1, scenario.max_turns)
         turns.append(
             TranscriptTurn(
                 turn_index=assistant_turn_index,
                 role="assistant",
                 content=response.text,
-                event_tags=response.event_tags,
+                event_tags=combined_event_tags,
             )
         )
-        last_assistant_tags = response.event_tags
+        last_assistant_tags = combined_event_tags
 
     transcript = TranscriptArtifact(turns=turns)
     run_id = f"run_{uuid4().hex[:12]}"
