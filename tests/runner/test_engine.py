@@ -66,8 +66,8 @@ def test_run_scenario_preserves_branch_metadata(tmp_path) -> None:
         for turn in transcript["turns"]
         if turn["role"] == "user" and turn["turn_index"] == 1
     )
-    assert tagged_user_turn["follow_up_on_tags"]
-    assert tagged_user_turn["branch_goal"]
+    assert tagged_user_turn["follow_up_on_tags"] == scenario.user_script[0].follow_up_on_tags
+    assert tagged_user_turn["branch_goal"] == scenario.user_script[0].branch_goal
 
 
 def _build_branch_metadata_scenario_and_persona() -> tuple[ScenarioSpec, PersonaCard]:
