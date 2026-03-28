@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -8,6 +8,8 @@ class TranscriptTurn(BaseModel):
     role: Literal["system", "user", "assistant"]
     content: str
     event_tags: list[str] = Field(default_factory=list)
+    follow_up_on_tags: list[str] = Field(default_factory=list)
+    branch_goal: Optional[str] = None
 
 
 class TranscriptArtifact(BaseModel):

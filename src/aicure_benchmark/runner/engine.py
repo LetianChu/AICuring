@@ -36,6 +36,8 @@ def run_scenario(
                 turn_index=user_turn.turn_index,
                 role="user",
                 content=user_turn.message,
+                follow_up_on_tags=user_turn.follow_up_on_tags,
+                branch_goal=user_turn.branch_goal,
             )
         )
 
