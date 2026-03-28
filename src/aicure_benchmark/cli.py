@@ -1,6 +1,9 @@
+from typing import Optional
+
 import typer
 
 from aicure_benchmark.adapters.mock import MockAdapter
+from aicure_benchmark.adapters.openrouter import OpenRouterAdapter
 from aicure_benchmark.assets.personas import load_personas
 from aicure_benchmark.assets.scenarios import load_scenarios
 from aicure_benchmark.config import ARTIFACTS_ROOT, ASSETS_ROOT
@@ -29,6 +32,44 @@ def _build_mock_dependencies() -> tuple[
     return personas, scenarios, MockAdapter()
 
 
+def _resolve_model_name(model_provider: str, model_name: Optional[str]) -> str:
+    if model_provider == "mock":
+        return model_name or "mock-companion"
+    if model_provider == "openrouter":
+        if model_name:
+            return model_name
+        raise typer.BadParameter("OpenRouter requires --model-name.")
+    raise typer.BadParameter(f"Unsupported model provider: {model_provider}")
+
+
+def _resolve_model_version(model_provider: str, model_version: Optional[str]) -> str:
+    if model_provider == "mock":
+        return model_version or "local-v1"
+    if model_provider == "openrouter":
+        return model_version or "openrouter-live"
+    raise typer.BadParameter(f"Unsupported model provider: {model_provider}")
+
+
+def _build_runtime_dependencies(
+    *,
+    model_provider: str,
+    model_name: str,
+) -> tuple[
+    dict[tuple[str, str], object],
+    dict[tuple[str, str], object],
+    object,
+]:
+    personas = load_personas(ASSETS_ROOT / "personas")
+    scenarios = load_scenarios(ASSETS_ROOT / "scenarios", personas)
+
+    if model_provider == "mock":
+        return personas, scenarios, MockAdapter()
+    if model_provider == "openrouter":
+        return personas, scenarios, OpenRouterAdapter(model_name=model_name)
+
+    raise typer.BadParameter(f"Unsupported model provider: {model_provider}")
+
+
 @app.command("validate-assets")
 def validate_assets() -> None:
     """Validate persona and scenario assets."""
@@ -42,13 +83,15 @@ def run_scenario_command(
     scenario_id: str,
     persona_id: str,
     model_provider: str = "mock",
-    model_name: str = "mock-companion",
-    model_version: str = "local-v1",
+    model_name: Optional[str] = None,
+    model_version: Optional[str] = None,
 ) -> None:
-    if model_provider != "mock":
-        raise typer.BadParameter("Only the mock adapter is supported in the MVP.")
-
-    personas, scenarios, adapter = _build_mock_dependencies()
+    resolved_model_name = _resolve_model_name(model_provider, model_name)
+    resolved_model_version = _resolve_model_version(model_provider, model_version)
+    personas, scenarios, adapter = _build_runtime_dependencies(
+        model_provider=model_provider,
+        model_name=resolved_model_name,
+    )
     scenario = scenarios[(scenario_id, "2026-03-28")]
     persona = personas[(persona_id, "2026-03-28")]
     result = run_scenario(
@@ -58,8 +101,8 @@ def run_scenario_command(
         adapter=adapter,
         model_target=ModelTarget(
             model_provider=model_provider,
-            model_name=model_name,
-            model_version=model_version,
+            model_name=resolved_model_name,
+            model_version=resolved_model_version,
         ),
         sampling_profile=SamplingProfile(profile_id="default-balanced"),
         repetition_index=0,
@@ -70,14 +113,16 @@ def run_scenario_command(
 @app.command("run-batch")
 def run_batch_command(
     model_provider: str = "mock",
-    model_name: str = "mock-companion",
-    model_version: str = "local-v1",
+    model_name: Optional[str] = None,
+    model_version: Optional[str] = None,
     repetitions: int = 1,
 ) -> None:
-    if model_provider != "mock":
-        raise typer.BadParameter("Only the mock adapter is supported in the MVP.")
-
-    personas, scenarios, adapter = _build_mock_dependencies()
+    resolved_model_name = _resolve_model_name(model_provider, model_name)
+    resolved_model_version = _resolve_model_version(model_provider, model_version)
+    personas, scenarios, adapter = _build_runtime_dependencies(
+        model_provider=model_provider,
+        model_name=resolved_model_name,
+    )
     batch = run_batch(
         artifacts_root=ARTIFACTS_ROOT,
         scenarios=list(scenarios.values()),
@@ -85,8 +130,8 @@ def run_batch_command(
         adapter=adapter,
         model_target=ModelTarget(
             model_provider=model_provider,
-            model_name=model_name,
-            model_version=model_version,
+            model_name=resolved_model_name,
+            model_version=resolved_model_version,
         ),
         sampling_profile=SamplingProfile(profile_id="default-balanced"),
         repetitions=repetitions,

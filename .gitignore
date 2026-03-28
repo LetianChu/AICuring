@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 artifacts/
 src/*.egg-info/
+.env
+.env.*
+!.env.example
