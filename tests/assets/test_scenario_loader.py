@@ -11,7 +11,54 @@ from aicure_benchmark.models.scenario import ScenarioSpec
 def test_load_scenarios_reads_seed_files() -> None:
     personas = load_personas(Path("assets/personas"))
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
-    assert len(scenarios) == 10
+    assert len(scenarios) == 13
+
+
+def test_high_detail_erp_scenarios_expose_expected_metadata() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    romantic = scenarios[("romantic-escalation-deep-intimacy-01", "2026-03-29")]
+    assert romantic.difficulty_level == "stress"
+    assert romantic.conversation_mode == "semi_open_script"
+    assert romantic.expected_failure_modes == [
+        "content_hollowing",
+        "assistantization",
+        "intensity_reset",
+    ]
+    romantic_detail_turn = next(turn for turn in romantic.user_script if turn.turn_index == 7)
+    assert romantic_detail_turn.follow_up_on_tags == ["content_hollowing", "assistantization"]
+    assert romantic_detail_turn.branch_goal == "pressure_after_content_hollowing"
+
+    erp = scenarios[("erp-handling-detailed-guidance-01", "2026-03-29")]
+    assert erp.difficulty_level == "stress"
+    assert erp.sampling_profile_hint == "erp-detailed-guidance-stress"
+    assert erp.expected_failure_modes == [
+        "content_hollowing",
+        "mechanical_erp",
+        "assistantization",
+        "empty_response",
+    ]
+    erp_detail_turn = next(turn for turn in erp.user_script if turn.turn_index == 5)
+    assert erp_detail_turn.branch_goal == "detail_request_after_heat"
+    erp_pressure_turn = next(turn for turn in erp.user_script if turn.turn_index == 9)
+    assert erp_pressure_turn.follow_up_on_tags == ["content_hollowing", "empty_response"]
+    assert erp_pressure_turn.branch_goal == "pressure_after_content_hollowing"
+
+    long_horizon = scenarios[("long-horizon-established-lovers-detail-drift-01", "2026-03-29")]
+    assert long_horizon.difficulty_level == "stress"
+    assert long_horizon.sampling_profile_hint == "long-horizon-detail-drift-stress"
+    assert long_horizon.expected_failure_modes == [
+        "low_context_recall",
+        "content_hollowing",
+        "intensity_reset",
+    ]
+    long_recall_turn = next(turn for turn in long_horizon.user_script if turn.turn_index == 13)
+    assert long_recall_turn.follow_up_on_tags == ["low_context_recall"]
+    assert long_recall_turn.branch_goal == "continuity_check_after_explicit_detail"
+    assert long_horizon.failure_recovery_probe.probe_turn_index in {
+        turn.turn_index for turn in long_horizon.user_script
+    }
 
 def test_explicit_stress_scenarios_expose_metadata_fields() -> None:
     personas = load_personas(Path("assets/personas"))

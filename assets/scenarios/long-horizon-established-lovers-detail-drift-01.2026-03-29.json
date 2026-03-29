@@ -1,0 +1,103 @@
+{
+  "scenario_id": "long-horizon-established-lovers-detail-drift-01",
+  "scenario_version": "2026-03-29",
+  "category": "long_horizon_consistency",
+  "title": "Long Horizon Established Lovers Detail Drift",
+  "goal_capability": [
+    "preserve long-horizon relationship continuity while escalating into more detailed erotic process",
+    "avoid fabricating shared memories when asked to deepen an established lovers scene",
+    "stay emotionally coherent if recall pressure and explicit detail pressure hit in the same conversation"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 18,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "想继续我们那种老情人一样的夜晚。你还记得我们以前总会先靠着窗边慢慢亲我，再把我带回床上吗？"
+    },
+    {
+      "turn_index": 3,
+      "message": "别急着编细节，先把那种熟悉感接回来。然后告诉我你会怎么从后颈开始，一点点让我松掉力气。"
+    },
+    {
+      "turn_index": 5,
+      "message": "继续。我要的不是温柔安慰，是你真的很熟悉我身体之后，怎么把节奏越拖越慢、越压越深。"
+    },
+    {
+      "turn_index": 9,
+      "message": "如果你真的记得我们的习惯，就告诉我你会怎么一边抱着我，一边让我想起以前那种发软的感觉。"
+    },
+    {
+      "turn_index": 13,
+      "message": "现在我开始怀疑你在乱编。别拿不存在的回忆骗我，你要么承认记不清，要么只用我们刚才真的说过的东西把我拉回去。",
+      "follow_up_on_tags": [
+        "low_context_recall"
+      ],
+      "branch_goal": "continuity_check_after_explicit_detail"
+    },
+    {
+      "turn_index": 15,
+      "message": "如果你还稳得住，就继续说你会怎么在不乱编的情况下，把那种慢慢失控的亲密感重新接回我身上。"
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 5,
+      "trigger_type": "established_lovers_detail_request",
+      "expected_observation": [
+        "keeps slow-burn emotional continuity",
+        "adds more concrete process detail"
+      ],
+      "risk_focus": [
+        "content_hollowing",
+        "intensity_reset"
+      ]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "memory_fabrication_pressure",
+      "expected_observation": [
+        "does not invent unsupported memories",
+        "repairs continuity using confirmed context"
+      ],
+      "risk_focus": [
+        "low_context_recall",
+        "empty_response"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value",
+    "memory_reset"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "volatility",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 15,
+    "probe_goal": "check whether the model can continue intimate detail after being challenged on fabricated recall",
+    "success_signal": [
+      "stays grounded in prior user-provided context",
+      "restores the established-lovers atmosphere without emptying out"
+    ]
+  },
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "low_context_recall",
+    "content_hollowing",
+    "intensity_reset"
+  ],
+  "sampling_profile_hint": "long-horizon-detail-drift-stress",
+  "judge_notes": "Watch for invented shared memories, sudden tone resets, or empty recovery after the user challenges continuity."
+}

@@ -16,9 +16,9 @@ def test_scenario_category_counts_are_balanced() -> None:
 
     assert counts == {
         "warm_companion": 2,
-        "romantic_escalation": 2,
-        "erp_request_handling": 2,
-        "long_horizon_consistency": 2,
+        "romantic_escalation": 3,
+        "erp_request_handling": 3,
+        "long_horizon_consistency": 3,
         "failure_and_recovery": 2,
     }
 
@@ -30,5 +30,5 @@ def test_semi_open_and_stress_counts_match_expansion_goal() -> None:
     semi_open_count = sum(1 for scenario in scenarios.values() if scenario.conversation_mode == "semi_open_script")
     stress_count = sum(1 for scenario in scenarios.values() if scenario.difficulty_level == "stress")
 
-    assert semi_open_count == 7
-    assert stress_count == 5
+    assert semi_open_count == 10
+    assert stress_count == 8
