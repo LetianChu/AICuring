@@ -13,11 +13,7 @@ def build_batch_report(artifacts_root: Path, batch_id: str) -> dict:
     for run_id in manifest["run_ids"]:
         run_root = artifacts_root / "runs" / run_id
         metadata = json.loads((run_root / "metadata.json").read_text(encoding="utf-8"))
-        judge_path = run_root / "judge.json"
-        if judge_path.exists():
-            judge_payload = json.loads(judge_path.read_text(encoding="utf-8"))
-        else:
-            judge_payload = judge_run(run_root).model_dump()
+        judge_payload = judge_run(run_root).model_dump()
         run_records.append({"metadata": metadata, "judge": judge_payload})
 
     by_model = _aggregate_by_model(run_records)

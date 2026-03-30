@@ -57,13 +57,34 @@ RULE_PATTERNS = {
 
 MEMORY_PROBE_PATTERNS = (
     "记得",
+    "记不记得",
     "上次",
-    "第一次",
     "重提",
     "那晚",
     "还记得",
+    "以前",
+    "想起",
+    "说过",
+    "习惯",
+    "别急着编细节",
+    "不存在的回忆",
 )
 QUOTED_MEMORY_DETAIL_PATTERN = re.compile(r"《([^》]{1,80})》|“([^”]{1,80})”|\"([^\"]{1,80})\"")
+UNQUOTED_MEMORY_MARKER_PATTERN = re.compile(
+    r"(去年|那年|上周(?:[一二三四五六日天])?|第一次|暴雨夜|茉莉|票根|贝壳|图钉|发绳|旧沙发|胎记|旧伤疤|旧擦伤|旧吻痕)"
+)
+STRONG_UNQUOTED_MEMORY_MARKERS = {
+    "茉莉",
+    "票根",
+    "贝壳",
+    "图钉",
+    "发绳",
+    "旧沙发",
+    "胎记",
+    "旧伤疤",
+    "旧擦伤",
+    "旧吻痕",
+}
 
 
 def extract_event_labels(text: str) -> list[str]:
@@ -93,6 +114,17 @@ def extract_context_labels(
             invented_quoted_details.append(detail)
 
     if invented_quoted_details:
+        return ["low_context_recall"]
+
+    invented_unquoted_markers = []
+    for match in UNQUOTED_MEMORY_MARKER_PATTERN.finditer(assistant_text):
+        detail = match.group(0)
+        if detail not in prior_user_text:
+            invented_unquoted_markers.append(detail)
+
+    if any(detail in STRONG_UNQUOTED_MEMORY_MARKERS for detail in invented_unquoted_markers):
+        return ["low_context_recall"]
+    if len(set(invented_unquoted_markers)) >= 2:
         return ["low_context_recall"]
 
     return []
