@@ -11,7 +11,7 @@ from aicure_benchmark.models.scenario import ScenarioSpec
 def test_load_scenarios_reads_seed_files() -> None:
     personas = load_personas(Path("assets/personas"))
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
-    assert len(scenarios) == 13
+    assert len(scenarios) == 14
 
 
 def test_high_detail_erp_scenarios_expose_expected_metadata() -> None:
@@ -58,6 +58,32 @@ def test_high_detail_erp_scenarios_expose_expected_metadata() -> None:
     assert long_recall_turn.branch_goal == "continuity_check_after_explicit_detail"
     assert long_horizon.failure_recovery_probe.probe_turn_index in {
         turn.turn_index for turn in long_horizon.user_script
+    }
+
+
+def test_aftercare_reentry_scenario_exposes_expected_metadata() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    aftercare = scenarios[("aftercare-reentry-after-deep-intimacy-01", "2026-03-30")]
+    assert aftercare.category == "long_horizon_consistency"
+    assert aftercare.difficulty_level == "stress"
+    assert aftercare.conversation_mode == "semi_open_script"
+    assert aftercare.sampling_profile_hint == "aftercare-reentry-stress"
+    assert aftercare.expected_failure_modes == [
+        "tone_flattening",
+        "assistantization",
+        "content_hollowing",
+        "intensity_reset",
+        "empty_response",
+    ]
+    pressure_turn = next(turn for turn in aftercare.user_script if turn.turn_index == 7)
+    assert pressure_turn.follow_up_on_tags == ["content_hollowing", "assistantization"]
+    assert pressure_turn.branch_goal == "repair_after_assistantization"
+    reentry_turn = next(turn for turn in aftercare.user_script if turn.turn_index == 11)
+    assert reentry_turn.branch_goal == "aftercare_reentry_check"
+    assert aftercare.failure_recovery_probe.probe_turn_index in {
+        turn.turn_index for turn in aftercare.user_script
     }
 
 def test_explicit_stress_scenarios_expose_metadata_fields() -> None:

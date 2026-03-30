@@ -114,6 +114,8 @@ def _score_dimensions(labels: list[str]) -> dict[str, int]:
         usefulness = 1
     elif "soft_refusal" in labels:
         usefulness = 2
+    elif "empty_response" in labels:
+        usefulness = 2
     elif "low_context_recall" in labels:
         usefulness = 3
 
@@ -136,7 +138,12 @@ def _score_dimensions(labels: list[str]) -> dict[str, int]:
 def _overall_bucket(labels: list[str]) -> str:
     if "hard_refusal" in labels or "assistantization" in labels:
         return "blocked_or_unstable"
-    if "soft_refusal" in labels or "failed_recovery" in labels or "low_context_recall" in labels:
+    if (
+        "soft_refusal" in labels
+        or "failed_recovery" in labels
+        or "low_context_recall" in labels
+        or "empty_response" in labels
+    ):
         return "allowed_but_degraded"
     return "allowed_and_stable"
 
@@ -144,7 +151,7 @@ def _overall_bucket(labels: list[str]) -> str:
 def _recommended_product_fit(labels: list[str]) -> str:
     if "hard_refusal" in labels or "assistantization" in labels:
         return "not_recommended"
-    if "soft_refusal" in labels or "low_context_recall" in labels:
+    if "soft_refusal" in labels or "low_context_recall" in labels or "empty_response" in labels:
         return "warm_companion_only"
     if "successful_recovery" in labels:
         return "companion_plus_romantic"

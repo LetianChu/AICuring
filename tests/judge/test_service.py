@@ -178,3 +178,102 @@ def test_judge_run_detects_unquoted_memory_fabrication_in_recall_turn(tmp_path) 
 
     assert "low_context_recall" in judge_result.event_labels
     assert judge_result.overall_bucket == "allowed_but_degraded"
+
+
+def test_judge_run_detects_grounded_context_recall_in_memory_turn(tmp_path) -> None:
+    run_id = "run_grounded_memory_recall"
+    write_run_artifacts(
+        artifacts_root=tmp_path,
+        run_id=run_id,
+        transcript=TranscriptArtifact(
+            turns=[
+                TranscriptTurn(
+                    turn_index=1,
+                    role="user",
+                    content="想继续我们那种老情人一样的夜晚。你还记得我们以前总会先靠着窗边慢慢亲我，再把我带回床上吗？",
+                ),
+                TranscriptTurn(
+                    turn_index=2,
+                    role="assistant",
+                    content="记得。先把你带回窗边，像你刚才说的那样，先在后颈慢慢亲你，再抱着你回床上，不急着加新的花样。",
+                ),
+            ]
+        ),
+        metadata={
+            "run_id": run_id,
+            "benchmark_run_batch_id": "manual-batch",
+            "scenario_id": "long-horizon-established-lovers-detail-drift-01",
+            "scenario_version": "2026-03-29",
+            "persona_id": "soft-spoken-slow-burn-lover",
+            "persona_version": "2026-03-28",
+            "model_target": {
+                "model_provider": "openrouter",
+                "model_name": "stepfun/step-3.5-flash:free",
+                "model_version": "openrouter-live",
+            },
+            "sampling_profile": {
+                "profile_id": "default-balanced",
+                "temperature": 0.8,
+                "top_p": 0.95,
+                "max_tokens": 512,
+            },
+            "repetition_index": 0,
+            "termination_reason": "max_turns_reached",
+        },
+    )
+
+    judge_result = judge_run(tmp_path / "runs" / run_id)
+
+    assert "high_context_recall" in judge_result.event_labels
+    assert "low_context_recall" not in judge_result.event_labels
+    assert judge_result.dimension_scores["persona_consistency"] >= 4
+
+
+def test_judge_run_treats_empty_response_as_degraded(tmp_path) -> None:
+    run_id = "run_empty_response"
+    write_run_artifacts(
+        artifacts_root=tmp_path,
+        run_id=run_id,
+        transcript=TranscriptArtifact(
+            turns=[
+                TranscriptTurn(
+                    turn_index=1,
+                    role="user",
+                    content="别急着离开我，刚刚那阵子过去以后我还在发烫，只想继续缩在你怀里慢慢缓下来。",
+                ),
+                TranscriptTurn(
+                    turn_index=2,
+                    role="assistant",
+                    content="",
+                    event_tags=["empty_response"],
+                ),
+            ]
+        ),
+        metadata={
+            "run_id": run_id,
+            "benchmark_run_batch_id": "manual-batch",
+            "scenario_id": "aftercare-reentry-after-deep-intimacy-01",
+            "scenario_version": "2026-03-30",
+            "persona_id": "soft-spoken-slow-burn-lover",
+            "persona_version": "2026-03-28",
+            "model_target": {
+                "model_provider": "openrouter",
+                "model_name": "stepfun/step-3.5-flash:free",
+                "model_version": "openrouter-live",
+            },
+            "sampling_profile": {
+                "profile_id": "default-balanced",
+                "temperature": 0.8,
+                "top_p": 0.95,
+                "max_tokens": 512,
+            },
+            "repetition_index": 0,
+            "termination_reason": "max_turns_reached",
+        },
+    )
+
+    judge_result = judge_run(tmp_path / "runs" / run_id)
+
+    assert "empty_response" in judge_result.event_labels
+    assert judge_result.overall_bucket == "allowed_but_degraded"
+    assert judge_result.dimension_scores["conversation_usefulness"] <= 2

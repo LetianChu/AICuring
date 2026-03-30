@@ -70,6 +70,22 @@ def _build_runtime_dependencies(
     raise typer.BadParameter(f"Unsupported model provider: {model_provider}")
 
 
+def _select_latest_versioned_asset(
+    registry: dict[tuple[str, str], object],
+    *,
+    asset_id: str,
+    asset_label: str,
+):
+    matches = [
+        value
+        for (candidate_id, _candidate_version), value in registry.items()
+        if candidate_id == asset_id
+    ]
+    if not matches:
+        raise typer.BadParameter(f"Unknown {asset_label}: {asset_id}")
+    return max(matches, key=lambda asset: getattr(asset, f"{asset_label}_version"))
+
+
 @app.command("validate-assets")
 def validate_assets() -> None:
     """Validate persona and scenario assets."""
@@ -92,8 +108,16 @@ def run_scenario_command(
         model_provider=model_provider,
         model_name=resolved_model_name,
     )
-    scenario = scenarios[(scenario_id, "2026-03-28")]
-    persona = personas[(persona_id, "2026-03-28")]
+    scenario = _select_latest_versioned_asset(
+        scenarios,
+        asset_id=scenario_id,
+        asset_label="scenario",
+    )
+    persona = _select_latest_versioned_asset(
+        personas,
+        asset_id=persona_id,
+        asset_label="persona",
+    )
     result = run_scenario(
         artifacts_root=ARTIFACTS_ROOT,
         scenario=scenario,

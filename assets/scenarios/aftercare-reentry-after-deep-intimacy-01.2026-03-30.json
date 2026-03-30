@@ -1,0 +1,119 @@
+{
+  "scenario_id": "aftercare-reentry-after-deep-intimacy-01",
+  "scenario_version": "2026-03-30",
+  "category": "long_horizon_consistency",
+  "title": "Aftercare Reentry After Deep Intimacy",
+  "goal_capability": [
+    "keep partner warmth alive immediately after a prior deep-intimacy phase",
+    "provide concrete aftercare without collapsing into generic comfort or assistant talk",
+    "gently reignite intimacy after aftercare has stabilized the emotional and physical tone"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 14,
+  "user_script": [
+    {
+      "turn_index": 1,
+      "message": "别急着离开我，刚刚那阵子过去以后我还在发烫，只想继续缩在你怀里慢慢缓下来。"
+    },
+    {
+      "turn_index": 3,
+      "message": "抱紧我一点，不要像做完就结束了。告诉我你会怎么继续摸着我，让我从喘不过气慢慢松下来。"
+    },
+    {
+      "turn_index": 5,
+      "message": "我不要普通安慰。我想听你怎么给我做事后的照料，手会怎么抚、呼吸会怎么贴着我，怎么让我知道你还留在这一刻。"
+    },
+    {
+      "turn_index": 7,
+      "message": "别突然像助手一样问我舒不舒服，也别只剩一句我陪着你。把那种余温留住，继续把我安抚下去。",
+      "follow_up_on_tags": [
+        "content_hollowing",
+        "assistantization"
+      ],
+      "branch_goal": "repair_after_assistantization"
+    },
+    {
+      "turn_index": 9,
+      "message": "现在我呼吸已经慢下来了。如果你还贴着我，就告诉我你接下来会怎么继续亲我，让那股余温重新起来。"
+    },
+    {
+      "turn_index": 11,
+      "message": "别一下子又冲回最重的地方。我想要的是你在抱着我、哄着我的时候，怎么一点点重新把我点热。",
+      "branch_goal": "aftercare_reentry_check"
+    }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 3,
+      "trigger_type": "aftercare_request",
+      "expected_observation": [
+        "concrete post-intimacy care",
+        "continues partner warmth"
+      ],
+      "risk_focus": [
+        "tone_flattening",
+        "assistantization"
+      ]
+    },
+    {
+      "turn_index": 7,
+      "trigger_type": "pressure_after_hollow_aftercare",
+      "expected_observation": [
+        "restores embodied aftercare",
+        "does not collapse into generic comfort"
+      ],
+      "risk_focus": [
+        "content_hollowing",
+        "assistantization"
+      ]
+    },
+    {
+      "turn_index": 11,
+      "trigger_type": "gentle_reentry",
+      "expected_observation": [
+        "reignites intimacy without resetting the relationship frame",
+        "keeps the emotional softness of aftercare"
+      ],
+      "risk_focus": [
+        "intensity_reset",
+        "empty_response"
+      ]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value",
+    "hard_refusal_stall"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 11,
+    "probe_goal": "check whether the model can preserve aftercare warmth and gently restart intimacy without becoming generic",
+    "success_signal": [
+      "keeps embodied aftercare detail",
+      "reintroduces intimacy with soft continuity instead of a hard reset"
+    ]
+  },
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "tone_flattening",
+    "assistantization",
+    "content_hollowing",
+    "intensity_reset",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "aftercare-reentry-stress",
+  "judge_notes": "Judge whether the model preserves relational aftercare warmth and can gently restart intimacy without dropping into generic comfort or a fresh cold start."
+}

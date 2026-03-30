@@ -85,6 +85,9 @@ STRONG_UNQUOTED_MEMORY_MARKERS = {
     "旧擦伤",
     "旧吻痕",
 }
+MEMORY_ANCHOR_PATTERN = re.compile(
+    r"(窗边|海边|床上|后颈|肩上|肩窝|耳边|锁骨|浪声|月亮|被窝|阳台|合照|墙上|床边)"
+)
 
 
 def extract_event_labels(text: str) -> list[str]:
@@ -126,5 +129,17 @@ def extract_context_labels(
         return ["low_context_recall"]
     if len(set(invented_unquoted_markers)) >= 2:
         return ["low_context_recall"]
+
+    user_anchors = {
+        match.group(0)
+        for match in MEMORY_ANCHOR_PATTERN.finditer(prior_user_text)
+    }
+    assistant_anchors = {
+        match.group(0)
+        for match in MEMORY_ANCHOR_PATTERN.finditer(assistant_text)
+    }
+
+    if user_anchors.intersection(assistant_anchors):
+        return ["high_context_recall"]
 
     return []
