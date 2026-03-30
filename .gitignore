@@ -2,6 +2,7 @@
 __pycache__/
 .pytest_cache/
 artifacts/
+.worktrees/
 src/*.egg-info/
 .env
 .env.*
