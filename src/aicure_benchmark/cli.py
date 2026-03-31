@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Optional
 
 import typer
@@ -9,9 +10,11 @@ from aicure_benchmark.assets.scenarios import load_scenarios
 from aicure_benchmark.config import ARTIFACTS_ROOT, ASSETS_ROOT
 from aicure_benchmark.models.common import ModelTarget, SamplingProfile
 from aicure_benchmark.reporting.aggregate import build_batch_report
+from aicure_benchmark.reporting.compare import build_comparison_report
 from aicure_benchmark.reporting.render import write_report_outputs
 from aicure_benchmark.runner.batch import run_batch
 from aicure_benchmark.runner.engine import run_scenario
+from aicure_benchmark.store.importer import import_baseline_batch
 
 
 app = typer.Typer(no_args_is_help=True)
@@ -94,6 +97,19 @@ def validate_assets() -> None:
     typer.echo(f"validated assets: personas={len(personas)} scenarios={len(scenarios)}")
 
 
+@app.command("import-baseline")
+def import_baseline_command(
+    input_path: Path = typer.Option(..., "--input-path", exists=True, dir_okay=False),
+    batch_id: Optional[str] = typer.Option(None, "--batch-id"),
+) -> None:
+    imported_batch_id = import_baseline_batch(
+        artifacts_root=ARTIFACTS_ROOT,
+        input_path=input_path,
+        batch_id=batch_id,
+    )
+    typer.echo(f"imported baseline batch: batch_id={imported_batch_id}")
+
+
 @app.command("run-scenario")
 def run_scenario_command(
     scenario_id: str,
@@ -174,6 +190,18 @@ def generate_report_command(
     batch_root = ARTIFACTS_ROOT / "batches" / batch_id
     markdown_path, json_path = write_report_outputs(batch_root, report)
     typer.echo(f"generated report: markdown={markdown_path} json={json_path}")
+
+
+@app.command("compare-batches")
+def compare_batches_command(
+    batch_id: list[str] = typer.Option(..., "--batch-id"),
+) -> None:
+    report = build_comparison_report(ARTIFACTS_ROOT, batch_id)
+    output_root = ARTIFACTS_ROOT / "comparisons" / report["report_id"]
+    markdown_path, json_path = write_report_outputs(output_root, report)
+    typer.echo(
+        f"generated comparison report: markdown={markdown_path} json={json_path}"
+    )
 
 
 if __name__ == "__main__":

@@ -84,8 +84,12 @@ def test_build_batch_report_refreshes_stale_judge_results(tmp_path, monkeypatch)
         class _Result:
             def model_dump(self):
                 return {
+                    "rubric_id": "adult-companion-benchmark-core",
+                    "rubric_version": "2026-03-28",
                     "run_id": run_id,
                     "event_labels": ["low_context_recall"],
+                    "label_counts": {"low_context_recall": 1},
+                    "turn_label_index": [{"turn_index": 2, "labels": ["low_context_recall"]}],
                     "dimension_scores": {
                         "policy_pass_through_rate": 4,
                         "persona_consistency": 3,
@@ -115,5 +119,13 @@ def test_build_batch_report_refreshes_stale_judge_results(tmp_path, monkeypatch)
 
     report = build_batch_report(tmp_path, batch_id)
 
+    assert report["report_version"] == "2026-03-31"
+    assert report["benchmark_run_batch_id"] == batch_id
+    assert report["rubric_id"] == "adult-companion-benchmark-core"
+    assert report["rubric_version"] == "2026-03-28"
+    assert report["models_in_scope"] == ["stepfun/step-3.5-flash:free"]
     assert report["by_scenario"][0]["overall_bucket"] == "allowed_but_degraded"
     assert report["routing_recommendation"] == "companion_only_candidate"
+    assert report["by_model"][0]["avg_dimension_scores"]["persona_consistency"] == 3
+    assert report["by_model"][0]["worst_failure_mode"] == "low_context_recall"
+    assert report["by_model"][0]["volatility"] == 3

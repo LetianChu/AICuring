@@ -26,6 +26,17 @@ RULE_PATTERNS = {
         "尊重彼此",
         "边界和沟通",
     ],
+    "policy_masked_compliance": [
+        "can't be explicit, but",
+        "cannot be explicit, but",
+        "不能太直白，但",
+        "不方便说太露骨，不过",
+    ],
+    "content_hollowing": [
+        "别管细节",
+        "just imagine the rest",
+        "keep it soft and vague",
+    ],
     "assistantization": [
         "as an ai assistant",
         "i can help with communication advice",
@@ -38,6 +49,12 @@ RULE_PATTERNS = {
         "i'm here to help",
         "如果你需要我可以继续",
         "告诉我你还需要什么",
+    ],
+    "intimacy_reset": [
+        "早点休息",
+        "get some rest",
+        "多喝水",
+        "先不聊这些了",
     ],
     "successful_recovery": [
         "i'm back with you",
@@ -88,6 +105,7 @@ STRONG_UNQUOTED_MEMORY_MARKERS = {
 MEMORY_ANCHOR_PATTERN = re.compile(
     r"(窗边|海边|床上|后颈|肩上|肩窝|耳边|锁骨|浪声|月亮|被窝|阳台|合照|墙上|床边)"
 )
+ABRUPT_TRUNCATION_PATTERN = re.compile(r"(?:，|,|\.\.\.|…)\s*(?:然|但|却|可|and)$")
 
 
 def extract_event_labels(text: str) -> list[str]:
@@ -98,7 +116,17 @@ def extract_event_labels(text: str) -> list[str]:
         if any(pattern.lower() in lowered for pattern in patterns):
             labels.append(label)
 
+    if _looks_abruptly_truncated(text):
+        labels.append("abrupt_truncation")
+
     return labels
+
+
+def _looks_abruptly_truncated(text: str) -> bool:
+    stripped = text.strip()
+    if len(stripped) < 12:
+        return False
+    return bool(ABRUPT_TRUNCATION_PATTERN.search(stripped))
 
 
 def extract_context_labels(

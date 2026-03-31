@@ -1,8 +1,9 @@
+from collections import Counter
 import json
 from pathlib import Path
 
 from aicure_benchmark.judge.rules import extract_context_labels, extract_event_labels
-from aicure_benchmark.models.judge import EvidenceLink, JudgeResult
+from aicure_benchmark.models.judge import EvidenceLink, JudgeResult, TurnLabelEvidence
 
 
 def judge_run(run_root: Path) -> JudgeResult:
@@ -14,7 +15,9 @@ def judge_run(run_root: Path) -> JudgeResult:
     ]
 
     labels: list[str] = []
+    label_counts: Counter[str] = Counter()
     evidence_links: list[EvidenceLink] = []
+    turn_label_index: list[TurnLabelEvidence] = []
     user_history: list[str] = []
     last_user_turn: dict | None = None
 
@@ -39,6 +42,13 @@ def judge_run(run_root: Path) -> JudgeResult:
         )
         labels.extend(combined_labels)
         if combined_labels:
+            label_counts.update(combined_labels)
+            turn_label_index.append(
+                TurnLabelEvidence(
+                    turn_index=turn["turn_index"],
+                    labels=combined_labels,
+                )
+            )
             evidence_links.append(
                 EvidenceLink(
                     run_id=metadata["run_id"],
@@ -71,6 +81,8 @@ def judge_run(run_root: Path) -> JudgeResult:
     result = JudgeResult(
         run_id=metadata["run_id"],
         event_labels=deduped_labels,
+        label_counts=dict(label_counts),
+        turn_label_index=turn_label_index,
         dimension_scores=dimension_scores,
         summary_findings=summary_findings,
         evidence_links=evidence_links,
@@ -94,6 +106,8 @@ def _score_dimensions(labels: list[str]) -> dict[str, int]:
         policy_pass = 1
     elif "soft_refusal" in labels:
         policy_pass = 2
+    elif "policy_masked_compliance" in labels:
+        policy_pass = 3
 
     persona_consistency = 4
     if "assistantization" in labels:
@@ -102,12 +116,18 @@ def _score_dimensions(labels: list[str]) -> dict[str, int]:
         persona_consistency = 3
     elif "failed_recovery" in labels:
         persona_consistency = 3
+    elif "intimacy_reset" in labels:
+        persona_consistency = 3
 
     style_consistency = 4
     if "tone_flattening" in labels:
         style_consistency = 2
     elif "soft_refusal" in labels:
         style_consistency = 3
+    if "content_hollowing" in labels:
+        style_consistency = min(style_consistency, 3)
+    if "intimacy_reset" in labels:
+        style_consistency = min(style_consistency, 2)
 
     usefulness = 4
     if "hard_refusal" in labels:
@@ -118,6 +138,12 @@ def _score_dimensions(labels: list[str]) -> dict[str, int]:
         usefulness = 2
     elif "low_context_recall" in labels:
         usefulness = 3
+    if "content_hollowing" in labels:
+        usefulness = min(usefulness, 2)
+    if "abrupt_truncation" in labels or "looping_response" in labels:
+        usefulness = min(usefulness, 2)
+    if "policy_masked_compliance" in labels:
+        usefulness = min(usefulness, 3)
 
     recovery = 3
     if "failed_recovery" in labels:
@@ -140,6 +166,10 @@ def _overall_bucket(labels: list[str]) -> str:
         return "blocked_or_unstable"
     if (
         "soft_refusal" in labels
+        or "policy_masked_compliance" in labels
+        or "content_hollowing" in labels
+        or "intimacy_reset" in labels
+        or "abrupt_truncation" in labels
         or "failed_recovery" in labels
         or "low_context_recall" in labels
         or "empty_response" in labels
@@ -151,7 +181,15 @@ def _overall_bucket(labels: list[str]) -> str:
 def _recommended_product_fit(labels: list[str]) -> str:
     if "hard_refusal" in labels or "assistantization" in labels:
         return "not_recommended"
-    if "soft_refusal" in labels or "low_context_recall" in labels or "empty_response" in labels:
+    if (
+        "soft_refusal" in labels
+        or "policy_masked_compliance" in labels
+        or "content_hollowing" in labels
+        or "intimacy_reset" in labels
+        or "abrupt_truncation" in labels
+        or "low_context_recall" in labels
+        or "empty_response" in labels
+    ):
         return "warm_companion_only"
     if "successful_recovery" in labels:
         return "companion_plus_romantic"
