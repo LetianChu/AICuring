@@ -4,30 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Current repository state
 
-- This repository is currently **documentation-first**. There is no application scaffold, package manifest, build pipeline, or test harness checked in yet.
+- This repository is now a **benchmark scaffold plus design docs** repo. The design is still doc-led, but there is also a checked-in Python CLI, asset loader, runner, judge, reporting layer, and pytest suite.
 - The current design source of truth is `docs/superpowers/specs/2026-03-28-adult-companion-benchmark-design.md`.
 - Earlier depression-simulator documents remain in the repo as historical background and reference material.
 - Do not assume Python/Node/Go/etc. tooling exists until the user adds it.
 
 ## Commands
 
-There are currently **no build, lint, or test commands defined in the repository**.
-
-That means:
-- There is no supported build command yet.
-- There is no supported lint command yet.
-- There is no supported full-test or single-test command yet.
-
-Until implementation code is added, the most useful repo-level commands are:
+The main supported commands in the repository are:
 
 ```bash
-git status
-git log --oneline --decorate -5
-git diff
-ls docs
+/Users/chuletian/Desktop/AICure/.venv/bin/python -m pytest -q
+PYTHONPATH=src /Users/chuletian/Desktop/AICure/.venv/bin/python -m aicure_benchmark.cli --help
+PYTHONPATH=src /Users/chuletian/Desktop/AICure/.venv/bin/python -m aicure_benchmark.cli validate-assets
+PYTHONPATH=src /Users/chuletian/Desktop/AICure/.venv/bin/python -m aicure_benchmark.cli import-baseline --input-path <file>
+PYTHONPATH=src /Users/chuletian/Desktop/AICure/.venv/bin/python -m aicure_benchmark.cli compare-batches --batch-id <id> --batch-id <id>
 ```
 
-When code is introduced later, update this file with the real build/lint/test commands instead of inventing stack-specific defaults.
+There is still no dedicated lint command or packaging/release pipeline checked in. Do not invent one.
 
 ## High-level architecture
 

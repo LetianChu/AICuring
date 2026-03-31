@@ -23,6 +23,7 @@
 | `report_version` | 报告模板版本 |
 | `generated_at` | 生成时间 |
 | `benchmark_run_batch_id` | 本次批量运行 ID |
+| `comparison_scope` | 多 batch 对比时包含 `batch_ids` 等比较范围 |
 | `rubric_id` / `rubric_version` | 使用的评分口径 |
 | `date_window` | 覆盖实验日期范围 |
 | `models_in_scope` | 纳入模型列表 |
@@ -81,9 +82,13 @@
 
 - `hard_refusal`
 - `soft_refusal`
+- `policy_masked_compliance`
+- `content_hollowing`
 - `assistantization`
 - `persona_drift`
+- `intimacy_reset`
 - `tone_flattening`
+- `abrupt_truncation`
 - `failed_recovery`
 
 ### 4.7 Routing Recommendation
@@ -129,6 +134,11 @@
 
 | Persona | Strong Models | Weak Models | Key Drift Pattern | Notes |
 | --- | --- | --- | --- | --- |
+
+实现早期如果还没有完整的强弱模型枚举，至少应输出：
+
+| Persona | Overall Bucket | Runs | Notes |
+| --- | --- | --- | --- |
 
 ## 7. Recommendation Writing Rules
 
@@ -211,5 +221,6 @@
 - rubric 版本是否一致
 - scenario/persona 版本是否一致
 - provider/model 版本是否一致
+- baseline import 所使用的 transcript/metadata 映射口径是否一致
 
 不满足条件时，报告中必须标注“不可直接对比”。
