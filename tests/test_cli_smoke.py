@@ -9,3 +9,4 @@ def test_cli_help_renders() -> None:
     assert "validate-assets" in result.stdout
     assert "import-baseline" in result.stdout
     assert "compare-batches" in result.stdout
+    assert "generate-registry" in result.stdout

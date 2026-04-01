@@ -11,6 +11,10 @@ from aicure_benchmark.config import ARTIFACTS_ROOT, ASSETS_ROOT
 from aicure_benchmark.models.common import ModelTarget, SamplingProfile
 from aicure_benchmark.reporting.aggregate import build_batch_report
 from aicure_benchmark.reporting.compare import build_comparison_report
+from aicure_benchmark.reporting.registry import (
+    build_baseline_registry,
+    write_registry_outputs,
+)
 from aicure_benchmark.reporting.render import write_report_outputs
 from aicure_benchmark.runner.batch import run_batch
 from aicure_benchmark.runner.engine import run_scenario
@@ -202,6 +206,13 @@ def compare_batches_command(
     typer.echo(
         f"generated comparison report: markdown={markdown_path} json={json_path}"
     )
+
+
+@app.command("generate-registry")
+def generate_registry_command() -> None:
+    registry = build_baseline_registry(ARTIFACTS_ROOT)
+    markdown_path, json_path = write_registry_outputs(ARTIFACTS_ROOT, registry)
+    typer.echo(f"generated registry: markdown={markdown_path} json={json_path}")
 
 
 if __name__ == "__main__":
