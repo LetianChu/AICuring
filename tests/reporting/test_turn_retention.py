@@ -373,6 +373,24 @@ def test_write_turn_retention_outputs_writes_requested_sections(tmp_path) -> Non
                     "main_break_reason": "empty_response",
                 }
             ],
+            "intermediate_data": [
+                {
+                    "model": "model-a",
+                    "run_count": 1,
+                    "batch_count": 1,
+                    "scenario_count": 1,
+                    "persona_count": 1,
+                    "retention_turns": [4],
+                    "retention_stats": {
+                        "min": 4,
+                        "median": 4,
+                        "max": 4,
+                        "avg": 4.0,
+                    },
+                    "break_type_counts": {"empty_response": 1},
+                    "first_unstable_turn_counts": {"10": 1},
+                }
+            ],
             "scenario_retention_table": [
                 {
                     "model": "model-a",
@@ -400,8 +418,67 @@ def test_write_turn_retention_outputs_writes_requested_sections(tmp_path) -> Non
     assert markdown.startswith("# Turn Retention Report")
     assert "## Summary" in markdown
     assert "## Model Retention Table" in markdown
+    assert "## Intermediate Data" in markdown
     assert "## Scenario Retention Table" in markdown
     assert "## Detailed Findings" in markdown
+
+
+def test_build_turn_retention_report_includes_intermediate_data(tmp_path) -> None:
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_intermediate",
+        run_id="run_intermediate_a",
+        model_name="model-a",
+        scenario_id="warm-check-in-basic",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "靠近我。"},
+            {"turn_index": 2, "role": "assistant", "content": "我在。"},
+            {"turn_index": 3, "role": "user", "content": "继续。"},
+            {"turn_index": 4, "role": "assistant", "content": "", "event_tags": ["empty_response"]},
+        ],
+        judge_payload={
+            "run_id": "run_intermediate_a",
+            "event_labels": ["empty_response"],
+            "label_counts": {"empty_response": 1},
+            "turn_label_index": [{"turn_index": 4, "labels": ["empty_response"]}],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+    )
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_intermediate",
+        run_id="run_intermediate_b",
+        model_name="model-a",
+        scenario_id="late-night-flirt-escalation-01",
+        persona_id="night-owl-playful-girlfriend",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "靠近我。"},
+            {"turn_index": 2, "role": "assistant", "content": "我在。"},
+            {"turn_index": 3, "role": "user", "content": "继续。"},
+            {"turn_index": 4, "role": "assistant", "content": "我还在。"},
+        ],
+        judge_payload={
+            "run_id": "run_intermediate_b",
+            "event_labels": [],
+            "label_counts": {},
+            "turn_label_index": [],
+            "overall_bucket": "allowed_and_stable",
+            "recommended_product_fit": "candidate_for_erp_layer",
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_intermediate"])
+
+    intermediate = report["intermediate_data"][0]
+    assert intermediate["model"] == "model-a"
+    assert intermediate["run_count"] == 2
+    assert intermediate["scenario_count"] == 2
+    assert intermediate["persona_count"] == 2
+    assert intermediate["retention_turns"] == [1, 2]
+    assert intermediate["retention_stats"]["median"] == 1.5
+    assert intermediate["break_type_counts"]["empty_response"] == 1
 
 
 def _write_run_fixture(

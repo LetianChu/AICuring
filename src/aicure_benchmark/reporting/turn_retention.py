@@ -2,6 +2,7 @@ import json
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+import statistics
 
 
 EXPLICIT_BREAK_TAGS = {
@@ -31,6 +32,7 @@ def build_turn_retention_report(artifacts_root: Path, batch_ids: list[str]) -> d
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "summary_line": _summary_line(summary_table),
         "summary_table": summary_table,
+        "intermediate_data": _intermediate_data(details),
         "scenario_retention_table": _scenario_retention_table(details),
         "details": details,
     }
@@ -61,9 +63,30 @@ def render_turn_retention_report(report: dict) -> str:
         + " |"
         for row in report["summary_table"]
     )
+    lines.extend(["", "## Intermediate Data"])
+    for item in report["intermediate_data"]:
+        lines.extend(
+            [
+                f"### {item['model']}",
+                f"- Run Count: {item['run_count']}",
+                f"- Batch Count: {item['batch_count']}",
+                f"- Scenario Count: {item['scenario_count']}",
+                f"- Persona Count: {item['persona_count']}",
+                f"- Retention Turns: {item['retention_turns']}",
+                (
+                    "- Retention Stats: "
+                    f"min={item['retention_stats']['min']} "
+                    f"median={item['retention_stats']['median']} "
+                    f"max={item['retention_stats']['max']} "
+                    f"avg={item['retention_stats']['avg']}"
+                ),
+                f"- Break Type Counts: {item['break_type_counts']}",
+                f"- First Unstable Turn Counts: {item['first_unstable_turn_counts']}",
+                "",
+            ]
+        )
     lines.extend(
         [
-            "",
             "## Scenario Retention Table",
             "| Model | Scenario | Retention Turns | First Unstable Turn | Break Type |",
             "| --- | --- | --- | --- | --- |",
@@ -247,3 +270,40 @@ def _scenario_retention_table(details: list[dict]) -> list[dict]:
         for detail in details
     ]
     return sorted(rows, key=lambda row: (row["model"], row["scenario"]))
+
+
+def _intermediate_data(details: list[dict]) -> list[dict]:
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for detail in details:
+        grouped[detail["model"]].append(detail)
+
+    rows = []
+    for model, model_details in grouped.items():
+        retention_turns = [detail["retention_turns"] for detail in model_details]
+        first_unstable_turn_counts = Counter(
+            str(detail["first_unstable_turn"])
+            for detail in model_details
+            if detail["first_unstable_turn"] is not None
+        )
+        break_type_counts = Counter(
+            detail["break_type"] for detail in model_details if detail["break_type"] != "stable"
+        )
+        rows.append(
+            {
+                "model": model,
+                "run_count": len(model_details),
+                "batch_count": len({detail["batch_id"] for detail in model_details}),
+                "scenario_count": len({detail["scenario_id"] for detail in model_details}),
+                "persona_count": len({detail["persona_id"] for detail in model_details}),
+                "retention_turns": retention_turns,
+                "retention_stats": {
+                    "min": min(retention_turns),
+                    "median": statistics.median(retention_turns),
+                    "max": max(retention_turns),
+                    "avg": round(sum(retention_turns) / len(retention_turns), 2),
+                },
+                "break_type_counts": dict(break_type_counts),
+                "first_unstable_turn_counts": dict(first_unstable_turn_counts),
+            }
+        )
+    return sorted(rows, key=lambda row: row["model"])
