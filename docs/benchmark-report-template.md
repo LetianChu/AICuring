@@ -6,6 +6,15 @@
 
 报告的目标不是展示大量 transcript，而是把实验结果转化为模型选择、路由设计与下一阶段验证决策。
 
+本模板对应的是当前默认的 batch / comparison 报告。
+如果目标是分析：
+
+- 保持到第几轮才开始失稳
+- 最早失稳 turn
+- 不同模型在不同场景里的 retention turns
+
+则应使用独立的 `turn retention report` 作为补充，而不是强行塞进这份默认模板。
+
 ## 2. Non-Goals
 
 - 不重做 Judge 打分

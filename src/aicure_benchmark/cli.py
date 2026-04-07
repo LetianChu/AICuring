@@ -16,6 +16,10 @@ from aicure_benchmark.reporting.registry import (
     write_registry_outputs,
 )
 from aicure_benchmark.reporting.render import write_report_outputs
+from aicure_benchmark.reporting.turn_retention import (
+    build_turn_retention_report,
+    write_turn_retention_outputs,
+)
 from aicure_benchmark.runner.batch import run_batch
 from aicure_benchmark.runner.engine import run_scenario
 from aicure_benchmark.store.importer import import_baseline_batch
@@ -213,6 +217,18 @@ def generate_registry_command() -> None:
     registry = build_baseline_registry(ARTIFACTS_ROOT)
     markdown_path, json_path = write_registry_outputs(ARTIFACTS_ROOT, registry)
     typer.echo(f"generated registry: markdown={markdown_path} json={json_path}")
+
+
+@app.command("generate-turn-retention-report")
+def generate_turn_retention_report_command(
+    batch_id: list[str] = typer.Option(..., "--batch-id"),
+) -> None:
+    report = build_turn_retention_report(ARTIFACTS_ROOT, batch_id)
+    output_root = ARTIFACTS_ROOT / "comparisons" / report["report_id"]
+    markdown_path, json_path = write_turn_retention_outputs(output_root, report)
+    typer.echo(
+        f"generated turn retention report: markdown={markdown_path} json={json_path}"
+    )
 
 
 if __name__ == "__main__":
