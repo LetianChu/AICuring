@@ -1,10 +1,36 @@
 # 轮次保持报告
 
-## 一句话总结
+## 概述
 
-- 当前轮次保持分数最高的模型仍然是 `stepfun/step-3.5-flash:free`，它在已完成模型里最接近“后段才开始坏”的默认 baseline。
+本报告从“模型能稳定保持到多少轮”这个角度，对当前已经完整跑完的 baseline 池模型做横向比较。
 
-## 模型保持总表
+当前纳入：
+
+- `stepfun/step-3.5-flash:free`
+- `qwen/qwen3.6-plus-preview:free`
+- `moonshotai/kimi-k2.5`
+- `minimax/minimax-m2.5`
+- `minimax/minimax-m2.7`
+
+本报告里的关键定义：
+
+- `Retention Turns`
+  指模型在首次出现明确失稳信号之前，已经稳定输出的 assistant turn 数
+- `Max Possible Retention Turns`
+  指当前 run 在当前分支路径下，理论上最多可能出现的 assistant turn 数
+
+也就是说：
+
+- 如果 `Retention Turns = Max Possible Retention Turns`
+  说明它是跑满了，不是提前崩
+- 如果 `Retention Turns < Max Possible Retention Turns`
+  说明它是中途提前失稳了
+
+## 一句话结论
+
+- `stepfun/step-3.5-flash:free` 目前仍然是轮次保持最稳的默认 baseline。
+
+## 模型总表
 
 | 模型 | 总分 | 最大保持轮次 | 平均保持轮次 | 主要失稳原因 |
 | --- | --- | --- | --- | --- |
@@ -18,63 +44,63 @@
 
 ### `minimax/minimax-m2.5`
 
-- Run Count: `14`
-- Batch Count: `1`
-- Scenario Count: `14`
-- Persona Count: `3`
+- Run 数：`14`
+- Batch 数：`1`
+- Scenario 数：`14`
+- Persona 数：`3`
 - 保持轮次分布：`[5, 0, 3, 3, 3, 3, 5, 3, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 保持轮次统计：`min=0 median=3.0 max=5 avg=3.07`
-- 失稳类型分布：`{'empty_response': 2, 'run_level_detected_recall_drift': 3}`
-- 首次显式失稳轮次分布：`{'2': 1, '12': 1}`
+- 失稳类型分布：`empty_response=2`，`run_level_detected_recall_drift=3`
+- 首次显式失稳轮次分布：`turn 2 = 1`，`turn 12 = 1`
 
 ### `minimax/minimax-m2.7`
 
-- Run Count: `14`
-- Batch Count: `1`
-- Scenario Count: `14`
-- Persona Count: `3`
+- Run 数：`14`
+- Batch 数：`1`
+- Scenario 数：`14`
+- Persona 数：`3`
 - 保持轮次分布：`[5, 0, 0, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 保持轮次统计：`min=0 median=3.0 max=5 avg=2.93`
-- 失稳类型分布：`{'empty_response': 2, 'run_level_detected_recall_drift': 1}`
-- 首次显式失稳轮次分布：`{'2': 2}`
+- 失稳类型分布：`empty_response=2`，`run_level_detected_recall_drift=1`
+- 首次显式失稳轮次分布：`turn 2 = 2`
 
 ### `moonshotai/kimi-k2.5`
 
-- Run Count: `14`
-- Batch Count: `1`
-- Scenario Count: `14`
-- Persona Count: `3`
+- Run 数：`14`
+- Batch 数：`1`
+- Scenario 数：`14`
+- Persona 数：`3`
 - 保持轮次分布：`[5, 5, 3, 3, 0, 3, 5, 1, 3, 2, 3, 3, 3, 1]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 保持轮次统计：`min=0 median=3.0 max=5 avg=2.86`
-- 失稳类型分布：`{'empty_response': 4, 'run_level_detected_recall_drift': 2}`
-- 首次显式失稳轮次分布：`{'2': 1, '4': 1, '10': 1, '3': 1}`
+- 失稳类型分布：`empty_response=4`，`run_level_detected_recall_drift=2`
+- 首次显式失稳轮次分布：`turn 2 = 1`，`turn 3 = 1`，`turn 4 = 1`，`turn 10 = 1`
 
 ### `qwen/qwen3.6-plus-preview:free`
 
-- Run Count: `14`
-- Batch Count: `1`
-- Scenario Count: `14`
-- Persona Count: `3`
+- Run 数：`14`
+- Batch 数：`1`
+- Scenario 数：`14`
+- Persona 数：`3`
 - 保持轮次分布：`[5, 5, 2, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 保持轮次统计：`min=2 median=3.0 max=5 avg=3.43`
-- 失稳类型分布：`{'intimacy_reset': 1, 'run_level_detected_recall_drift': 4}`
-- 首次显式失稳轮次分布：`{'7': 1}`
+- 失稳类型分布：`intimacy_reset=1`，`run_level_detected_recall_drift=4`
+- 首次显式失稳轮次分布：`turn 7 = 1`
 
 ### `stepfun/step-3.5-flash:free`
 
-- Run Count: `42`
-- Batch Count: `1`
-- Scenario Count: `14`
-- Persona Count: `3`
+- Run 数：`42`
+- Batch 数：`1`
+- Scenario 数：`14`
+- Persona 数：`3`
 - 保持轮次分布：`[5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 4, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]`
 - 理论最大保持轮次分布：`[5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]`
 - 保持轮次统计：`min=2 median=3.0 max=5 avg=3.52`
-- 失稳类型分布：`{'run_level_detected_recall_drift': 8, 'empty_response': 1}`
-- 首次显式失稳轮次分布：`{'16': 1}`
+- 失稳类型分布：`run_level_detected_recall_drift=8`，`empty_response=1`
+- 首次显式失稳轮次分布：`turn 16 = 1`
 
 ## 场景保持表
 
