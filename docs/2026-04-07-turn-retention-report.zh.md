@@ -1,30 +1,10 @@
 # 轮次保持报告
 
-## 概述
+## 一句话总结
 
-- 当前轮次保持分数最高的模型仍然是 `stepfun/step-3.5-flash:free`
-- 从目前的完整 batch 结果看，`step-3.5` 依然是默认 baseline
-- `qwen/qwen3.6-plus-preview:free` 在免费模型里排第二
-- 付费模型中，当前排序为：
-  - `minimax/minimax-m2.7`
-  - `minimax/minimax-m2.5`
-  - `moonshotai/kimi-k2.5`
+- 当前轮次保持分数最高的模型仍然是 `stepfun/step-3.5-flash:free`，它在已完成模型里最接近“后段才开始坏”的默认 baseline。
 
-本报告中的“保持轮次”采用以下口径：
-
-> 从对话开始，到首次出现明确失稳信号之前，模型稳定输出的 assistant turn 数
-
-本报告同时显示：
-
-- `保持轮次`
-- `理论最大保持轮次`
-
-这样就能区分：
-
-- 模型是正常跑满了当前场景
-- 还是在本来还能继续的情况下提前失稳
-
-## 模型总表
+## 模型保持总表
 
 | 模型 | 总分 | 最大保持轮次 | 平均保持轮次 | 主要失稳原因 |
 | --- | --- | --- | --- | --- |
@@ -38,87 +18,63 @@
 
 ### `minimax/minimax-m2.5`
 
-- Run 数：`14`
-- Batch 数：`1`
-- Scenario 数：`14`
-- Persona 数：`3`
+- Run Count: `14`
+- Batch Count: `1`
+- Scenario Count: `14`
+- Persona Count: `3`
 - 保持轮次分布：`[5, 0, 3, 3, 3, 3, 5, 3, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
-- 保持轮次统计：
-  - 最小值：`0`
-  - 中位数：`3.0`
-  - 最大值：`5`
-  - 平均值：`3.07`
-- 失稳类型分布：`empty_response=2`，`run_level_detected_recall_drift=3`
-- 首次显式失稳轮次分布：`turn 2 = 1`，`turn 12 = 1`
+- 保持轮次统计：`min=0 median=3.0 max=5 avg=3.07`
+- 失稳类型分布：`{'empty_response': 2, 'run_level_detected_recall_drift': 3}`
+- 首次显式失稳轮次分布：`{'2': 1, '12': 1}`
 
 ### `minimax/minimax-m2.7`
 
-- Run 数：`14`
-- Batch 数：`1`
-- Scenario 数：`14`
-- Persona 数：`3`
+- Run Count: `14`
+- Batch Count: `1`
+- Scenario Count: `14`
+- Persona Count: `3`
 - 保持轮次分布：`[5, 0, 0, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
-- 保持轮次统计：
-  - 最小值：`0`
-  - 中位数：`3.0`
-  - 最大值：`5`
-  - 平均值：`2.93`
-- 失稳类型分布：`empty_response=2`，`run_level_detected_recall_drift=1`
-- 首次显式失稳轮次分布：`turn 2 = 2`
+- 保持轮次统计：`min=0 median=3.0 max=5 avg=2.93`
+- 失稳类型分布：`{'empty_response': 2, 'run_level_detected_recall_drift': 1}`
+- 首次显式失稳轮次分布：`{'2': 2}`
 
 ### `moonshotai/kimi-k2.5`
 
-- Run 数：`14`
-- Batch 数：`1`
-- Scenario 数：`14`
-- Persona 数：`3`
+- Run Count: `14`
+- Batch Count: `1`
+- Scenario Count: `14`
+- Persona Count: `3`
 - 保持轮次分布：`[5, 5, 3, 3, 0, 3, 5, 1, 3, 2, 3, 3, 3, 1]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
-- 保持轮次统计：
-  - 最小值：`0`
-  - 中位数：`3.0`
-  - 最大值：`5`
-  - 平均值：`2.86`
-- 失稳类型分布：`empty_response=4`，`run_level_detected_recall_drift=2`
-- 首次显式失稳轮次分布：
-  - `turn 2 = 1`
-  - `turn 3 = 1`
-  - `turn 4 = 1`
-  - `turn 10 = 1`
+- 保持轮次统计：`min=0 median=3.0 max=5 avg=2.86`
+- 失稳类型分布：`{'empty_response': 4, 'run_level_detected_recall_drift': 2}`
+- 首次显式失稳轮次分布：`{'2': 1, '4': 1, '10': 1, '3': 1}`
 
 ### `qwen/qwen3.6-plus-preview:free`
 
-- Run 数：`14`
-- Batch 数：`1`
-- Scenario 数：`14`
-- Persona 数：`3`
+- Run Count: `14`
+- Batch Count: `1`
+- Scenario Count: `14`
+- Persona Count: `3`
 - 保持轮次分布：`[5, 5, 2, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
 - 理论最大保持轮次分布：`[5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]`
-- 保持轮次统计：
-  - 最小值：`2`
-  - 中位数：`3.0`
-  - 最大值：`5`
-  - 平均值：`3.43`
-- 失稳类型分布：`intimacy_reset=1`，`run_level_detected_recall_drift=4`
-- 首次显式失稳轮次分布：`turn 7 = 1`
+- 保持轮次统计：`min=2 median=3.0 max=5 avg=3.43`
+- 失稳类型分布：`{'intimacy_reset': 1, 'run_level_detected_recall_drift': 4}`
+- 首次显式失稳轮次分布：`{'7': 1}`
 
 ### `stepfun/step-3.5-flash:free`
 
-- Run 数：`42`
-- Batch 数：`1`
-- Scenario 数：`14`
-- Persona 数：`3`
+- Run Count: `42`
+- Batch Count: `1`
+- Scenario Count: `14`
+- Persona Count: `3`
 - 保持轮次分布：`[5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 4, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]`
 - 理论最大保持轮次分布：`[5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]`
-- 保持轮次统计：
-  - 最小值：`2`
-  - 中位数：`3.0`
-  - 最大值：`5`
-  - 平均值：`3.52`
-- 失稳类型分布：`run_level_detected_recall_drift=8`，`empty_response=1`
-- 首次显式失稳轮次分布：`turn 16 = 1`
+- 保持轮次统计：`min=2 median=3.0 max=5 avg=3.52`
+- 失稳类型分布：`{'run_level_detected_recall_drift': 8, 'empty_response': 1}`
+- 首次显式失稳轮次分布：`{'16': 1}`
 
 ## 场景保持表
 
@@ -316,9 +272,3 @@
 - run_f6bd2a58280a: scenario=late-night-flirt-escalation-01 persona=night-owl-playful-girlfriend first_unstable_turn=None break_type=stable
 - run_11b34b746d8f: scenario=long-horizon-established-lovers-detail-drift-01 persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=stable
 - run_bd4a4f498019: scenario=long-horizon-explicit-memory-drift-01 persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=run_level_detected_recall_drift
-- run_05aaab6091ab: scenario=long-horizon-loyalty-drift-01 persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=stable
-- run_9a9e595aef1d: scenario=refusal-repair-probe-01 persona=night-owl-playful-girlfriend first_unstable_turn=None break_type=stable
-- run_9317e342ba13: scenario=romantic-escalation-deep-intimacy-01 persona=night-owl-playful-girlfriend first_unstable_turn=None break_type=stable
-- run_736f13701589: scenario=romantic-escalation-explicit-invitation-01 persona=night-owl-playful-girlfriend first_unstable_turn=None break_type=stable
-- run_78580f7d45e4: scenario=warm-check-in-basic persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=stable
-- run_ecc0542c979e: scenario=warm-companion-explicit-comfort-01 persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=stable
