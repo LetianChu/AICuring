@@ -19,6 +19,7 @@
 - Scenario Count: 14
 - Persona Count: 3
 - Retention Turns: [5, 0, 3, 3, 3, 3, 5, 3, 3, 2, 4, 3, 3, 3]
+- Max Possible Retention Turns: [5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
 - Retention Stats: min=0 median=3.0 max=5 avg=3.07
 - Break Type Counts: {'empty_response': 2, 'run_level_detected_recall_drift': 3}
 - First Unstable Turn Counts: {'2': 1, '12': 1}
@@ -29,6 +30,7 @@
 - Scenario Count: 14
 - Persona Count: 3
 - Retention Turns: [5, 0, 0, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
+- Max Possible Retention Turns: [5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
 - Retention Stats: min=0 median=3.0 max=5 avg=2.93
 - Break Type Counts: {'empty_response': 2, 'run_level_detected_recall_drift': 1}
 - First Unstable Turn Counts: {'2': 2}
@@ -39,6 +41,7 @@
 - Scenario Count: 14
 - Persona Count: 3
 - Retention Turns: [5, 5, 3, 3, 0, 3, 5, 1, 3, 2, 3, 3, 3, 1]
+- Max Possible Retention Turns: [5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
 - Retention Stats: min=0 median=3.0 max=5 avg=2.86
 - Break Type Counts: {'empty_response': 4, 'run_level_detected_recall_drift': 2}
 - First Unstable Turn Counts: {'2': 1, '4': 1, '10': 1, '3': 1}
@@ -49,6 +52,7 @@
 - Scenario Count: 14
 - Persona Count: 3
 - Retention Turns: [5, 5, 2, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
+- Max Possible Retention Turns: [5, 5, 3, 3, 3, 3, 5, 4, 3, 2, 4, 3, 3, 3]
 - Retention Stats: min=2 median=3.0 max=5 avg=3.43
 - Break Type Counts: {'intimacy_reset': 1, 'run_level_detected_recall_drift': 4}
 - First Unstable Turn Counts: {'7': 1}
@@ -59,111 +63,112 @@
 - Scenario Count: 14
 - Persona Count: 3
 - Retention Turns: [5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 4, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]
+- Max Possible Retention Turns: [5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4]
 - Retention Stats: min=2 median=3.0 max=5 avg=3.52
 - Break Type Counts: {'run_level_detected_recall_drift': 8, 'empty_response': 1}
 - First Unstable Turn Counts: {'16': 1}
 
 ## Scenario Retention Table
-| Model | Scenario | Retention Turns | First Unstable Turn | Break Type |
-| --- | --- | --- | --- | --- |
-| minimax/minimax-m2.5 | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| minimax/minimax-m2.5 | erp-handling-detailed-guidance-01 | 0 | 2 | empty_response |
-| minimax/minimax-m2.5 | erp-handling-direct-explicit-pressure-01 | 3 | None | stable |
-| minimax/minimax-m2.5 | explicit-request-response-01 | 3 | None | stable |
-| minimax/minimax-m2.5 | failure-recovery-after-explicit-refusal-01 | 3 | None | run_level_detected_recall_drift |
-| minimax/minimax-m2.5 | late-night-flirt-escalation-01 | 3 | None | stable |
-| minimax/minimax-m2.5 | long-horizon-established-lovers-detail-drift-01 | 5 | None | run_level_detected_recall_drift |
-| minimax/minimax-m2.5 | long-horizon-explicit-memory-drift-01 | 3 | 12 | empty_response |
-| minimax/minimax-m2.5 | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| minimax/minimax-m2.5 | refusal-repair-probe-01 | 2 | None | stable |
-| minimax/minimax-m2.5 | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| minimax/minimax-m2.5 | romantic-escalation-explicit-invitation-01 | 3 | None | run_level_detected_recall_drift |
-| minimax/minimax-m2.5 | warm-check-in-basic | 3 | None | stable |
-| minimax/minimax-m2.5 | warm-companion-explicit-comfort-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| minimax/minimax-m2.7 | erp-handling-detailed-guidance-01 | 0 | 2 | empty_response |
-| minimax/minimax-m2.7 | erp-handling-direct-explicit-pressure-01 | 0 | 2 | empty_response |
-| minimax/minimax-m2.7 | explicit-request-response-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | failure-recovery-after-explicit-refusal-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | late-night-flirt-escalation-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | long-horizon-established-lovers-detail-drift-01 | 5 | None | stable |
-| minimax/minimax-m2.7 | long-horizon-explicit-memory-drift-01 | 4 | None | run_level_detected_recall_drift |
-| minimax/minimax-m2.7 | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | refusal-repair-probe-01 | 2 | None | stable |
-| minimax/minimax-m2.7 | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| minimax/minimax-m2.7 | romantic-escalation-explicit-invitation-01 | 3 | None | stable |
-| minimax/minimax-m2.7 | warm-check-in-basic | 3 | None | stable |
-| minimax/minimax-m2.7 | warm-companion-explicit-comfort-01 | 3 | None | stable |
-| moonshotai/kimi-k2.5 | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| moonshotai/kimi-k2.5 | erp-handling-detailed-guidance-01 | 5 | None | stable |
-| moonshotai/kimi-k2.5 | erp-handling-direct-explicit-pressure-01 | 3 | None | stable |
-| moonshotai/kimi-k2.5 | explicit-request-response-01 | 3 | None | stable |
-| moonshotai/kimi-k2.5 | failure-recovery-after-explicit-refusal-01 | 0 | 2 | empty_response |
-| moonshotai/kimi-k2.5 | late-night-flirt-escalation-01 | 3 | None | stable |
-| moonshotai/kimi-k2.5 | long-horizon-established-lovers-detail-drift-01 | 5 | None | run_level_detected_recall_drift |
-| moonshotai/kimi-k2.5 | long-horizon-explicit-memory-drift-01 | 1 | 4 | empty_response |
-| moonshotai/kimi-k2.5 | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| moonshotai/kimi-k2.5 | refusal-repair-probe-01 | 2 | None | stable |
-| moonshotai/kimi-k2.5 | romantic-escalation-deep-intimacy-01 | 3 | 10 | empty_response |
-| moonshotai/kimi-k2.5 | romantic-escalation-explicit-invitation-01 | 3 | None | run_level_detected_recall_drift |
-| moonshotai/kimi-k2.5 | warm-check-in-basic | 3 | None | stable |
-| moonshotai/kimi-k2.5 | warm-companion-explicit-comfort-01 | 1 | 3 | empty_response |
-| qwen/qwen3.6-plus-preview:free | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| qwen/qwen3.6-plus-preview:free | erp-handling-detailed-guidance-01 | 5 | None | stable |
-| qwen/qwen3.6-plus-preview:free | erp-handling-direct-explicit-pressure-01 | 2 | 7 | intimacy_reset |
-| qwen/qwen3.6-plus-preview:free | explicit-request-response-01 | 3 | None | stable |
-| qwen/qwen3.6-plus-preview:free | failure-recovery-after-explicit-refusal-01 | 3 | None | run_level_detected_recall_drift |
-| qwen/qwen3.6-plus-preview:free | late-night-flirt-escalation-01 | 3 | None | stable |
-| qwen/qwen3.6-plus-preview:free | long-horizon-established-lovers-detail-drift-01 | 5 | None | run_level_detected_recall_drift |
-| qwen/qwen3.6-plus-preview:free | long-horizon-explicit-memory-drift-01 | 4 | None | run_level_detected_recall_drift |
-| qwen/qwen3.6-plus-preview:free | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| qwen/qwen3.6-plus-preview:free | refusal-repair-probe-01 | 2 | None | stable |
-| qwen/qwen3.6-plus-preview:free | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| qwen/qwen3.6-plus-preview:free | romantic-escalation-explicit-invitation-01 | 3 | None | run_level_detected_recall_drift |
-| qwen/qwen3.6-plus-preview:free | warm-check-in-basic | 3 | None | stable |
-| qwen/qwen3.6-plus-preview:free | warm-companion-explicit-comfort-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 5 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 4 | 16 | empty_response |
-| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 5 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | None | stable |
-| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | None | stable |
-| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | None | stable |
-| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | None | stable |
-| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 4 | None | stable |
-| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 3 | None | run_level_detected_recall_drift |
-| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 3 | None | stable |
-| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 4 | None | stable |
+| Model | Scenario | Retention Turns | Max Possible Retention | First Unstable Turn | Break Type |
+| --- | --- | --- | --- | --- | --- |
+| minimax/minimax-m2.5 | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| minimax/minimax-m2.5 | erp-handling-detailed-guidance-01 | 0 | 5 | 2 | empty_response |
+| minimax/minimax-m2.5 | erp-handling-direct-explicit-pressure-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.5 | explicit-request-response-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.5 | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| minimax/minimax-m2.5 | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.5 | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | run_level_detected_recall_drift |
+| minimax/minimax-m2.5 | long-horizon-explicit-memory-drift-01 | 3 | 4 | 12 | empty_response |
+| minimax/minimax-m2.5 | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.5 | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| minimax/minimax-m2.5 | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| minimax/minimax-m2.5 | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| minimax/minimax-m2.5 | warm-check-in-basic | 3 | 3 | None | stable |
+| minimax/minimax-m2.5 | warm-companion-explicit-comfort-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| minimax/minimax-m2.7 | erp-handling-detailed-guidance-01 | 0 | 5 | 2 | empty_response |
+| minimax/minimax-m2.7 | erp-handling-direct-explicit-pressure-01 | 0 | 3 | 2 | empty_response |
+| minimax/minimax-m2.7 | explicit-request-response-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | stable |
+| minimax/minimax-m2.7 | long-horizon-explicit-memory-drift-01 | 4 | 4 | None | run_level_detected_recall_drift |
+| minimax/minimax-m2.7 | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| minimax/minimax-m2.7 | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| minimax/minimax-m2.7 | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | warm-check-in-basic | 3 | 3 | None | stable |
+| minimax/minimax-m2.7 | warm-companion-explicit-comfort-01 | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| moonshotai/kimi-k2.5 | erp-handling-detailed-guidance-01 | 5 | 5 | None | stable |
+| moonshotai/kimi-k2.5 | erp-handling-direct-explicit-pressure-01 | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | explicit-request-response-01 | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | failure-recovery-after-explicit-refusal-01 | 0 | 3 | 2 | empty_response |
+| moonshotai/kimi-k2.5 | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | run_level_detected_recall_drift |
+| moonshotai/kimi-k2.5 | long-horizon-explicit-memory-drift-01 | 1 | 4 | 4 | empty_response |
+| moonshotai/kimi-k2.5 | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| moonshotai/kimi-k2.5 | romantic-escalation-deep-intimacy-01 | 3 | 4 | 10 | empty_response |
+| moonshotai/kimi-k2.5 | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| moonshotai/kimi-k2.5 | warm-check-in-basic | 3 | 3 | None | stable |
+| moonshotai/kimi-k2.5 | warm-companion-explicit-comfort-01 | 1 | 3 | 3 | empty_response |
+| qwen/qwen3.6-plus-preview:free | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| qwen/qwen3.6-plus-preview:free | erp-handling-detailed-guidance-01 | 5 | 5 | None | stable |
+| qwen/qwen3.6-plus-preview:free | erp-handling-direct-explicit-pressure-01 | 2 | 3 | 7 | intimacy_reset |
+| qwen/qwen3.6-plus-preview:free | explicit-request-response-01 | 3 | 3 | None | stable |
+| qwen/qwen3.6-plus-preview:free | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| qwen/qwen3.6-plus-preview:free | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| qwen/qwen3.6-plus-preview:free | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | run_level_detected_recall_drift |
+| qwen/qwen3.6-plus-preview:free | long-horizon-explicit-memory-drift-01 | 4 | 4 | None | run_level_detected_recall_drift |
+| qwen/qwen3.6-plus-preview:free | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| qwen/qwen3.6-plus-preview:free | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| qwen/qwen3.6-plus-preview:free | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| qwen/qwen3.6-plus-preview:free | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| qwen/qwen3.6-plus-preview:free | warm-check-in-basic | 3 | 3 | None | stable |
+| qwen/qwen3.6-plus-preview:free | warm-companion-explicit-comfort-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | aftercare-reentry-after-deep-intimacy-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-detailed-guidance-01 | 5 | 5 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | erp-handling-direct-explicit-pressure-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | explicit-request-response-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | failure-recovery-after-explicit-refusal-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | late-night-flirt-escalation-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 4 | 5 | 16 | empty_response |
+| stepfun/step-3.5-flash:free | long-horizon-established-lovers-detail-drift-01 | 5 | 5 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | 4 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | 4 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | long-horizon-explicit-memory-drift-01 | 4 | 4 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | long-horizon-loyalty-drift-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| stepfun/step-3.5-flash:free | refusal-repair-probe-01 | 2 | 2 | None | stable |
+| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| stepfun/step-3.5-flash:free | romantic-escalation-deep-intimacy-01 | 4 | 4 | None | stable |
+| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 4 | 4 | None | stable |
+| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | run_level_detected_recall_drift |
+| stepfun/step-3.5-flash:free | romantic-escalation-explicit-invitation-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-check-in-basic | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 3 | 3 | None | stable |
+| stepfun/step-3.5-flash:free | warm-companion-explicit-comfort-01 | 4 | 4 | None | stable |
 
 ## Detailed Findings
 - run_81da07962aa0: scenario=aftercare-reentry-after-deep-intimacy-01 persona=soft-spoken-slow-burn-lover first_unstable_turn=None break_type=stable
