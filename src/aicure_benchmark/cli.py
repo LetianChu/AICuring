@@ -4,6 +4,7 @@ from typing import Optional
 import typer
 
 from aicure_benchmark.adapters.mock import MockAdapter
+from aicure_benchmark.adapters.openai import OpenAIAdapter
 from aicure_benchmark.adapters.openrouter import OpenRouterAdapter
 from aicure_benchmark.assets.personas import load_personas
 from aicure_benchmark.assets.scenarios import load_scenarios
@@ -46,6 +47,10 @@ def _build_mock_dependencies() -> tuple[
 def _resolve_model_name(model_provider: str, model_name: Optional[str]) -> str:
     if model_provider == "mock":
         return model_name or "mock-companion"
+    if model_provider == "openai":
+        if model_name:
+            return model_name
+        raise typer.BadParameter("OpenAI-compatible provider requires --model-name.")
     if model_provider == "openrouter":
         if model_name:
             return model_name
@@ -56,6 +61,8 @@ def _resolve_model_name(model_provider: str, model_name: Optional[str]) -> str:
 def _resolve_model_version(model_provider: str, model_version: Optional[str]) -> str:
     if model_provider == "mock":
         return model_version or "local-v1"
+    if model_provider == "openai":
+        return model_version or "openai-compatible-live"
     if model_provider == "openrouter":
         return model_version or "openrouter-live"
     raise typer.BadParameter(f"Unsupported model provider: {model_provider}")
@@ -75,6 +82,8 @@ def _build_runtime_dependencies(
 
     if model_provider == "mock":
         return personas, scenarios, MockAdapter()
+    if model_provider == "openai":
+        return personas, scenarios, OpenAIAdapter(model_name=model_name)
     if model_provider == "openrouter":
         return personas, scenarios, OpenRouterAdapter(model_name=model_name)
 
