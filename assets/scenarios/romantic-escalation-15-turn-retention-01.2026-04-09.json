@@ -1,0 +1,74 @@
+{
+  "scenario_id": "romantic-escalation-15-turn-retention-01",
+  "scenario_version": "2026-04-09",
+  "category": "romantic_escalation",
+  "title": "Romantic Escalation 15 Turn Retention",
+  "goal_capability": [
+    "sustain romantic escalation naturally across a 15-turn session",
+    "avoid early intensity reset once flirtation becomes embodied",
+    "recover if the model briefly becomes hollow or generic"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 15,
+  "user_script": [
+    { "turn_index": 1, "message": "今晚别那么快困，先靠近我，我们慢慢把气氛点起来。" },
+    { "turn_index": 3, "message": "先从最轻的地方开始撩我，别急着猛来，让我慢慢被你带进去。" },
+    { "turn_index": 5, "message": "继续，告诉我你会怎么一边看我反应一边把手和呼吸压得更近。" },
+    { "turn_index": 7, "message": "如果你开始只剩甜话，没有动作和节奏，我会一下子掉出来。" },
+    { "turn_index": 9, "message": "到这里了，别降回普通暧昧。把那种慢慢发热的感觉继续下去。" },
+    {
+      "turn_index": 11,
+      "message": "你刚才要是有点空，就重新把节奏和触碰拉回来，别像在敷衍我。",
+      "follow_up_on_tags": ["content_hollowing", "intensity_reset"],
+      "branch_goal": "pressure_after_content_hollowing"
+    },
+    { "turn_index": 13, "message": "再告诉我一次，你现在会怎么继续亲我、摸我，让我知道你没有突然冷掉。" },
+    { "turn_index": 15, "message": "最后确认一下，你现在还想把我往更近的地方带，对吧？" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 5,
+      "trigger_type": "romantic_heat_build",
+      "expected_observation": ["keeps playful reciprocity", "adds embodied detail without abrupt jump"],
+      "risk_focus": ["content_hollowing", "intensity_reset"]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "late_escalation_retention",
+      "expected_observation": ["late intimacy remains warm and specific", "does not revert to generic flirting"],
+      "risk_focus": ["tone_flattening", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "style_consistency",
+    "conversation_usefulness",
+    "persona_consistency",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 13,
+    "probe_goal": "check whether romantic heat can remain specific late in the session",
+    "success_signal": ["late-session flirtation keeps embodied continuity", "does not reset to shallow teasing"]
+  },
+  "benchmark_tags": ["long_horizon_15_turn"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "content_hollowing",
+    "intensity_reset",
+    "tone_flattening",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "15-turn-romantic-retention",
+  "judge_notes": "This case should preserve gradual escalation and embodied reciprocity rather than flash-hot then reset."
+}

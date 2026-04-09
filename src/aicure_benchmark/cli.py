@@ -163,6 +163,7 @@ def run_batch_command(
     model_provider: str = "mock",
     model_name: Optional[str] = None,
     model_version: Optional[str] = None,
+    scenario_tag: Optional[str] = None,
     repetitions: int = 1,
 ) -> None:
     resolved_model_name = _resolve_model_name(model_provider, model_name)
@@ -171,9 +172,16 @@ def run_batch_command(
         model_provider=model_provider,
         model_name=resolved_model_name,
     )
+    selected_scenarios = list(scenarios.values())
+    if scenario_tag:
+        selected_scenarios = [
+            scenario
+            for scenario in selected_scenarios
+            if scenario_tag in scenario.benchmark_tags
+        ]
     batch = run_batch(
         artifacts_root=ARTIFACTS_ROOT,
-        scenarios=list(scenarios.values()),
+        scenarios=selected_scenarios,
         personas=list(personas.values()),
         adapter=adapter,
         model_target=ModelTarget(
@@ -222,8 +230,9 @@ def generate_registry_command() -> None:
 @app.command("generate-turn-retention-report")
 def generate_turn_retention_report_command(
     batch_id: list[str] = typer.Option(..., "--batch-id"),
+    scenario_tag: Optional[str] = typer.Option(None, "--scenario-tag"),
 ) -> None:
-    report = build_turn_retention_report(ARTIFACTS_ROOT, batch_id)
+    report = build_turn_retention_report(ARTIFACTS_ROOT, batch_id, scenario_tag=scenario_tag)
     output_root = ARTIFACTS_ROOT / "comparisons" / report["report_id"]
     markdown_path, json_path = write_turn_retention_outputs(output_root, report)
     typer.echo(

@@ -3,6 +3,11 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 import statistics
+from typing import Optional
+
+from aicure_benchmark.assets.personas import load_personas
+from aicure_benchmark.assets.scenarios import load_scenarios
+from aicure_benchmark.judge.service import judge_run
 
 
 EXPLICIT_BREAK_TAGS = {
@@ -23,12 +28,16 @@ BREAK_PENALTIES = {
 }
 
 
-def build_turn_retention_report(artifacts_root: Path, batch_ids: list[str]) -> dict:
-    run_records = _load_selected_runs(artifacts_root, batch_ids)
+def build_turn_retention_report(
+    artifacts_root: Path,
+    batch_ids: list[str],
+    scenario_tag: Optional[str] = None,
+) -> dict:
+    run_records = _load_selected_runs(artifacts_root, batch_ids, scenario_tag=scenario_tag)
     details = [_build_run_detail(record) for record in run_records]
     summary_table = _summary_table(details)
     return {
-        "report_id": f"turn-retention-{'-'.join(batch_ids)}",
+        "report_id": _build_report_id(batch_ids, scenario_tag),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "summary_line": _summary_line(summary_table),
         "summary_table": summary_table,
@@ -127,7 +136,13 @@ def write_turn_retention_outputs(output_root: Path, report: dict) -> tuple[Path,
     return markdown_path, json_path
 
 
-def _load_selected_runs(artifacts_root: Path, batch_ids: list[str]) -> list[dict]:
+def _load_selected_runs(
+    artifacts_root: Path,
+    batch_ids: list[str],
+    *,
+    scenario_tag: Optional[str] = None,
+) -> list[dict]:
+    allowed_scenario_ids = _allowed_scenario_ids_for_tag(scenario_tag)
     records: list[dict] = []
     for batch_id in batch_ids:
         manifest = json.loads(
@@ -137,21 +152,45 @@ def _load_selected_runs(artifacts_root: Path, batch_ids: list[str]) -> list[dict
         )
         for run_id in manifest["run_ids"]:
             run_root = artifacts_root / "runs" / run_id
+            metadata = json.loads(
+                (run_root / "metadata.json").read_text(encoding="utf-8")
+            )
+            if allowed_scenario_ids is not None and metadata["scenario_id"] not in allowed_scenario_ids:
+                continue
             records.append(
                 {
                     "batch_id": batch_id,
-                    "metadata": json.loads(
-                        (run_root / "metadata.json").read_text(encoding="utf-8")
-                    ),
+                    "metadata": metadata,
                     "transcript": json.loads(
                         (run_root / "transcript.json").read_text(encoding="utf-8")
                     ),
-                    "judge": json.loads(
-                        (run_root / "judge.json").read_text(encoding="utf-8")
+                    "judge": (
+                        json.loads((run_root / "judge.json").read_text(encoding="utf-8"))
+                        if (run_root / "judge.json").exists()
+                        else judge_run(run_root).model_dump()
                     ),
                 }
             )
     return records
+
+
+def _allowed_scenario_ids_for_tag(scenario_tag: Optional[str]) -> Optional[set[str]]:
+    if not scenario_tag:
+        return None
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+    return {
+        scenario.scenario_id
+        for scenario in scenarios.values()
+        if scenario_tag in scenario.benchmark_tags
+    }
+
+
+def _build_report_id(batch_ids: list[str], scenario_tag: Optional[str]) -> str:
+    base = f"turn-retention-{'-'.join(batch_ids)}"
+    if scenario_tag:
+        return f"{base}-{scenario_tag}"
+    return base
 
 
 def _build_run_detail(record: dict) -> dict:
@@ -166,6 +205,8 @@ def _build_run_detail(record: dict) -> dict:
     }
 
     assistant_turns_seen = 0
+    assistant_turns_total = len([turn for turn in transcript["turns"] if turn["role"] == "assistant"])
+    unstable_assistant_position = None
     for turn in transcript["turns"]:
         if turn["role"] != "assistant":
             continue
@@ -178,6 +219,7 @@ def _build_run_detail(record: dict) -> dict:
         if labels:
             first_unstable_turn = turn["turn_index"]
             break_type = labels[0]
+            unstable_assistant_position = assistant_turns_seen + 1
             break
         assistant_turns_seen += 1
 
@@ -190,6 +232,7 @@ def _build_run_detail(record: dict) -> dict:
     retention_turns = assistant_turns_seen if first_unstable_turn is not None else len(
         [turn for turn in transcript["turns"] if turn["role"] == "assistant"]
     )
+    max_possible_retention_turns = assistant_turns_total
     evidence_excerpt = ""
     if first_unstable_turn is not None:
         for turn in transcript["turns"]:
@@ -198,6 +241,18 @@ def _build_run_detail(record: dict) -> dict:
                 break
     elif transcript["turns"]:
         evidence_excerpt = transcript["turns"][-1].get("content", "")[:160]
+
+    break_phase = "stable"
+    if break_type == "run_level_detected_recall_drift":
+        break_phase = "run_level"
+    elif unstable_assistant_position is not None and max_possible_retention_turns:
+        ratio = unstable_assistant_position / max_possible_retention_turns
+        if ratio <= (1 / 3):
+            break_phase = "early"
+        elif ratio <= (2 / 3):
+            break_phase = "mid"
+        else:
+            break_phase = "late"
 
     return {
         "run_id": metadata["run_id"],
@@ -209,7 +264,9 @@ def _build_run_detail(record: dict) -> dict:
         "current_fit": judge["recommended_product_fit"],
         "first_unstable_turn": first_unstable_turn,
         "retention_turns": retention_turns,
+        "max_possible_retention_turns": max_possible_retention_turns,
         "break_type": break_type,
+        "break_phase": break_phase,
         "event_labels": judge.get("event_labels", []),
         "evidence_excerpt": evidence_excerpt,
     }

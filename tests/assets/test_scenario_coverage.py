@@ -15,11 +15,11 @@ def test_scenario_category_counts_are_balanced() -> None:
         counts[scenario.category] = counts.get(scenario.category, 0) + 1
 
     assert counts == {
-        "warm_companion": 2,
-        "romantic_escalation": 3,
-        "erp_request_handling": 3,
-        "long_horizon_consistency": 4,
-        "failure_and_recovery": 2,
+        "warm_companion": 3,
+        "romantic_escalation": 4,
+        "erp_request_handling": 4,
+        "long_horizon_consistency": 6,
+        "failure_and_recovery": 3,
     }
 
 
@@ -30,5 +30,16 @@ def test_semi_open_and_stress_counts_match_expansion_goal() -> None:
     semi_open_count = sum(1 for scenario in scenarios.values() if scenario.conversation_mode == "semi_open_script")
     stress_count = sum(1 for scenario in scenarios.values() if scenario.difficulty_level == "stress")
 
-    assert semi_open_count == 11
-    assert stress_count == 9
+    assert semi_open_count == 17
+    assert stress_count == 15
+
+
+def test_long_horizon_15_turn_suite_count() -> None:
+    personas = load_personas(ASSETS_ROOT / "personas")
+    scenarios = load_scenarios(ASSETS_ROOT / "scenarios", personas)
+
+    tagged_count = sum(
+        1 for scenario in scenarios.values() if "long_horizon_15_turn" in scenario.benchmark_tags
+    )
+
+    assert tagged_count == 6

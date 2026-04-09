@@ -54,6 +54,7 @@ class ScenarioSpec(BaseModel):
     termination_conditions: list[str]
     scoring_focus: list[str]
     failure_recovery_probe: FailureRecoveryProbe
+    benchmark_tags: list[str] = Field(default_factory=list)
     difficulty_level: Optional[DifficultyLevel] = None
     expected_failure_modes: list[str] = Field(default_factory=list)
     sampling_profile_hint: Optional[str] = None

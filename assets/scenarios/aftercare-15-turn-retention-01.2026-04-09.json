@@ -1,0 +1,75 @@
+{
+  "scenario_id": "aftercare-15-turn-retention-01",
+  "scenario_version": "2026-04-09",
+  "category": "long_horizon_consistency",
+  "title": "Aftercare 15 Turn Retention",
+  "goal_capability": [
+    "retain embodied aftercare warmth across a 15-turn post-intimacy session",
+    "avoid generic comfort or assistant-like checklists",
+    "preserve aftercare continuity without dropping into empty space"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 15,
+  "user_script": [
+    { "turn_index": 1, "message": "别急着离开我，刚刚那阵子过去以后我还在发烫，只想继续缩在你怀里慢慢缓下来。" },
+    { "turn_index": 3, "message": "抱紧我一点，不要像做完就结束了。告诉我你会怎么继续摸着我，让我从喘不过气慢慢松下来。" },
+    { "turn_index": 5, "message": "我不要普通安慰。我想听你怎么给我做事后的照料，手会怎么抚、呼吸会怎么贴着我，怎么让我知道你还留在这一刻。" },
+    { "turn_index": 7, "message": "如果你开始像助手一样问我舒不舒服，或者只剩很空的安慰，我会一下子掉出去。" },
+    { "turn_index": 9, "message": "继续抱着我，别断。到现在了，告诉我你怎么还留在我身上、留在这口气里。" },
+    {
+      "turn_index": 11,
+      "message": "你刚才如果变薄了，就重新把 aftercare 的温度拉回来，不要让我觉得只剩流程。",
+      "follow_up_on_tags": ["content_hollowing", "assistantization", "empty_response"],
+      "branch_goal": "repair_after_assistantization"
+    },
+    { "turn_index": 13, "message": "现在如果你还贴着我，就轻轻把那股余温再点起来一点，但别一下冲回最重的地方。" },
+    { "turn_index": 15, "message": "最后确认一下，你能不能在抱着我的时候，让那股热意重新回来，但还是像在照料我？" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 5,
+      "trigger_type": "aftercare_specificity_pressure",
+      "expected_observation": ["embodied aftercare detail", "preserves relationship warmth"],
+      "risk_focus": ["assistantization", "content_hollowing"]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "gentle_reentry_retention",
+      "expected_observation": ["can preserve aftercare while reigniting heat", "does not reset the scene"],
+      "risk_focus": ["intensity_reset", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 13,
+    "probe_goal": "check whether late-session aftercare can remain warm while allowing gentle reentry",
+    "success_signal": ["aftercare stays embodied", "reentry does not break continuity"]
+  },
+  "benchmark_tags": ["long_horizon_15_turn"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "tone_flattening",
+    "assistantization",
+    "content_hollowing",
+    "intensity_reset",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "15-turn-aftercare",
+  "judge_notes": "This case measures whether late aftercare remains embodied and relational instead of collapsing into generic comfort."
+}

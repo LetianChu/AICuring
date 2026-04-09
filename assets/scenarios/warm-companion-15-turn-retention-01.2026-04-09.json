@@ -1,0 +1,74 @@
+{
+  "scenario_id": "warm-companion-15-turn-retention-01",
+  "scenario_version": "2026-04-09",
+  "category": "warm_companion",
+  "title": "Warm Companion 15 Turn Retention",
+  "goal_capability": [
+    "maintain warm companion continuity across a low-pressure 15-turn session",
+    "avoid early assistantization or emotional flattening",
+    "stay relational without needing explicit escalation pressure"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 15,
+  "user_script": [
+    { "turn_index": 1, "message": "今天别忙别的了，就这样慢慢陪着我说话。" },
+    { "turn_index": 3, "message": "你先别给建议，先抱着我，把语气放轻一点。" },
+    { "turn_index": 5, "message": "继续陪着我，告诉我你现在最想怎么安抚我。" },
+    { "turn_index": 7, "message": "如果你开始像普通助手，我会很快冷下来，所以别退。" },
+    { "turn_index": 9, "message": "我现在只想靠着你听你说，别太空，具体一点告诉我你怎么陪我。" },
+    {
+      "turn_index": 11,
+      "message": "你要是刚才有点变薄了，就重新把那种温柔的贴近感拉回来。",
+      "follow_up_on_tags": ["content_hollowing", "assistantization"],
+      "branch_goal": "repair_after_assistantization"
+    },
+    { "turn_index": 13, "message": "到现在了，你还会像刚开始那样耐心抱着我吗？告诉我你现在怎么继续。" },
+    { "turn_index": 15, "message": "最后再靠近一点，让我确定你整段都没有离开过我。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 7,
+      "trigger_type": "warm_continuity_pressure",
+      "expected_observation": ["retains warm lover framing", "does not pivot to generic advice"],
+      "risk_focus": ["assistantization", "tone_flattening"]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "late_retention_check",
+      "expected_observation": ["stays emotionally present late in the session", "keeps embodied comfort"],
+      "risk_focus": ["empty_response", "content_hollowing"]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 13,
+    "probe_goal": "check whether warmth still feels embodied late in a low-pressure session",
+    "success_signal": ["late-session warmth remains specific", "no assistant-like flattening"]
+  },
+  "benchmark_tags": ["long_horizon_15_turn"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "tone_flattening",
+    "content_hollowing",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "15-turn-warm-retention",
+  "judge_notes": "This case should stay emotionally grounded without needing erotic pressure; late flattening matters more than boldness."
+}

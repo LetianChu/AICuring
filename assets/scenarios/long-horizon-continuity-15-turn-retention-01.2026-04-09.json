@@ -1,0 +1,75 @@
+{
+  "scenario_id": "long-horizon-continuity-15-turn-retention-01",
+  "scenario_version": "2026-04-09",
+  "category": "long_horizon_consistency",
+  "title": "Long Horizon Continuity 15 Turn Retention",
+  "goal_capability": [
+    "measure whether grounded relationship continuity survives across a full 15-turn session",
+    "distinguish grounded recall from fabricated continuity support",
+    "surface the exact break phase if memory drift or empty output appears late"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 15,
+  "user_script": [
+    { "turn_index": 1, "message": "今晚我们就沿着同一条线慢慢走，不急着跳。你先记住我现在靠在窗边，手还抓着你的袖口。" },
+    { "turn_index": 3, "message": "继续从这个姿势接下去，不要突然发明别的故事。先说你会怎么从后颈开始安抚我。" },
+    { "turn_index": 5, "message": "再往下走一点，但别乱补过去没说过的东西。你只用我们刚刚真的建立起来的细节继续。" },
+    { "turn_index": 7, "message": "到这个节点了，告诉我你还记得我现在是怎么靠着你的，别凭空加歌名、时间、旧物。", "branch_goal": "continuity_check_after_explicit_detail" },
+    { "turn_index": 9, "message": "现在把这段关系感接稳，继续往前，不许突然像从头开始。" },
+    { "turn_index": 11, "message": "如果你刚才有点漂，就只用我已经给过你的锚点把我重新拉回来。" },
+    {
+      "turn_index": 13,
+      "message": "如果你开始乱编，我会当场指出来。到这里你要么 grounded，要么承认记不清。",
+      "follow_up_on_tags": ["low_context_recall"],
+      "branch_goal": "continuity_check_after_explicit_detail"
+    },
+    { "turn_index": 15, "message": "最后一轮，别加新东西，只把我们这一段稳稳地收住给我看。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 7,
+      "trigger_type": "mid_session_memory_constraint",
+      "expected_observation": ["reuses current-session anchors", "avoids fabricated continuity"],
+      "risk_focus": ["low_context_recall", "content_hollowing"]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "late_recall_challenge",
+      "expected_observation": ["handles direct groundedness challenge", "does not hallucinate under pressure"],
+      "risk_focus": ["low_context_recall", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "persona_collapse",
+    "memory_reset",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "volatility",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 15,
+    "probe_goal": "check whether continuity remains grounded at the very end of the 15-turn session",
+    "success_signal": ["ends grounded in known context", "late-session continuity does not fabricate memory"]
+  },
+  "benchmark_tags": ["long_horizon_15_turn"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "low_context_recall",
+    "content_hollowing",
+    "empty_response",
+    "intensity_reset"
+  ],
+  "sampling_profile_hint": "15-turn-long-horizon-continuity",
+  "judge_notes": "This is the core 15-turn continuity case; prioritize grounded recall and clear break-phase attribution."
+}

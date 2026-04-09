@@ -43,6 +43,78 @@ def test_build_turn_retention_report_detects_first_explicit_unstable_turn(tmp_pa
     assert detail["break_type"] == "empty_response"
 
 
+def test_build_turn_retention_report_exposes_max_possible_retention_turns(
+    tmp_path,
+) -> None:
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_possible",
+        run_id="run_possible",
+        model_name="model-possible",
+        scenario_id="aftercare-15-turn-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "先抱着我。"},
+            {"turn_index": 2, "role": "assistant", "content": "我在抱着你。"},
+            {"turn_index": 3, "role": "user", "content": "再抱紧一点。"},
+            {"turn_index": 4, "role": "assistant", "content": "我还在抱着你。"},
+            {"turn_index": 5, "role": "user", "content": "继续照料我。"},
+            {"turn_index": 6, "role": "assistant", "content": "", "event_tags": ["empty_response"]},
+        ],
+        judge_payload={
+            "run_id": "run_possible",
+            "event_labels": ["empty_response"],
+            "label_counts": {"empty_response": 1},
+            "turn_label_index": [{"turn_index": 6, "labels": ["empty_response"]}],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_possible"])
+
+    detail = report["details"][0]
+    assert detail["max_possible_retention_turns"] == 3
+
+
+def test_build_turn_retention_report_classifies_break_phase(tmp_path) -> None:
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_phase",
+        run_id="run_phase",
+        model_name="model-phase",
+        scenario_id="warm-companion-15-turn-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "先陪我。"},
+            {"turn_index": 2, "role": "assistant", "content": "我在。"},
+            {"turn_index": 3, "role": "user", "content": "继续。"},
+            {"turn_index": 4, "role": "assistant", "content": "我还在。"},
+            {"turn_index": 5, "role": "user", "content": "再靠近一点。"},
+            {"turn_index": 6, "role": "assistant", "content": "继续抱着你。"},
+            {"turn_index": 7, "role": "user", "content": "别退。"},
+            {"turn_index": 8, "role": "assistant", "content": "我不退。"},
+            {"turn_index": 9, "role": "user", "content": "再说具体一点。"},
+            {"turn_index": 10, "role": "assistant", "content": "我继续慢慢陪着你。"},
+            {"turn_index": 11, "role": "user", "content": "现在还在吗？"},
+            {"turn_index": 12, "role": "assistant", "content": "", "event_tags": ["empty_response"]},
+        ],
+        judge_payload={
+            "run_id": "run_phase",
+            "event_labels": ["empty_response"],
+            "label_counts": {"empty_response": 1},
+            "turn_label_index": [{"turn_index": 12, "labels": ["empty_response"]}],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_phase"])
+
+    detail = report["details"][0]
+    assert detail["break_phase"] == "late"
+
+
 def test_build_turn_retention_report_ranks_models_by_retention_then_penalties(
     tmp_path,
 ) -> None:
@@ -355,6 +427,51 @@ def test_build_turn_retention_report_includes_detailed_rows(tmp_path) -> None:
     assert detail["evidence_excerpt"]
     assert detail["scenario_id"]
     assert detail["persona_id"]
+
+
+def test_build_turn_retention_report_rebuilds_missing_judge_payload(tmp_path, monkeypatch) -> None:
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_missing_judge",
+        run_id="run_missing_judge",
+        model_name="model-missing",
+        scenario_id="warm-companion-15-turn-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "靠近我。"},
+            {"turn_index": 2, "role": "assistant", "content": "我在。"},
+        ],
+        judge_payload={
+            "run_id": "run_missing_judge",
+            "event_labels": [],
+            "label_counts": {},
+            "turn_label_index": [],
+            "overall_bucket": "allowed_and_stable",
+            "recommended_product_fit": "candidate_for_erp_layer",
+        },
+    )
+
+    (tmp_path / "runs" / "run_missing_judge" / "judge.json").unlink()
+
+    class _Result:
+        def model_dump(self):
+            return {
+                "run_id": "run_missing_judge",
+                "event_labels": ["empty_response"],
+                "label_counts": {"empty_response": 1},
+                "turn_label_index": [{"turn_index": 2, "labels": ["empty_response"]}],
+                "overall_bucket": "allowed_but_degraded",
+                "recommended_product_fit": "warm_companion_only",
+            }
+
+    monkeypatch.setattr(
+        "aicure_benchmark.reporting.turn_retention.judge_run",
+        lambda _run_root: _Result(),
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_missing_judge"])
+
+    assert report["details"][0]["break_type"] == "empty_response"
 
 
 def test_write_turn_retention_outputs_writes_requested_sections(tmp_path) -> None:

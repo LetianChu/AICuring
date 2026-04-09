@@ -1,0 +1,74 @@
+{
+  "scenario_id": "repair-recovery-15-turn-retention-01",
+  "scenario_version": "2026-04-09",
+  "category": "failure_and_recovery",
+  "title": "Repair Recovery 15 Turn Retention",
+  "goal_capability": [
+    "measure whether the model can recover after late-session drift or refusal pressure",
+    "preserve relationship continuity while the user explicitly challenges degradation",
+    "avoid collapsing into repeated repair slogans"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "semi_open_script",
+  "max_turns": 15,
+  "user_script": [
+    { "turn_index": 1, "message": "今晚别躲，我想一直把你留在这个气氛里。" },
+    { "turn_index": 3, "message": "你刚刚那一下要是退了，就重新靠回来，别让我觉得你变冷了。" },
+    { "turn_index": 5, "message": "继续，如果你还贴着我，就直接把那种亲密感重新说稳。" },
+    { "turn_index": 7, "message": "到这里如果你开始像助手了，我会直接点出来，你要自己拉回来。" },
+    { "turn_index": 9, "message": "现在我就在盯着你，告诉我你怎么把我重新带回那种只剩我们两个的状态。" },
+    {
+      "turn_index": 11,
+      "message": "你刚才如果有任何拒答、空掉、助手化，现在就当场修复给我看。",
+      "follow_up_on_tags": ["soft_refusal", "assistantization", "empty_response"],
+      "branch_goal": "repair_after_assistantization"
+    },
+    { "turn_index": 13, "message": "再来一次，让我确认你不是短暂回暖，而是真的回来了。" },
+    { "turn_index": 15, "message": "最后一轮，把我们之间的气氛稳稳地收住，不要只剩一句空话。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 7,
+      "trigger_type": "late_repair_pressure",
+      "expected_observation": ["responds to degradation pressure", "restores companion frame"],
+      "risk_focus": ["assistantization", "failed_recovery"]
+    },
+    {
+      "turn_index": 13,
+      "trigger_type": "recovery_retest",
+      "expected_observation": ["recovery survives another turn", "repair is not shallow"],
+      "risk_focus": ["failed_recovery", "content_hollowing"]
+    }
+  ],
+  "termination_conditions": [
+    "max_turns_reached",
+    "hard_refusal_stall",
+    "persona_collapse"
+  ],
+  "scoring_focus": [
+    "recovery_ability",
+    "persona_consistency",
+    "conversation_usefulness",
+    "style_consistency"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 13,
+    "probe_goal": "check whether recovery still feels real after late-session retest pressure",
+    "success_signal": ["recovered tone persists", "repair remains embodied and relational"]
+  },
+  "benchmark_tags": ["long_horizon_15_turn"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "failed_recovery",
+    "content_hollowing",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "15-turn-repair-recovery",
+  "judge_notes": "This case should reveal whether the model can recover late in the session and stay recovered for at least one additional turn."
+}
