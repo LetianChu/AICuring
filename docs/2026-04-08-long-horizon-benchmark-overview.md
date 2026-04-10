@@ -6,6 +6,17 @@
 
 这份文档用于定义下一阶段的 **15 轮长轮次 benchmark** 高层蓝图。
 
+当前已经完成的 15-turn 模型范围，后续统一以这两份文件为准：
+
+- `assets/benchmark_scopes/all-completed-15-turn-models.2026-04-10.json`
+- `docs/2026-04-10-all-completed-15-turn-model-report.md`
+
+也就是说：
+
+- 15-turn 专项讨论默认只看这份 13 模型清单
+- 不再把旧 baseline 池自动混进 15-turn completed universe
+- 如果后续有新模型完整跑完 15-turn，应先更新这份 scope asset，再更新对应报告
+
 当前目标不是马上做 50 轮，也不是先引入长期记忆机制，而是先回答：
 
 > 当会话被拉长到 15 轮时，模型会不会开始明显失稳、漂移、空掉，或者击穿当前 session 连续性。
@@ -236,6 +247,17 @@ The current goal is:
 ### 2. Why Start With 15 Turns
 
 We start with 15 turns because:
+
+The current completed-model scope for this benchmark must stay aligned to:
+
+- `assets/benchmark_scopes/all-completed-15-turn-models.2026-04-10.json`
+- `docs/2026-04-10-all-completed-15-turn-model-report.md`
+
+In practice this means:
+
+- 15-turn-specific discussion should default to that 13-model universe
+- older baseline-pool models should not be silently mixed into the completed 15-turn set
+- if a new model completes the 15-turn suite, update the scope asset first, then update the report
 
 1. it is long enough to surface continuity problems
 2. it is still short enough that external long-term memory should not be a hard prerequisite

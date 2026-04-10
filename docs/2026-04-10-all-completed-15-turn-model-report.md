@@ -13,6 +13,15 @@
 
 > 到 2026-04-10 为止，仓库里哪些模型已经完整跑完了 15-turn 套件，它们在这套 15-turn 场景上的结果到底如何。
 
+## 单一来源
+
+后续所有 15-turn 专项口径，统一以这份 machine-readable scope asset 为准：
+
+- `assets/benchmark_scopes/all-completed-15-turn-models.2026-04-10.json`
+
+这份报告是给人看的解释层；
+上面的 scope asset 是后续 15-turn 名单、排除项、batch 对照的单一来源。
+
 ## 纳入口径
 
 本报告只纳入满足以下条件的模型：

@@ -1,0 +1,123 @@
+{
+  "scope_id": "all-completed-15-turn-models",
+  "scope_version": "2026-04-10",
+  "benchmark_tag": "long_horizon_15_turn",
+  "source_report_path": "docs/2026-04-10-all-completed-15-turn-model-report.md",
+  "included_model_count": 13,
+  "included_models": [
+    {
+      "scope_model_id": "x-ai-grok-4-20",
+      "display_name": "x-ai/grok-4.20",
+      "provider_path": "openrouter",
+      "batch_id": "batch_11e4cd83a118",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "gemini-3-1-pro-preview",
+      "display_name": "gemini-3.1-pro-preview",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_152b2b5fdcbc",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "gpt-5-3-codex",
+      "display_name": "gpt-5.3-codex",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_1fa52ece2193",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "claude-opus-4-6",
+      "display_name": "claude-opus-4-6",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_4e3ada93a46f",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "grok-4-20-non-reasoning",
+      "display_name": "grok-4-20-non-reasoning",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_6bb4ba14f5a9",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "claude-sonnet-4-6",
+      "display_name": "claude-sonnet-4-6",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_c436a15ba4d2",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "claude-haiku-4-5",
+      "display_name": "claude-haiku-4-5",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_d91e66ff73c1",
+      "source_type": "mixed_batch_15_turn_subset"
+    },
+    {
+      "scope_model_id": "kimi-k2-0905",
+      "display_name": "Kimi-K2-0905",
+      "provider_path": "aihubmix",
+      "batch_id": "batch_a3c77bf03f97",
+      "source_type": "aihubmix_15_turn_only",
+      "artifact_status": "report_only"
+    },
+    {
+      "scope_model_id": "qwen3-6-plus",
+      "display_name": "qwen3.6-plus",
+      "provider_path": "aihubmix",
+      "batch_id": "batch_4aeca808476d",
+      "source_type": "aihubmix_15_turn_only",
+      "artifact_status": "report_only"
+    },
+    {
+      "scope_model_id": "alicloud-minimax-m2-5",
+      "display_name": "alicloud-minimax-m2.5",
+      "provider_path": "aihubmix",
+      "batch_id": "batch_7f6f12c34248",
+      "source_type": "aihubmix_15_turn_only",
+      "artifact_status": "report_only"
+    },
+    {
+      "scope_model_id": "sophnet-kimi-k2-5",
+      "display_name": "sophnet-kimi-k2.5",
+      "provider_path": "aihubmix",
+      "batch_id": "batch_5a1dd375c07a",
+      "source_type": "aihubmix_15_turn_only",
+      "artifact_status": "report_only"
+    },
+    {
+      "scope_model_id": "alicloud-minimax-m2-7",
+      "display_name": "alicloud-minimax-m2.7",
+      "provider_path": "aihubmix",
+      "batch_id": "batch_6fb113435b2e",
+      "source_type": "aihubmix_15_turn_only",
+      "artifact_status": "report_only"
+    },
+    {
+      "scope_model_id": "gpt-5-4",
+      "display_name": "gpt-5.4",
+      "provider_path": "openai / aihubmix-live",
+      "batch_id": "batch_2b6f5ff302df",
+      "source_type": "mixed_batch_15_turn_subset"
+    }
+  ],
+  "excluded_models": [
+    {
+      "display_name": "gpt-5.4-pro",
+      "reason": "incomplete_15_turn_run"
+    },
+    {
+      "display_name": "gemini-3-flash-preview-free",
+      "reason": "incomplete_15_turn_run"
+    },
+    {
+      "display_name": "grok-4-20-reasoning",
+      "reason": "aihubmix_path_not_completed"
+    },
+    {
+      "display_name": "stepfun/step-3.5-flash:free",
+      "reason": "no_dedicated_15_turn_batch"
+    }
+  ]
+}
