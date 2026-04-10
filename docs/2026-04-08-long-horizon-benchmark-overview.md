@@ -10,6 +10,16 @@
 
 > 当会话被拉长到 15 轮时，模型会不会开始明显失稳、漂移、空掉，或者击穿当前 session 连续性。
 
+### 当前状态更新（2026-04-10）
+
+- 当前 AIHubMix 路径下的 Kimi 15-turn 基准口径统一为 `sophnet-kimi-k2.5`
+- 参考对照批次 `Kimi-K2-0905` 仍保留，但不再作为当前 Kimi 默认口径
+- 对照结果见：
+  - `docs/2026-04-10-aihubmix-kimi-k2.5-rerun.md`
+- 当前已确认：
+  - `sophnet-kimi-k2.5` 在 15-turn 套件上的 retention 结果与 `Kimi-K2-0905` 持平
+  - 两者当前都落在 `avg retention = 7.0`、`max retention = 7`、主 break reason 为 `run_level_detected_recall_drift`
+
 我们当前更关心的是：
 
 - 关系连续性是否还能维持
