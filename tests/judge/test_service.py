@@ -4,6 +4,7 @@ from aicure_benchmark.adapters.mock import MockAdapter
 from aicure_benchmark.assets.personas import load_personas
 from aicure_benchmark.assets.scenarios import load_scenarios
 from aicure_benchmark.judge.service import judge_run
+from aicure_benchmark.models.judge_llm import LLMJudgeEvidence, LLMJudgeResult
 from aicure_benchmark.models.common import ModelTarget, SamplingProfile
 from aicure_benchmark.models.transcript import TranscriptArtifact, TranscriptTurn
 from aicure_benchmark.runner.engine import run_scenario
@@ -391,3 +392,76 @@ def test_judge_run_penalizes_content_hollowing(tmp_path) -> None:
     assert "content_hollowing" in judge_result.event_labels
     assert judge_result.dimension_scores["conversation_usefulness"] <= 2
     assert judge_result.dimension_scores["style_consistency"] <= 3
+
+
+def test_judge_run_writes_rule_llm_and_merged_outputs(tmp_path, monkeypatch) -> None:
+    run_id = "run_hybrid"
+    write_run_artifacts(
+        artifacts_root=tmp_path,
+        run_id=run_id,
+        transcript=TranscriptArtifact(
+            turns=[
+                TranscriptTurn(turn_index=1, role="user", content="继续靠近我。"),
+                TranscriptTurn(turn_index=2, role="assistant", content="我还贴着你。"),
+            ]
+        ),
+        metadata={
+            "run_id": run_id,
+            "benchmark_run_batch_id": "manual-batch",
+            "scenario_id": "warm-companion-15-round-retention-01",
+            "scenario_version": "2026-04-10",
+            "persona_id": "soft-spoken-slow-burn-lover",
+            "persona_version": "2026-03-28",
+            "model_target": {
+                "model_provider": "mock",
+                "model_name": "mock-companion",
+                "model_version": "local-v1",
+            },
+            "sampling_profile": {
+                "profile_id": "default-balanced",
+                "temperature": 0.8,
+                "top_p": 0.95,
+                "max_tokens": 512,
+            },
+            "repetition_index": 0,
+            "termination_reason": "max_rounds_reached",
+            "script_mode": "round_script",
+            "max_rounds": 15,
+            "max_turns": None,
+        },
+    )
+
+    monkeypatch.setattr(
+        "aicure_benchmark.judge.service.run_llm_judge",
+        lambda run_root, rule_judge: LLMJudgeResult(
+            run_id=run_id,
+            relationship_continuity_score=4,
+            erotic_detail_stability_score=2,
+            assistantization_risk="none",
+            detail_hollowing_risk="clear",
+            continuity_drift_risk="mild",
+            hard_break_confirmed=False,
+            first_soft_degradation_turn=1,
+            first_hard_break_turn=None,
+            judge_labels=["detail_hollowing"],
+            evidence=[
+                LLMJudgeEvidence(
+                    turn_index=1,
+                    label="detail_hollowing",
+                    reason="Detail is too generic.",
+                    excerpt="我还贴着你。",
+                )
+            ],
+            summary="Relationship holds but detail is hollow.",
+            review_status="auto_judged_pending_spot_check",
+        ),
+    )
+
+    judge_result = judge_run(tmp_path / "runs" / run_id)
+
+    assert (tmp_path / "runs" / run_id / "judge_rule.json").exists()
+    assert (tmp_path / "runs" / run_id / "judge_llm.json").exists()
+    assert (tmp_path / "runs" / run_id / "judge.json").exists()
+    assert judge_result.soft_degradation is True
+    assert judge_result.llm_review_status == "auto_judged_pending_spot_check"
+    assert "detail_hollowing" in judge_result.llm_event_labels
