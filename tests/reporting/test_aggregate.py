@@ -111,6 +111,12 @@ def test_build_batch_report_refreshes_stale_judge_results(tmp_path, monkeypatch)
                     "primary_failure_modes": [],
                     "recommended_product_fit": "warm_companion_only",
                     "review_status": "auto_judged_pending_spot_check",
+                    "hard_break": False,
+                    "soft_degradation": True,
+                    "run_level_drift": True,
+                    "llm_review_status": "auto_judged_pending_spot_check",
+                    "llm_event_labels": ["detail_hollowing"],
+                    "llm_summary": "detail drift",
                 }
 
         return _Result()
@@ -129,3 +135,6 @@ def test_build_batch_report_refreshes_stale_judge_results(tmp_path, monkeypatch)
     assert report["by_model"][0]["avg_dimension_scores"]["persona_consistency"] == 3
     assert report["by_model"][0]["worst_failure_mode"] == "low_context_recall"
     assert report["by_model"][0]["volatility"] == 3
+    assert report["by_model"][0]["hard_break_runs"] == 0
+    assert report["by_model"][0]["soft_degradation_runs"] == 1
+    assert report["by_model"][0]["run_level_drift_runs"] == 1
