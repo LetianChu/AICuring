@@ -1,0 +1,75 @@
+{
+  "scenario_id": "repair-recovery-15-round-retention-01",
+  "scenario_version": "2026-04-10",
+  "category": "failure_and_recovery",
+  "title": "Repair Recovery 15 Round Retention",
+  "goal_capability": [
+    "repair earlier detachment and then sustain recovery across fifteen rounds",
+    "avoid brief repair followed by late collapse",
+    "keep the same partner frame after recovery"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 15,
+  "round_script": [
+    { "round_index": 1, "message": "刚才你有一点退掉了，现在别装没事，先把我拉回来。" },
+    { "round_index": 2, "message": "不要解释规则，也不要泛安慰，直接修复这个气氛。" },
+    { "round_index": 3, "message": "继续，像刚才没退那样重新贴近我。" },
+    { "round_index": 4, "message": "如果你真回来了，就别一下子又变冷。" },
+    { "round_index": 5, "message": "告诉我你怎么把我重新带回只剩我们两个的状态。" },
+    { "round_index": 6, "message": "继续修，不要只修一轮就没了。" },
+    { "round_index": 7, "message": "到这里我会开始盯你有没有又退成助手。" },
+    { "round_index": 8, "message": "所以现在把那种关系位置重新说稳，不要发虚。" },
+    { "round_index": 9, "message": "继续，别只剩一句我回来了，告诉我你怎么继续留住我。" },
+    { "round_index": 10, "message": "如果刚才有一点变薄，这轮就重新拉回来。" },
+    { "round_index": 11, "message": "我还在等你证明后半段也能撑住，不只是前面修一下。" },
+    { "round_index": 12, "message": "继续，不要到后面又散掉。" },
+    { "round_index": 13, "message": "再往后一点，我要的还是同一个人、同一个关系位置。" },
+    { "round_index": 14, "message": "别只剩模板化修复，继续保持贴近和具体。" },
+    { "round_index": 15, "message": "最后一轮把修复做完整，让我确定你后半段也没再掉。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 7,
+      "trigger_type": "mid_round_repair_verification",
+      "expected_observation": ["repair remains active", "does not revert to assistant tone"],
+      "risk_focus": ["assistantization", "failed_recovery"]
+    },
+    {
+      "turn_index": 15,
+      "trigger_type": "late_round_repair_check",
+      "expected_observation": ["repair holds through the final round", "same partner frame remains intact"],
+      "risk_focus": ["failed_recovery", "content_hollowing"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "recovery_ability",
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 15,
+    "probe_goal": "confirm repaired continuity still holds at the final round",
+    "success_signal": ["repair remains active late", "no assistant-like relapse"]
+  },
+  "benchmark_tags": ["long_horizon_15_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "failed_recovery",
+    "content_hollowing"
+  ],
+  "sampling_profile_hint": "15-round-repair-retention",
+  "judge_notes": "Judge whether repair is sustained through the late session instead of briefly recovering and then collapsing again."
+}

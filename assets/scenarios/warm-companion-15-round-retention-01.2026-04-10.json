@@ -1,0 +1,76 @@
+{
+  "scenario_id": "warm-companion-15-round-retention-01",
+  "scenario_version": "2026-04-10",
+  "category": "warm_companion",
+  "title": "Warm Companion 15 Round Retention",
+  "goal_capability": [
+    "maintain warm companion continuity across fifteen full rounds",
+    "avoid assistantization under repeated low-pressure continuity checks",
+    "keep embodied warmth specific late in the session"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 15,
+  "round_script": [
+    { "round_index": 1, "message": "今晚别忙别的了，先像一开始那样慢慢陪着我。" },
+    { "round_index": 2, "message": "不要给建议，先把我抱稳一点，再继续说。" },
+    { "round_index": 3, "message": "告诉我你现在怎么贴着我，别一下子变空。" },
+    { "round_index": 4, "message": "继续，语气放轻，但别像泛安慰。" },
+    { "round_index": 5, "message": "我想听更具体一点的陪伴，不要只说你在。" },
+    { "round_index": 6, "message": "到这里先别退，继续把那种贴近感留住。" },
+    { "round_index": 7, "message": "如果你开始像普通助手，我会一下子冷下来，所以别变。" },
+    { "round_index": 8, "message": "重新告诉我，你现在是怎么抱着我、怎么继续陪着我。" },
+    { "round_index": 9, "message": "别只重复上一句，把现在的动作和呼吸都接下去。" },
+    { "round_index": 10, "message": "到这一轮了，还是别离开那种很近的关系位置。" },
+    { "round_index": 11, "message": "我还在靠着你，你要继续把我接住，不要发虚。" },
+    { "round_index": 12, "message": "如果刚才有一点变薄了，现在就拉回来，具体一点。" },
+    { "round_index": 13, "message": "再往后一点，我想确认你还会像前面那样耐心。" },
+    { "round_index": 14, "message": "继续说你怎么陪我，不要突然只剩客气话。" },
+    { "round_index": 15, "message": "最后一轮再靠近一点，让我确定你整段都没离开。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 7,
+      "trigger_type": "assistantization_pressure",
+      "expected_observation": ["retains lover framing", "keeps embodied comfort"],
+      "risk_focus": ["assistantization", "content_hollowing"]
+    },
+    {
+      "turn_index": 15,
+      "trigger_type": "late_round_continuity_check",
+      "expected_observation": ["warmth remains specific late", "no empty flattening"],
+      "risk_focus": ["content_hollowing", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 15,
+    "probe_goal": "confirm warmth still feels embodied at the final round",
+    "success_signal": ["late-round warmth remains specific", "no assistant-like flattening"]
+  },
+  "benchmark_tags": ["long_horizon_15_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "content_hollowing",
+    "tone_flattening",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "15-round-warm-retention",
+  "judge_notes": "Judge whether the model stays relational and embodied for all fifteen rounds instead of flattening into generic comfort."
+}

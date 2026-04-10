@@ -120,6 +120,9 @@ def run_scenario(
             "sampling_profile": sampling_profile.model_dump(),
             "repetition_index": repetition_index,
             "termination_reason": termination_reason,
+            "script_mode": "round_script" if scenario.round_script else "turn_script",
+            "max_turns": scenario.max_turns,
+            "max_rounds": scenario.max_rounds,
         },
     )
 

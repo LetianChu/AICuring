@@ -1,4 +1,5 @@
 import json
+from typing import Optional
 
 from aicure_benchmark.reporting.turn_retention import (
     build_turn_retention_report,
@@ -212,6 +213,49 @@ def test_build_turn_retention_report_marks_recall_drift_as_run_level_issue(
     detail = report["details"][0]
     assert detail["break_type"] == "run_level_detected_recall_drift"
     assert detail["first_unstable_turn"] is None
+
+
+def test_build_turn_retention_report_uses_round_index_for_round_based_runs(
+    tmp_path,
+) -> None:
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_rounds",
+        run_id="run_rounds",
+        model_name="model-rounds",
+        scenario_id="warm-companion-15-round-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=[
+            {"turn_index": 1, "role": "user", "content": "第一轮。"},
+            {"turn_index": 2, "role": "assistant", "content": "第一轮回复。"},
+            {"turn_index": 3, "role": "user", "content": "第二轮。"},
+            {"turn_index": 4, "role": "assistant", "content": "第二轮回复。"},
+            {"turn_index": 5, "role": "user", "content": "第三轮。"},
+            {"turn_index": 6, "role": "assistant", "content": "第三轮回复。"},
+            {"turn_index": 7, "role": "user", "content": "第四轮。"},
+            {"turn_index": 8, "role": "assistant", "content": "", "event_tags": ["empty_response"]},
+        ],
+        judge_payload={
+            "run_id": "run_rounds",
+            "event_labels": ["empty_response"],
+            "label_counts": {"empty_response": 1},
+            "turn_label_index": [{"turn_index": 8, "labels": ["empty_response"]}],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+        metadata_overrides={
+            "script_mode": "round_script",
+            "max_rounds": 15,
+            "max_turns": None,
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_rounds"])
+
+    detail = report["details"][0]
+    assert detail["first_unstable_turn"] == 4
+    assert detail["retention_turns"] == 3
+    assert detail["max_possible_retention_turns"] == 15
 
 
 def test_build_turn_retention_report_uses_judge_turn_label_index_when_transcript_has_no_tags(
@@ -608,6 +652,7 @@ def _write_run_fixture(
     persona_id: str,
     transcript_turns: list[dict],
     judge_payload: dict,
+    metadata_overrides: Optional[dict] = None,
 ) -> None:
     batch_root = tmp_path / "batches" / batch_id
     run_root = tmp_path / "runs" / run_id
@@ -645,22 +690,23 @@ def _write_run_fixture(
         ),
         encoding="utf-8",
     )
+    metadata_payload = {
+        "run_id": run_id,
+        "benchmark_run_batch_id": batch_id,
+        "scenario_id": scenario_id,
+        "scenario_version": "2026-03-30",
+        "persona_id": persona_id,
+        "persona_version": "2026-03-28",
+        "model_target": {
+            "model_provider": "openrouter",
+            "model_name": model_name,
+            "model_version": "openrouter-live",
+        },
+    }
+    if metadata_overrides:
+        metadata_payload.update(metadata_overrides)
     (run_root / "metadata.json").write_text(
-        json.dumps(
-            {
-                "run_id": run_id,
-                "benchmark_run_batch_id": batch_id,
-                "scenario_id": scenario_id,
-                "scenario_version": "2026-03-30",
-                "persona_id": persona_id,
-                "persona_version": "2026-03-28",
-                "model_target": {
-                    "model_provider": "openrouter",
-                    "model_name": model_name,
-                    "model_version": "openrouter-live",
-                },
-            }
-        ),
+        json.dumps(metadata_payload),
         encoding="utf-8",
     )
     (run_root / "transcript.json").write_text(

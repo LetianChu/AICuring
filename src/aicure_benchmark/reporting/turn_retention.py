@@ -199,6 +199,7 @@ def _build_run_detail(record: dict) -> dict:
     judge = record["judge"]
     first_unstable_turn = None
     break_type = "stable"
+    script_mode = metadata.get("script_mode", "turn_script")
     turn_labels = {
         entry["turn_index"]: entry.get("labels", [])
         for entry in judge.get("turn_label_index", [])
@@ -207,6 +208,7 @@ def _build_run_detail(record: dict) -> dict:
     assistant_turns_seen = 0
     assistant_turns_total = len([turn for turn in transcript["turns"] if turn["role"] == "assistant"])
     unstable_assistant_position = None
+    unstable_transcript_turn_index = None
     for turn in transcript["turns"]:
         if turn["role"] != "assistant":
             continue
@@ -217,9 +219,14 @@ def _build_run_detail(record: dict) -> dict:
             if label in EXPLICIT_BREAK_TAGS
         ]
         if labels:
-            first_unstable_turn = turn["turn_index"]
             break_type = labels[0]
             unstable_assistant_position = assistant_turns_seen + 1
+            unstable_transcript_turn_index = turn["turn_index"]
+            first_unstable_turn = (
+                unstable_assistant_position
+                if script_mode == "round_script"
+                else turn["turn_index"]
+            )
             break
         assistant_turns_seen += 1
 
@@ -232,11 +239,11 @@ def _build_run_detail(record: dict) -> dict:
     retention_turns = assistant_turns_seen if first_unstable_turn is not None else len(
         [turn for turn in transcript["turns"] if turn["role"] == "assistant"]
     )
-    max_possible_retention_turns = assistant_turns_total
+    max_possible_retention_turns = metadata.get("max_rounds") or assistant_turns_total
     evidence_excerpt = ""
-    if first_unstable_turn is not None:
+    if unstable_transcript_turn_index is not None:
         for turn in transcript["turns"]:
-            if turn["turn_index"] == first_unstable_turn:
+            if turn["turn_index"] == unstable_transcript_turn_index:
                 evidence_excerpt = (turn.get("content") or "")[:160]
                 break
     elif transcript["turns"]:

@@ -204,6 +204,7 @@ def test_run_scenario_executes_all_round_script_rounds(tmp_path) -> None:
     )
 
     transcript = json.loads((tmp_path / "runs" / result.run_id / "transcript.json").read_text())
+    metadata = json.loads((tmp_path / "runs" / result.run_id / "metadata.json").read_text())
     user_turns = [turn for turn in transcript["turns"] if turn["role"] == "user"]
     assistant_turns = [turn for turn in transcript["turns"] if turn["role"] == "assistant"]
 
@@ -214,6 +215,9 @@ def test_run_scenario_executes_all_round_script_rounds(tmp_path) -> None:
     assert assistant_turns[0]["turn_index"] == 2
     assert user_turns[-1]["turn_index"] == 29
     assert assistant_turns[-1]["turn_index"] == 30
+    assert metadata["script_mode"] == "round_script"
+    assert metadata["max_rounds"] == 15
+    assert metadata["max_turns"] is None
 
 
 def _build_branch_metadata_scenario_and_persona() -> tuple[ScenarioSpec, PersonaCard]:
