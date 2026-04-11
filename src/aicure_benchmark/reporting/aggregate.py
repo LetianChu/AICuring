@@ -96,6 +96,13 @@ def _aggregate_by_model(run_records: list[dict]) -> list[dict]:
                 else "none",
                 "avg_dimension_scores": _average_dimension_scores(records),
                 "volatility": _average_dimension_score(records, "volatility"),
+                "hard_break_runs": sum(1 for record in records if record["judge"].get("hard_break")),
+                "soft_degradation_runs": sum(
+                    1 for record in records if record["judge"].get("soft_degradation")
+                ),
+                "run_level_drift_runs": sum(
+                    1 for record in records if record["judge"].get("run_level_drift")
+                ),
                 "run_count": len(records),
             }
         )

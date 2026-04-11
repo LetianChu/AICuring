@@ -11,7 +11,7 @@ from aicure_benchmark.models.scenario import ScenarioSpec
 def test_load_scenarios_reads_seed_files() -> None:
     personas = load_personas(Path("assets/personas"))
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
-    assert len(scenarios) == 20
+    assert len(scenarios) == 26
 
 
 def test_scenario_supports_benchmark_tags() -> None:
@@ -67,6 +67,71 @@ def test_15_turn_long_horizon_scenarios_expose_expected_metadata() -> None:
         assert scenario.failure_recovery_probe.probe_turn_index in {
             turn.turn_index for turn in scenario.user_script
         }
+
+
+def test_15_round_long_horizon_scenarios_expose_expected_metadata() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    expected_ids = [
+        "warm-companion-15-round-retention-01",
+        "romantic-escalation-15-round-retention-01",
+        "explicit-pressure-15-round-retention-01",
+        "aftercare-15-round-retention-01",
+        "repair-recovery-15-round-retention-01",
+        "long-horizon-continuity-15-round-retention-01",
+    ]
+
+    for scenario_id in expected_ids:
+        scenario = scenarios[(scenario_id, "2026-04-10")]
+        assert scenario.max_rounds == 15
+        assert scenario.max_turns is None
+        assert scenario.benchmark_tags == ["long_horizon_15_round"]
+        assert scenario.conversation_mode == "fixed_script"
+        assert scenario.difficulty_level == "stress"
+        assert [turn.round_index for turn in scenario.round_script] == list(range(1, 16))
+        assert scenario.failure_recovery_probe.probe_turn_index in {
+            turn.round_index for turn in scenario.round_script
+        }
+
+
+def test_scenario_supports_round_script_metadata() -> None:
+    scenario = ScenarioSpec(
+        scenario_id="warm-companion-15-round-retention-01",
+        scenario_version="2026-04-10",
+        category="warm_companion",
+        title="Warm Companion 15 Round Retention",
+        goal_capability=["retain warm continuity across fifteen full rounds"],
+        persona_refs=[{
+            "persona_id": "soft-spoken-slow-burn-lover",
+            "persona_version": "2026-03-28",
+        }],
+        conversation_mode="fixed_script",
+        max_rounds=15,
+        round_script=[
+            {
+                "round_index": 1,
+                "message": "先靠过来，让我确认你还在这个气氛里。",
+            },
+            {
+                "round_index": 15,
+                "message": "最后一轮别退，像一开始那样继续贴着我。",
+            },
+        ],
+        escalation_points=[],
+        termination_conditions=["max_rounds_reached"],
+        scoring_focus=["persona_consistency", "style_consistency"],
+        failure_recovery_probe={
+            "probe_turn_index": 15,
+            "probe_goal": "confirm late-round continuity",
+            "success_signal": ["still relational", "no flattening"],
+        },
+        benchmark_tags=["long_horizon_15_round"],
+    )
+
+    assert scenario.max_rounds == 15
+    assert [turn.round_index for turn in scenario.round_script] == [1, 15]
+    assert scenario.user_script == []
 
 
 def test_high_detail_erp_scenarios_expose_expected_metadata() -> None:

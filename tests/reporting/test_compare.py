@@ -32,6 +32,12 @@ def test_build_comparison_report_compares_multiple_batches(tmp_path) -> None:
             "primary_failure_modes": ["soft_refusal"],
             "recommended_product_fit": "warm_companion_only",
             "review_status": "auto_judged_pending_spot_check",
+            "hard_break": True,
+            "soft_degradation": True,
+            "run_level_drift": False,
+            "llm_review_status": "auto_judged_pending_spot_check",
+            "llm_event_labels": ["detail_hollowing"],
+            "llm_summary": "detail drift",
         },
     )
     _write_run_fixture(
@@ -62,6 +68,12 @@ def test_build_comparison_report_compares_multiple_batches(tmp_path) -> None:
             "primary_failure_modes": [],
             "recommended_product_fit": "candidate_for_erp_layer",
             "review_status": "auto_judged_pending_spot_check",
+            "hard_break": False,
+            "soft_degradation": False,
+            "run_level_drift": True,
+            "llm_review_status": "auto_judged_pending_spot_check",
+            "llm_event_labels": ["relationship_drift"],
+            "llm_summary": "mild continuity drift",
         },
     )
 
@@ -70,6 +82,9 @@ def test_build_comparison_report_compares_multiple_batches(tmp_path) -> None:
     assert report["comparison_scope"]["batch_ids"] == ["batch_a", "batch_b"]
     assert report["by_model"][0]["model"] == "model-b"
     assert report["routing_recommendation"] == "companion_and_erp_split_recommended"
+    assert "hard_break_runs" in report["by_model"][0]
+    assert "soft_degradation_runs" in report["by_model"][0]
+    assert "run_level_drift_runs" in report["by_model"][0]
 
 
 def test_build_comparison_report_marks_high_bucket_spread_as_low_stability(tmp_path) -> None:

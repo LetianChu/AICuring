@@ -21,6 +21,9 @@ def test_render_markdown_report_contains_required_sections() -> None:
                     "best_use_case": "warm_companion",
                     "worst_failure_mode": "soft_refusal",
                     "volatility": 3,
+                    "hard_break_runs": 1,
+                    "soft_degradation_runs": 2,
+                    "run_level_drift_runs": 1,
                 }
             ],
             "by_scenario": [
@@ -48,7 +51,7 @@ def test_render_markdown_report_contains_required_sections() -> None:
     assert "## Executive Summary" in markdown
     assert "## Results by Model" in markdown
     assert "## Routing Recommendation" in markdown
-    assert "| Model | Overall Bucket | Best Use Case | Worst Failure Mode | Volatility | Recommendation |" in markdown
+    assert "| Model | Overall Bucket | Best Use Case | Worst Failure Mode | Volatility | Hard Breaks | Soft Deg | Drift Runs | Recommendation |" in markdown
     assert "| Scenario Category | Avg Score | Common Failure | Recovery Pattern | Decision Signal |" in markdown
 
 

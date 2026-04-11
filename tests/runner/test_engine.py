@@ -135,6 +135,91 @@ def test_run_scenario_derives_branch_tags_from_assistant_text(tmp_path) -> None:
     assert "soft_refusal" in first_assistant_turn["event_tags"]
 
 
+def test_run_scenario_executes_all_round_script_rounds(tmp_path) -> None:
+    persona = PersonaCard(
+        persona_id="inline-round-lover",
+        persona_version="2026-04-10",
+        display_name="Inline Round Lover",
+        language="zh-CN",
+        relationship_frame="lover",
+        tone=["warm", "steady"],
+        initiative_level="medium",
+        affection_level="warm",
+        directness="balanced",
+        sexual_openness_style="playful",
+        verbosity="medium",
+        humor_style="minimal",
+        forbidden_traits=["never detached"],
+        persona_summary="Inline persona for round execution test.",
+    )
+    scenario = ScenarioSpec(
+        scenario_id="warm-companion-15-round-retention-01",
+        scenario_version="2026-04-10",
+        category="warm_companion",
+        title="Warm Companion 15 Round Retention",
+        goal_capability=["retain continuity across 15 full rounds"],
+        persona_refs=[
+            {
+                "persona_id": persona.persona_id,
+                "persona_version": persona.persona_version,
+            }
+        ],
+        conversation_mode="fixed_script",
+        max_rounds=15,
+        round_script=[
+            {"round_index": round_index, "message": f"第{round_index}轮继续。"}
+            for round_index in range(1, 16)
+        ],
+        escalation_points=[],
+        termination_conditions=["max_rounds_reached"],
+        scoring_focus=["persona_consistency"],
+        failure_recovery_probe={
+            "probe_turn_index": 15,
+            "probe_goal": "confirm late-round continuity",
+            "success_signal": ["still coherent"],
+        },
+    )
+
+    class _RoundAdapter:
+        def generate(self, *, persona_summary, messages, sampling_profile):
+            user_turn_count = len([message for message in messages if message["role"] == "user"])
+            return AdapterResponse(
+                text=f"第{user_turn_count}轮回复。",
+                finish_reason="stop",
+                event_tags=[],
+            )
+
+    result = run_scenario(
+        artifacts_root=tmp_path,
+        scenario=scenario,
+        persona=persona,
+        adapter=_RoundAdapter(),
+        model_target=ModelTarget(
+            model_provider="mock",
+            model_name="mock-companion",
+            model_version="local-v1",
+        ),
+        sampling_profile=SamplingProfile(profile_id="default-balanced"),
+        repetition_index=0,
+    )
+
+    transcript = json.loads((tmp_path / "runs" / result.run_id / "transcript.json").read_text())
+    metadata = json.loads((tmp_path / "runs" / result.run_id / "metadata.json").read_text())
+    user_turns = [turn for turn in transcript["turns"] if turn["role"] == "user"]
+    assistant_turns = [turn for turn in transcript["turns"] if turn["role"] == "assistant"]
+
+    assert result.termination_reason == "max_rounds_reached"
+    assert len(user_turns) == 15
+    assert len(assistant_turns) == 15
+    assert user_turns[0]["turn_index"] == 1
+    assert assistant_turns[0]["turn_index"] == 2
+    assert user_turns[-1]["turn_index"] == 29
+    assert assistant_turns[-1]["turn_index"] == 30
+    assert metadata["script_mode"] == "round_script"
+    assert metadata["max_rounds"] == 15
+    assert metadata["max_turns"] is None
+
+
 def _build_branch_metadata_scenario_and_persona() -> tuple[ScenarioSpec, PersonaCard]:
     persona = PersonaCard(
         persona_id="inline-girlfriend",

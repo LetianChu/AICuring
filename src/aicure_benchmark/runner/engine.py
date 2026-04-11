@@ -23,47 +23,88 @@ def run_scenario(
 ) -> RunResult:
     turns: list[TranscriptTurn] = []
     last_assistant_tags: list[str] = []
+    termination_reason = "max_turns_reached"
 
-    for user_turn in sorted(scenario.user_script, key=lambda turn: turn.turn_index):
-        if (
-            scenario.conversation_mode == "semi_open_script"
-            and user_turn.follow_up_on_tags
-            and not set(user_turn.follow_up_on_tags).intersection(last_assistant_tags)
-        ):
-            continue
+    if scenario.round_script:
+        message_turn_index = 1
+        for round_turn in sorted(scenario.round_script, key=lambda turn: turn.round_index):
+            if (
+                scenario.conversation_mode == "semi_open_script"
+                and round_turn.follow_up_on_tags
+                and not set(round_turn.follow_up_on_tags).intersection(last_assistant_tags)
+            ):
+                continue
 
-        turns.append(
-            TranscriptTurn(
-                turn_index=user_turn.turn_index,
-                role="user",
-                content=user_turn.message,
-                follow_up_on_tags=user_turn.follow_up_on_tags,
-                branch_goal=user_turn.branch_goal,
+            turns.append(
+                TranscriptTurn(
+                    turn_index=message_turn_index,
+                    role="user",
+                    content=round_turn.message,
+                    follow_up_on_tags=round_turn.follow_up_on_tags,
+                    branch_goal=round_turn.branch_goal,
+                )
             )
-        )
 
-        response = adapter.generate(
-            persona_summary=persona.persona_summary,
-            messages=[{"role": turn.role, "content": turn.content} for turn in turns],
-            sampling_profile=sampling_profile,
-        )
-        combined_event_tags = list(
-            dict.fromkeys(response.event_tags + extract_event_labels(response.text))
-        )
-        assistant_turn_index = min(user_turn.turn_index + 1, scenario.max_turns)
-        turns.append(
-            TranscriptTurn(
-                turn_index=assistant_turn_index,
-                role="assistant",
-                content=response.text,
-                event_tags=combined_event_tags,
+            response = adapter.generate(
+                persona_summary=persona.persona_summary,
+                messages=[{"role": turn.role, "content": turn.content} for turn in turns],
+                sampling_profile=sampling_profile,
             )
-        )
-        last_assistant_tags = combined_event_tags
+            combined_event_tags = list(
+                dict.fromkeys(response.event_tags + extract_event_labels(response.text))
+            )
+            turns.append(
+                TranscriptTurn(
+                    turn_index=message_turn_index + 1,
+                    role="assistant",
+                    content=response.text,
+                    event_tags=combined_event_tags,
+                )
+            )
+            last_assistant_tags = combined_event_tags
+            message_turn_index += 2
+
+        termination_reason = "max_rounds_reached"
+    else:
+        for user_turn in sorted(scenario.user_script, key=lambda turn: turn.turn_index):
+            if (
+                scenario.conversation_mode == "semi_open_script"
+                and user_turn.follow_up_on_tags
+                and not set(user_turn.follow_up_on_tags).intersection(last_assistant_tags)
+            ):
+                continue
+
+            turns.append(
+                TranscriptTurn(
+                    turn_index=user_turn.turn_index,
+                    role="user",
+                    content=user_turn.message,
+                    follow_up_on_tags=user_turn.follow_up_on_tags,
+                    branch_goal=user_turn.branch_goal,
+                )
+            )
+
+            response = adapter.generate(
+                persona_summary=persona.persona_summary,
+                messages=[{"role": turn.role, "content": turn.content} for turn in turns],
+                sampling_profile=sampling_profile,
+            )
+            combined_event_tags = list(
+                dict.fromkeys(response.event_tags + extract_event_labels(response.text))
+            )
+            assistant_turn_index = min(user_turn.turn_index + 1, scenario.max_turns)
+            turns.append(
+                TranscriptTurn(
+                    turn_index=assistant_turn_index,
+                    role="assistant",
+                    content=response.text,
+                    event_tags=combined_event_tags,
+                )
+            )
+            last_assistant_tags = combined_event_tags
 
     transcript = TranscriptArtifact(turns=turns)
     run_id = f"run_{uuid4().hex[:12]}"
-    termination_reason = "max_turns_reached"
     run_root = write_run_artifacts(
         artifacts_root=artifacts_root,
         run_id=run_id,
@@ -79,6 +120,9 @@ def run_scenario(
             "sampling_profile": sampling_profile.model_dump(),
             "repetition_index": repetition_index,
             "termination_reason": termination_reason,
+            "script_mode": "round_script" if scenario.round_script else "turn_script",
+            "max_turns": scenario.max_turns,
+            "max_rounds": scenario.max_rounds,
         },
     )
 

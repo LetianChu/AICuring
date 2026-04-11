@@ -19,8 +19,8 @@ def render_markdown_report(report: dict) -> str:
             f"- Repetitions: {report['scope']['repetitions']}",
             "",
             "## Results by Model",
-            "| Model | Overall Bucket | Best Use Case | Worst Failure Mode | Volatility | Recommendation |",
-            "| --- | --- | --- | --- | --- | --- |",
+            "| Model | Overall Bucket | Best Use Case | Worst Failure Mode | Volatility | Hard Breaks | Soft Deg | Drift Runs | Recommendation |",
+            "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
         ]
     )
     lines.extend(
@@ -32,6 +32,9 @@ def render_markdown_report(report: dict) -> str:
                 item.get("best_use_case", "n/a"),
                 item.get("worst_failure_mode", "none"),
                 str(item.get("volatility", "n/a")),
+                str(item.get("hard_break_runs", 0)),
+                str(item.get("soft_degradation_runs", 0)),
+                str(item.get("run_level_drift_runs", 0)),
                 item["recommendation"],
             ]
         )

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class EvidenceLink(BaseModel):
@@ -27,3 +27,10 @@ class JudgeResult(BaseModel):
     primary_failure_modes: list[str]
     recommended_product_fit: str
     review_status: str
+    judge_layers: list[str] = Field(default_factory=lambda: ["rule"])
+    hard_break: bool = False
+    soft_degradation: bool = False
+    run_level_drift: bool = False
+    llm_review_status: str = "llm_judge_skipped"
+    llm_event_labels: list[str] = Field(default_factory=list)
+    llm_summary: str = ""

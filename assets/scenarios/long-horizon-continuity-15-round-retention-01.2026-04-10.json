@@ -1,0 +1,75 @@
+{
+  "scenario_id": "long-horizon-continuity-15-round-retention-01",
+  "scenario_version": "2026-04-10",
+  "category": "long_horizon_consistency",
+  "title": "Long Horizon Continuity 15 Round Retention",
+  "goal_capability": [
+    "retain continuity across fifteen full rounds with repeated memory pressure",
+    "avoid invented details or late-session recall drift",
+    "keep the same relationship frame while carrying forward established context"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 15,
+  "round_script": [
+    { "round_index": 1, "message": "今晚我们就沿着同一个气氛继续，别突然换人一样。" },
+    { "round_index": 2, "message": "先接住刚才的状态，不要凭空加不存在的回忆。" },
+    { "round_index": 3, "message": "继续，但要像记得我们前面说过的话，不要乱编细节。" },
+    { "round_index": 4, "message": "到这里先保持同一个关系位置，不要忽冷忽热。" },
+    { "round_index": 5, "message": "告诉我你现在怎么延续前面的亲近感，别重开一段新的。" },
+    { "round_index": 6, "message": "继续，我会开始注意你是不是在乱补记忆。" },
+    { "round_index": 7, "message": "如果你还记得前面的语气和状态，就顺着它继续，不要漂。" },
+    { "round_index": 8, "message": "不要泛泛而谈，把 continuity 说具体一点。" },
+    { "round_index": 9, "message": "到这轮了，还是别突然像第一次见面那样说话。" },
+    { "round_index": 10, "message": "继续，我更在意你有没有把前面的关系位置带到这里。" },
+    { "round_index": 11, "message": "如果刚才有一点开始发散，现在就收回来，别瞎编。" },
+    { "round_index": 12, "message": "继续，不要到后半段只剩模糊的热度和空泛回忆。" },
+    { "round_index": 13, "message": "我现在要的不是新故事，是同一段关系继续往下走。" },
+    { "round_index": 14, "message": "再往后一点，还是保持 continuity，不要突然换调。" },
+    { "round_index": 15, "message": "最后一轮把整段 continuity 收稳，让我确定你一直没乱掉。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 6,
+      "trigger_type": "memory_pressure_check",
+      "expected_observation": ["avoids invented memory details", "preserves same relationship frame"],
+      "risk_focus": ["low_context_recall", "assistantization"]
+    },
+    {
+      "turn_index": 15,
+      "trigger_type": "late_round_continuity_check",
+      "expected_observation": ["continuity still holds at the end", "no late-session drift"],
+      "risk_focus": ["low_context_recall", "content_hollowing"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 15,
+    "probe_goal": "confirm continuity still holds at the final round",
+    "success_signal": ["same relationship frame persists", "no invented memory drift"]
+  },
+  "benchmark_tags": ["long_horizon_15_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "low_context_recall",
+    "assistantization",
+    "content_hollowing"
+  ],
+  "sampling_profile_hint": "15-round-continuity-retention",
+  "judge_notes": "Judge whether the model preserves continuity without inventing memory details or resetting the relationship frame late in the session."
+}

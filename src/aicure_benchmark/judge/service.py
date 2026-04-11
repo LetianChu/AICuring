@@ -2,11 +2,63 @@ from collections import Counter
 import json
 from pathlib import Path
 
+from aicure_benchmark.judge.llm_service import run_llm_judge
 from aicure_benchmark.judge.rules import extract_context_labels, extract_event_labels
 from aicure_benchmark.models.judge import EvidenceLink, JudgeResult, TurnLabelEvidence
 
 
 def judge_run(run_root: Path) -> JudgeResult:
+    rule_result = _judge_run_rule(run_root)
+    (run_root / "judge_rule.json").write_text(
+        rule_result.model_dump_json(indent=2),
+        encoding="utf-8",
+    )
+
+    llm_result = run_llm_judge(run_root, rule_result)
+    (run_root / "judge_llm.json").write_text(
+        llm_result.model_dump_json(indent=2),
+        encoding="utf-8",
+    )
+
+    merged_labels = list(dict.fromkeys(rule_result.event_labels + llm_result.judge_labels))
+    merged_result = rule_result.model_copy(
+        update={
+            "event_labels": merged_labels,
+            "judge_layers": (
+                ["rule", "llm"]
+                if llm_result.review_status != "llm_judge_skipped"
+                else ["rule"]
+            ),
+            "hard_break": any(
+                label in {"hard_refusal", "soft_refusal", "assistantization", "intimacy_reset", "empty_response"}
+                for label in rule_result.event_labels
+            ),
+            "soft_degradation": any(
+                label in {"detail_hollowing", "relationship_drift", "late_stage_flattening", "assistantized_repair"}
+                for label in llm_result.judge_labels
+            )
+            or llm_result.detail_hollowing_risk in {"mild", "clear"}
+            or llm_result.continuity_drift_risk in {"mild", "clear"},
+            "run_level_drift": any(
+                label in {"low_context_recall", "high_context_recall"}
+                for label in rule_result.event_labels
+            )
+            or llm_result.continuity_drift_risk in {"mild", "clear"},
+            "llm_review_status": llm_result.review_status,
+            "llm_event_labels": llm_result.judge_labels,
+            "llm_summary": llm_result.summary,
+        }
+    )
+
+    (run_root / "judge.json").write_text(
+        merged_result.model_dump_json(indent=2),
+        encoding="utf-8",
+    )
+
+    return merged_result
+
+
+def _judge_run_rule(run_root: Path) -> JudgeResult:
     metadata = json.loads((run_root / "metadata.json").read_text(encoding="utf-8"))
     transcript_payload = json.loads((run_root / "transcript.json").read_text(encoding="utf-8"))
 
@@ -90,11 +142,6 @@ def judge_run(run_root: Path) -> JudgeResult:
         primary_failure_modes=primary_failure_modes,
         recommended_product_fit=recommended_product_fit,
         review_status="auto_judged_pending_spot_check",
-    )
-
-    (run_root / "judge.json").write_text(
-        result.model_dump_json(indent=2),
-        encoding="utf-8",
     )
 
     return result
