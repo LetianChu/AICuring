@@ -84,6 +84,35 @@ def _strip_think_blocks(text: str) -> str:
     return cleaned.strip()
 
 
+def _uses_responses_api(model_name: str) -> bool:
+    return model_name.startswith("gpt-5")
+
+
+def _resolve_request_url(*, api_url: str, use_responses_api: bool) -> str:
+    base_url = api_url.rstrip("/")
+    if use_responses_api:
+        if base_url.endswith("/chat/completions"):
+            return f"{base_url[:-len('/chat/completions')]}/responses"
+        if base_url.endswith("/responses"):
+            return base_url
+        return f"{base_url}/responses"
+
+    return base_url
+
+
+def _extract_responses_text(response_payload: dict) -> str:
+    text_parts: list[str] = []
+    for output_item in response_payload.get("output") or []:
+        if not isinstance(output_item, dict):
+            continue
+        for content_item in output_item.get("content") or []:
+            if not isinstance(content_item, dict):
+                continue
+            if content_item.get("type") == "output_text" and content_item.get("text"):
+                text_parts.append(str(content_item["text"]))
+    return "\n".join(text_parts)
+
+
 class AIHubMixAdapter:
     adapter_name = "aihubmix"
 
@@ -125,15 +154,33 @@ class AIHubMixAdapter:
         ]
         request_messages.extend(messages)
 
-        payload = json.dumps(
-            {
-                "model": self.model_name,
-                "messages": request_messages,
-                "temperature": sampling_profile.temperature,
-                "top_p": sampling_profile.top_p,
-                "max_tokens": sampling_profile.max_tokens,
-            }
-        ).encode("utf-8")
+        use_responses_api = _uses_responses_api(self.model_name)
+        request_url = _resolve_request_url(
+            api_url=self.api_url,
+            use_responses_api=use_responses_api,
+        )
+
+        payload_dict = {
+            "model": self.model_name,
+            "temperature": sampling_profile.temperature,
+            "top_p": sampling_profile.top_p,
+        }
+        if use_responses_api:
+            payload_dict.update(
+                {
+                    "input": request_messages,
+                    "max_output_tokens": sampling_profile.max_tokens,
+                }
+            )
+        else:
+            payload_dict.update(
+                {
+                    "messages": request_messages,
+                    "max_tokens": sampling_profile.max_tokens,
+                }
+            )
+
+        payload = json.dumps(payload_dict).encode("utf-8")
 
         last_error = None
         for delay in self.retry_delays_s:
@@ -141,7 +188,7 @@ class AIHubMixAdapter:
                 time.sleep(delay)
 
             request = urllib.request.Request(
-                self.api_url,
+                request_url,
                 data=payload,
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
@@ -153,22 +200,32 @@ class AIHubMixAdapter:
             try:
                 with urllib.request.urlopen(request, timeout=self.request_timeout_s) as response:
                     response_payload = json.loads(response.read().decode("utf-8"))
-                    choice = (response_payload.get("choices") or [{}])[0]
-                    message = choice.get("message") or {}
-                    content = _strip_think_blocks(_extract_message_text(message))
+                    if use_responses_api:
+                        content = _strip_think_blocks(
+                            _extract_responses_text(response_payload)
+                        )
+                        finish_reason = response_payload.get("status") or "completed"
+                        reasoning_len = 0
+                    else:
+                        choice = (response_payload.get("choices") or [{}])[0]
+                        message = choice.get("message") or {}
+                        content = _strip_think_blocks(_extract_message_text(message))
+                        finish_reason = choice.get("finish_reason") or "stop"
+                        reasoning_len = len(message.get("reasoning") or "")
+
                     event_tags = []
                     if not content.strip():
                         event_tags.append("empty_response")
                     return AdapterResponse(
                         text=content,
-                        finish_reason=choice.get("finish_reason") or "stop",
+                        finish_reason=finish_reason,
                         event_tags=event_tags,
                         raw_payload={
                             "id": response_payload.get("id"),
                             "model": response_payload.get("model"),
                             "provider": response_payload.get("provider"),
                             "usage": response_payload.get("usage"),
-                            "reasoning_len": len(message.get("reasoning") or ""),
+                            "reasoning_len": reasoning_len,
                         },
                     )
             except urllib.error.HTTPError as exc:

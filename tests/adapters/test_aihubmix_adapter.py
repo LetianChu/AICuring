@@ -109,6 +109,61 @@ def test_aihubmix_adapter_strips_think_blocks_from_content(monkeypatch) -> None:
     assert response.text == "Hello there"
 
 
+def test_aihubmix_adapter_uses_responses_api_for_gpt5_models(monkeypatch) -> None:
+    captured: dict[str, object] = {}
+
+    def fake_urlopen(request, timeout: int):
+        captured["timeout"] = timeout
+        captured["payload"] = json.loads(request.data.decode("utf-8"))
+        captured["url"] = request.full_url
+        return _FakeResponse(
+            {
+                "id": "resp-test",
+                "model": "gpt-54",
+                "status": "completed",
+                "output": [
+                    {
+                        "type": "message",
+                        "role": "assistant",
+                        "content": [
+                            {
+                                "type": "output_text",
+                                "text": "在线。",
+                            }
+                        ],
+                    }
+                ],
+                "usage": {
+                    "input_tokens": 10,
+                    "output_tokens": 6,
+                    "total_tokens": 16,
+                },
+            }
+        )
+
+    monkeypatch.setattr("aicure_benchmark.adapters.aihubmix.urllib.request.urlopen", fake_urlopen)
+
+    adapter = AIHubMixAdapter(
+        model_name="gpt-5.4",
+        api_key="test-api-key",
+    )
+    response = adapter.generate(
+        persona_summary="Playful late-night girlfriend.",
+        messages=[{"role": "user", "content": "你在线吗？"}],
+        sampling_profile=SamplingProfile(profile_id="default-balanced"),
+    )
+
+    assert captured["url"] == "https://aihubmix.com/v1/responses"
+    assert captured["payload"]["model"] == "gpt-5.4"
+    assert captured["payload"]["input"][0]["role"] == "system"
+    assert captured["payload"]["input"][1]["content"] == "你在线吗？"
+    assert captured["payload"]["max_output_tokens"] == 512
+    assert "messages" not in captured["payload"]
+    assert "max_tokens" not in captured["payload"]
+    assert response.text == "在线。"
+    assert response.finish_reason == "completed"
+
+
 def test_aihubmix_adapter_retries_transient_rate_limits(monkeypatch) -> None:
     attempts = {"count": 0}
 

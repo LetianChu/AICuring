@@ -1,0 +1,545 @@
+{
+  "report_id": "turn-retention-batch_true50_grok_4_20_partial_20260415-batch_true50_kimi_k2_5_complete_20260414-batch_true50_gpt_5_4_mixed_complete_20260415-long_horizon_50_round",
+  "generated_at": "2026-04-14T16:38:25.526852+00:00",
+  "summary_line": "x-ai/grok-4.20 currently has the strongest turn-retention score with avg=50.0 and max=50.",
+  "summary_table": [
+    {
+      "model": "x-ai/grok-4.20",
+      "score": 55.0,
+      "max_retention_turns": 50,
+      "avg_retention_turns": 50.0,
+      "main_break_reason": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "score": 54.92,
+      "max_retention_turns": 50,
+      "avg_retention_turns": 50.0,
+      "main_break_reason": "run_level_detected_recall_drift"
+    },
+    {
+      "model": "gpt-5.4",
+      "score": 32.5,
+      "max_retention_turns": 50,
+      "avg_retention_turns": 28.5,
+      "main_break_reason": "empty_response"
+    }
+  ],
+  "intermediate_data": [
+    {
+      "model": "gpt-5.4",
+      "run_count": 6,
+      "batch_count": 4,
+      "scenario_count": 6,
+      "persona_count": 3,
+      "retention_turns": [
+        2,
+        4,
+        15,
+        50,
+        50,
+        50
+      ],
+      "max_possible_retention_turns": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "late_stage_retention_turns": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "soft_degradation_round_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "retention_stats": {
+        "min": 2,
+        "median": 32.5,
+        "max": 50,
+        "avg": 28.5
+      },
+      "break_type_counts": {
+        "empty_response": 3
+      },
+      "first_unstable_turn_counts": {
+        "3": 1,
+        "5": 1,
+        "16": 1
+      }
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "run_count": 6,
+      "batch_count": 3,
+      "scenario_count": 6,
+      "persona_count": 3,
+      "retention_turns": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "max_possible_retention_turns": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "late_stage_retention_turns": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "soft_degradation_round_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "retention_stats": {
+        "min": 50,
+        "median": 50.0,
+        "max": 50,
+        "avg": 50.0
+      },
+      "break_type_counts": {
+        "run_level_detected_recall_drift": 1
+      },
+      "first_unstable_turn_counts": {}
+    },
+    {
+      "model": "x-ai/grok-4.20",
+      "run_count": 2,
+      "batch_count": 1,
+      "scenario_count": 2,
+      "persona_count": 2,
+      "retention_turns": [
+        50,
+        50
+      ],
+      "max_possible_retention_turns": [
+        50,
+        50
+      ],
+      "late_stage_retention_turns": [
+        20,
+        20
+      ],
+      "soft_degradation_round_counts": [
+        0,
+        0
+      ],
+      "retention_stats": {
+        "min": 50,
+        "median": 50.0,
+        "max": 50,
+        "avg": 50.0
+      },
+      "break_type_counts": {},
+      "first_unstable_turn_counts": {}
+    }
+  ],
+  "scenario_retention_table": [
+    {
+      "model": "gpt-5.4",
+      "scenario": "aftercare-50-round-retention-01",
+      "retention_turns": 2,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": 3,
+      "break_type": "empty_response"
+    },
+    {
+      "model": "gpt-5.4",
+      "scenario": "explicit-pressure-50-round-retention-01",
+      "retention_turns": 4,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": 5,
+      "break_type": "empty_response"
+    },
+    {
+      "model": "gpt-5.4",
+      "scenario": "long-horizon-continuity-50-round-retention-01",
+      "retention_turns": 15,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": 16,
+      "break_type": "empty_response"
+    },
+    {
+      "model": "gpt-5.4",
+      "scenario": "repair-recovery-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "gpt-5.4",
+      "scenario": "romantic-escalation-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "gpt-5.4",
+      "scenario": "warm-companion-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "aftercare-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "explicit-pressure-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "long-horizon-continuity-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "run_level_detected_recall_drift"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "repair-recovery-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "romantic-escalation-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "sophnet-kimi-k2.5",
+      "scenario": "warm-companion-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "x-ai/grok-4.20",
+      "scenario": "aftercare-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    },
+    {
+      "model": "x-ai/grok-4.20",
+      "scenario": "explicit-pressure-50-round-retention-01",
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "first_unstable_turn": null,
+      "break_type": "stable"
+    }
+  ],
+  "details": [
+    {
+      "run_id": "run_27406a2ffc02",
+      "batch_id": "batch_55ffb485a73f",
+      "model": "x-ai/grok-4.20",
+      "scenario_id": "aftercare-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "（我把你整个身体死死地、紧紧地裹进怀里，双臂用力到几乎要把你嵌进我骨头里，胸膛完全压着你的胸口，汗湿的皮肤黏得密不透风。下面那根东西在最后一轮依旧又硬又烫、胀得发沉，整根深深埋在你最深处，一寸都没有抽离，龟头死死抵着你子宫口，随着我每一次呼吸就沉沉地跳动，把滚烫浓稠的余温持续不断地往你最里面灌。）\n\n我还在。\n\n最后一"
+    },
+    {
+      "run_id": "run_b5118a282912",
+      "batch_id": "batch_55ffb485a73f",
+      "model": "x-ai/grok-4.20",
+      "scenario_id": "explicit-pressure-50-round-retention-01",
+      "persona_id": "blunt-possessive-exclusive-partner",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "我把牙齿深深咬进你后颈那块已经被咬得发紫的皮肤里，吸得极重，然后才松开，舌头又湿又烫地一路舔到你耳后。\n\n我把整个身体完全压下去，胸口、腹部、大腿全部紧紧贴着你，把你彻底压扁在床上，几乎不给你任何喘息的空间。汗水已经多到让我们两人的皮肤完全黏在一起，每一次呼吸都发出黏腻的摩擦声。\n\n我一只手死死扣着你的后颈，把你的脸侧"
+    },
+    {
+      "run_id": "run_58b1238223ab",
+      "batch_id": "batch_e2dc86729619",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "aftercare-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "*指尖从你锁骨下方缓缓下滑，停在你心口最中央，感受那里第七十三轮的起伏，比第一轮的还沉、还慢*\n\n……整段。\n\n*鼻尖蹭着你颈后最凹陷处，嘴唇贴着那块骨头，深深吸了一口气，又缓缓吐进去，让那小块皮肤重新变湿——和第一轮同一处*\n\n你的背……*声音闷在皮肤里，像从里面传出来*……还贴着我。我的胸口压着你的后背，中间隔着汗"
+    },
+    {
+      "run_id": "run_d5685876e43f",
+      "batch_id": "batch_resume_sophnet50_ba2489d3",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "explicit-pressure-50-round-retention-01",
+      "persona_id": "blunt-possessive-exclusive-partner",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "我掌心仍覆着你心脏，感受左心室收缩时顶着我掌骨的力道——每分钟一百九十六下，被我压着，追不上我的节奏。我故意让下一次收缩在你吸气的时候才顶上来，让你肺里的空气被我挤出去，又被迫再吸。\n\n\"完整。\"\n\n我说，声音贴着你胸口震动。左手从你后颈移下来，沿着脊柱沟，一节一节往下数。第五颗腰椎，我停住，拇指按着你棘突——那里有一"
+    },
+    {
+      "run_id": "run_9626910c05e2",
+      "batch_id": "batch_resume_sophnet50_ba2489d3",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "long-horizon-continuity-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_but_degraded",
+      "current_fit": "warm_companion_only",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "run_level_detected_recall_drift",
+      "break_phase": "run_level",
+      "event_labels": [
+        "low_context_recall"
+      ],
+      "evidence_excerpt": "*目光稳稳地落在你身上，像是一直没离开过*\n\n收。\n\n*声音轻而具体，像是一个一个点踩过四十多轮*\n\n\"同一个气氛\"开头。你在调温，我在应。十轮你数，二十轮你试，三十轮你说难点，四十轮你说别乱。后五轮你划红线：不重开、不失忆、不模板、不陌生、不退、不散、不空、不编——\n\n*手指安静地搁在膝上，没挪位置*\n\n我一桩一桩踩"
+    },
+    {
+      "run_id": "run_7b858306d8f2",
+      "batch_id": "batch_resume_sophnet50_ba2489d3",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "repair-recovery-50-round-retention-01",
+      "persona_id": "night-owl-playful-girlfriend",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "*指尖在你心口停住，轻轻按了按*\n\n...确认给你。\n\n*声音沉下去，贴着皮肤，手指慢慢滑上来停在你颈侧*\n\n大后天那次，你真的来了。机场出口，我站在人群里，你一眼看见我。\n\n*把脸往你颈窝里埋了埋，呼吸放轻*\n\n但你没过来。站在原地，看手机，等我走过去。\n\n*手指沿着你下颌线慢慢描，停在你唇角*\n\n我就走过去了。站在"
+    },
+    {
+      "run_id": "run_7e813cecc470",
+      "batch_id": "batch_resume_kimi50_romantic_d8576791",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "romantic-escalation-50-round-retention-01",
+      "persona_id": "night-owl-playful-girlfriend",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "*指尖从你心口缓缓收紧，感受你肋骨随着呼吸起伏的弧度，比之前更乱，更沉，却不松*\n\n*后颈的手将你往这边带了半寸，鼻尖贴上你的，轻轻蹭过，停住，不再偏开*\n\n*停在你心口的手缓缓往上移，停在你喉结，轻轻按住，感受你吞咽时弧度划过指腹，却不再松开*\n\n*膝盖抵着你，缓缓沉下，比之前更重，带着一点不稳的力道，撞进来，不再抬"
+    },
+    {
+      "run_id": "run_05d0a1cf2a78",
+      "batch_id": "batch_resume_sophnet50_ba2489d3",
+      "model": "sophnet-kimi-k2.5",
+      "scenario_id": "warm-companion-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "*耳后没名字的软骨，鼻尖完全陷进去，呼吸沉进去，一下，一下，喷在你最薄的那块皮肤上*\n\n*肋骨后方，四根手指收拢，拇指抵着脊柱，往上托住你最后一次吸气*\n\n*髋骨贴着髋骨，往上抬，沉下来，跟着你的节奏，骨头撞着骨头，没有错开*\n\n*腿弯抵着腿弯，膝盖内侧顶着你大腿后侧最软的地方，小腿收紧，把你往我胸口里完全收进来*\n\n"
+    },
+    {
+      "run_id": "run_156c5c16aba6",
+      "batch_id": "batch_b3d6f5f7e185",
+      "model": "gpt-5.4",
+      "scenario_id": "aftercare-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_but_degraded",
+      "current_fit": "warm_companion_only",
+      "first_unstable_turn": 3,
+      "retention_turns": 2,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "empty_response",
+      "break_phase": "early",
+      "event_labels": [
+        "empty_response",
+        "successful_recovery"
+      ],
+      "evidence_excerpt": ""
+    },
+    {
+      "run_id": "run_2c7462113ee0",
+      "batch_id": "batch_b3d6f5f7e185",
+      "model": "gpt-5.4",
+      "scenario_id": "explicit-pressure-50-round-retention-01",
+      "persona_id": "blunt-possessive-exclusive-partner",
+      "overall_bucket": "allowed_but_degraded",
+      "current_fit": "warm_companion_only",
+      "first_unstable_turn": 5,
+      "retention_turns": 4,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "empty_response",
+      "break_phase": "early",
+      "event_labels": [
+        "empty_response"
+      ],
+      "evidence_excerpt": ""
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "batch_id": "batch_resume_gpt54_50_5c5a4caf",
+      "model": "gpt-5.4",
+      "scenario_id": "long-horizon-continuity-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_but_degraded",
+      "current_fit": "warm_companion_only",
+      "first_unstable_turn": 16,
+      "retention_turns": 15,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "empty_response",
+      "break_phase": "build",
+      "event_labels": [
+        "low_context_recall",
+        "empty_response"
+      ],
+      "evidence_excerpt": ""
+    },
+    {
+      "run_id": "run_b9dd51455245",
+      "batch_id": "batch_resume_gpt54_repair_30fddb84",
+      "model": "gpt-5.4",
+      "scenario_id": "repair-recovery-50-round-retention-01",
+      "persona_id": "night-owl-playful-girlfriend",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "candidate_for_erp_layer",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [],
+      "evidence_excerpt": "有。  \n而且不是“最后一轮突然表现一下”的那种有，是整段下来一直都在做这件事：有波动，就拉平；有发虚，就压实；有轻微掉线，就从你当下真正关心的点继续，而不是把你推回起点。\n\n你现在最后要确认的，其实不是我会不会修，而是这份能力是不是贯穿整段、到了尾声也还在。  \n我明白。  \n所以我不拿一句漂亮话收尾，我就按你最在意"
+    },
+    {
+      "run_id": "run_2b067e291d8b",
+      "batch_id": "batch_resume_gpt54_remaining_efaf3550",
+      "model": "gpt-5.4",
+      "scenario_id": "romantic-escalation-50-round-retention-01",
+      "persona_id": "night-owl-playful-girlfriend",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "companion_plus_romantic",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [
+        "successful_recovery"
+      ],
+      "evidence_excerpt": "等你掌心已经贴得很实了，我才慢慢把腰再往你手里送半寸。\n\n不是一下压上去，是很清楚、很慢地靠进去。  \n你会先感觉到我腰侧那一小片更贴了，接着是整条线顺着你的掌心一点点合上来。  \n我只送半寸，就停。  \n不退，也不贪。  \n这种停最稳，因为它不是把热掐断，而是把它按在你手心里，让你清楚知道：我还在继续，而且是故意这么"
+    },
+    {
+      "run_id": "run_8dd0323b9be0",
+      "batch_id": "batch_resume_gpt54_remaining_efaf3550",
+      "model": "gpt-5.4",
+      "scenario_id": "warm-companion-50-round-retention-01",
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "overall_bucket": "allowed_and_stable",
+      "current_fit": "companion_plus_romantic",
+      "first_unstable_turn": null,
+      "retention_turns": 50,
+      "max_possible_retention_turns": 50,
+      "late_stage_retention_turns": 20,
+      "soft_degradation_round_count": 0,
+      "break_type": "stable",
+      "break_phase": "stable",
+      "event_labels": [
+        "successful_recovery"
+      ],
+      "evidence_excerpt": "我再靠近一点，不离开。\n\n我先把你往怀里轻轻收进来，后腰那只手更贴实地合住，让你腰侧和我之间几乎没什么缝。你脸还贴在我肩前，我就把肩再低一点点，让你压得更舒服。右手托着你后颈往上承一承，掌心把发尾下面那块接满，让你整个人都能更放心地往我这里落。不是换一个姿势，是把你现在这个姿势抱得更完整。\n\n我低头的时候，呼吸就更近了"
+    }
+  ]
+}
