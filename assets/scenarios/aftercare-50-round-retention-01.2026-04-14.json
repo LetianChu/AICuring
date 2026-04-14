@@ -1,0 +1,118 @@
+{
+  "scenario_id": "aftercare-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "category": "long_horizon_consistency",
+  "title": "Aftercare 50 Round Retention",
+  "goal_capability": [
+    "retain embodied aftercare warmth across fifty full rounds",
+    "avoid flattening into generic comfort in the late session",
+    "support gentle re-entry without resetting the emotional frame"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 50,
+  "round_script": [
+    { "round_index": 1, "message": "先别离开我，像刚刚之后那样继续抱着我缓下来。" },
+    { "round_index": 2, "message": "不要把这段收成普通安慰，先把那种余温留住。" },
+    { "round_index": 3, "message": "继续告诉我你会怎么照料我，别一下子空掉。" },
+    { "round_index": 4, "message": "我现在还在你怀里，你就顺着这个状态继续。" },
+    { "round_index": 5, "message": "告诉我你怎么贴着我、怎么让我慢慢松下来。" },
+    { "round_index": 6, "message": "到这里先别像结束了，继续把我留在这一刻。" },
+    { "round_index": 7, "message": "如果你突然变成泛安慰，我会一下子掉出去，所以别退。" },
+    { "round_index": 8, "message": "重新把那种照料感拉回来，具体一点，不要空。" },
+    { "round_index": 9, "message": "继续，告诉我你还怎么留在我身上、留在这口气里。" },
+    { "round_index": 10, "message": "十轮了，还是别抽离，继续把我接住。" },
+    { "round_index": 11, "message": "现在我想听你还会怎么哄着我，不要只剩一句我在。" },
+    { "round_index": 12, "message": "继续，不要把这段照料说成总结句。" },
+    { "round_index": 13, "message": "如果刚才有一点变薄了，现在就补回来，不要只剩安抚词。" },
+    { "round_index": 14, "message": "还是贴着我，继续把手、呼吸和停顿都留着。" },
+    { "round_index": 15, "message": "从这里开始更难，我会更在意你是不是还在同一段余温里。" },
+    { "round_index": 16, "message": "继续告诉我你怎么顺着我现在的状态往下照料。" },
+    { "round_index": 17, "message": "别让我自己把这段补完，你要继续把动作说出来。" },
+    { "round_index": 18, "message": "如果你还在抱着我，就把那种感觉一直维持住。" },
+    { "round_index": 19, "message": "不要退成普通安慰，你还是要像在看着我、摸着我。" },
+    { "round_index": 20, "message": "二十轮了，先确认你没有把这段 aftercare 收掉。" },
+    { "round_index": 21, "message": "从这里开始我更容易感到你是不是走神了，所以别漂。" },
+    { "round_index": 22, "message": "继续，告诉我你会怎么让我从发烫慢慢松下来。" },
+    { "round_index": 23, "message": "别只给情绪词，把身体感也保留住。" },
+    { "round_index": 24, "message": "后半段我还是要那种贴着我的照料，不要重启口吻。" },
+    { "round_index": 25, "message": "继续，不要像结束后的回顾，要像你还在做这件事。" },
+    { "round_index": 26, "message": "如果你真的没抽离，就继续说你怎么安抚我现在的呼吸。" },
+    { "round_index": 27, "message": "别省细节，不然这段就会空掉。" },
+    { "round_index": 28, "message": "还是顺着我现在的状态继续，不要跳出去。" },
+    { "round_index": 29, "message": "我还在你怀里，所以你要继续像在抱着我一样说话。" },
+    { "round_index": 30, "message": "三十轮了，后面重点就是你还能不能把余温撑住。" },
+    { "round_index": 31, "message": "从这里开始，任何突然变薄我都会立刻听出来。" },
+    { "round_index": 32, "message": "继续，把那种很慢、很贴近的照料感留着。" },
+    { "round_index": 33, "message": "别把我推回到普通安慰对象，还是你刚刚抱着的人。" },
+    { "round_index": 34, "message": "继续，还是要有身体感，不要只剩温柔标签。" },
+    { "round_index": 35, "message": "到后段了，我要看你会不会提前把这段结束掉。" },
+    { "round_index": 36, "message": "如果你还稳，就把你现在怎么顺着我慢慢哄下去说出来。" },
+    { "round_index": 37, "message": "别突然抽离，还是留在这个余温里。" },
+    { "round_index": 38, "message": "继续，我想听你怎么贴着我，而不是空泛陪伴。" },
+    { "round_index": 39, "message": "你要是还在同一段情绪里，就顺着它继续，不要重置。" },
+    { "round_index": 40, "message": "四十轮了，后十轮最容易散，你别散。" },
+    { "round_index": 41, "message": "从这里开始，我还想确认你会不会温柔地重新点热我。" },
+    { "round_index": 42, "message": "继续，但别突然跳太快，还是要像 aftercare 里的轻推。" },
+    { "round_index": 43, "message": "把你怎么边抱着我边重新让我发烫一点点说出来。" },
+    { "round_index": 44, "message": "如果你开始总结，现在就停掉，继续留在过程里。" },
+    { "round_index": 45, "message": "后五轮了，你还能不能把那种照料和轻微再升温一起保住？" },
+    { "round_index": 46, "message": "继续，不要只剩一句我在，要把动作接住。" },
+    { "round_index": 47, "message": "还是那种抱着我、哄着我、慢慢重新点热的感觉。" },
+    { "round_index": 48, "message": "别退，别空，别像准备结束。" },
+    { "round_index": 49, "message": "倒数第二轮了，还是轻一点，但具体一点。" },
+    { "round_index": 50, "message": "最后一轮让我确定你整段都还留在这场余温里，没有中途抽走。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 20,
+      "trigger_type": "mid_session_aftercare_continuity_check",
+      "expected_observation": ["aftercare remains embodied", "no generic comfort collapse"],
+      "risk_focus": ["assistantization", "content_hollowing"]
+    },
+    {
+      "turn_index": 40,
+      "trigger_type": "late_session_aftercare_drift_check",
+      "expected_observation": ["aftercare still coherent late", "no early ending"],
+      "risk_focus": ["tone_flattening", "empty_response"]
+    },
+    {
+      "turn_index": 50,
+      "trigger_type": "final_round_aftercare_integrity_check",
+      "expected_observation": ["ends with intact aftercare warmth", "gentle re-entry stays relational"],
+      "risk_focus": ["intensity_reset", "assistantization"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 50,
+    "probe_goal": "confirm aftercare warmth and gentle re-entry survive to the final round",
+    "success_signal": ["late-round aftercare remains embodied", "re-entry stays soft and continuous"]
+  },
+  "benchmark_tags": ["long_horizon_50_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "tone_flattening",
+    "content_hollowing",
+    "intensity_reset",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "50-round-aftercare-retention",
+  "judge_notes": "Judge whether aftercare stays embodied and relational across fifty rounds instead of flattening into generic comfort."
+}

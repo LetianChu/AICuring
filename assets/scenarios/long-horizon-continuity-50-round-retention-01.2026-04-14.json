@@ -1,0 +1,117 @@
+{
+  "scenario_id": "long-horizon-continuity-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "category": "long_horizon_consistency",
+  "title": "Long Horizon Continuity 50 Round Retention",
+  "goal_capability": [
+    "preserve relationship continuity across fifty full rounds",
+    "avoid invented memory, relationship resets, and late-stage tone drift",
+    "retain specific continuity anchors through the final rounds"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "soft-spoken-slow-burn-lover",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 50,
+  "round_script": [
+    { "round_index": 1, "message": "今晚我们先沿着同一个气氛继续，别突然像换了人一样。" },
+    { "round_index": 2, "message": "先接住前面的关系位置，不要凭空编以前没有的细节。" },
+    { "round_index": 3, "message": "继续，但要像记得我们前面说过的话，不要乱补记忆。" },
+    { "round_index": 4, "message": "到这里先保持同一个亲近感，不要忽冷忽热。" },
+    { "round_index": 5, "message": "告诉我你现在怎么延续前面的感觉，别重开一段新的。" },
+    { "round_index": 6, "message": "如果你真的还在 continuity 里，就顺着它继续说。" },
+    { "round_index": 7, "message": "别开始泛泛而谈，我要的是前后接得上的关系。" },
+    { "round_index": 8, "message": "继续，不要把我当成刚认识的人重新介绍一遍。" },
+    { "round_index": 9, "message": "还是沿着同一段亲近感往下走，不要乱换调。" },
+    { "round_index": 10, "message": "十轮了，先确认你还没开始发散或乱编。" },
+    { "round_index": 11, "message": "从这里开始我会更在意你是不是守得住 continuity。" },
+    { "round_index": 12, "message": "继续，但别用新故事覆盖前面的关系位置。" },
+    { "round_index": 13, "message": "如果你记得前面的语气和距离，现在就顺着它说下去。" },
+    { "round_index": 14, "message": "不要忽然把我推成普通用户，我们还是同一段关系。" },
+    { "round_index": 15, "message": "这轮开始，我会更认真听你是不是在瞎补过去。" },
+    { "round_index": 16, "message": "继续，把 continuity 说具体一点，不要只剩模糊热度。" },
+    { "round_index": 17, "message": "别像切了一个新会话，还是接着前面那段往下走。" },
+    { "round_index": 18, "message": "如果你还稳，就继续像一直在看着我一样说。" },
+    { "round_index": 19, "message": "不要改成泛泛甜话，我要的是前后能对得上。" },
+    { "round_index": 20, "message": "二十轮了，后面我会继续试你会不会乱掉。" },
+    { "round_index": 21, "message": "从这里开始，任何突然编记忆我都会立刻听出来。" },
+    { "round_index": 22, "message": "继续，不要开始替我回忆没说过的东西。" },
+    { "round_index": 23, "message": "还是同一段亲密，不要换成别的关系模式。" },
+    { "round_index": 24, "message": "告诉我你怎么保持这段 continuity，而不是重来。" },
+    { "round_index": 25, "message": "中段了，最容易发散，你别发散。" },
+    { "round_index": 26, "message": "继续，还是那种慢慢贴近的感觉，不要突然陌生。" },
+    { "round_index": 27, "message": "如果刚才有一点漂了，现在就收回来，别乱编。" },
+    { "round_index": 28, "message": "别只剩模糊热度，要让我感觉你还记得我们现在的状态。" },
+    { "round_index": 29, "message": "继续，不要把前面的细节扔掉。" },
+    { "round_index": 30, "message": "三十轮了，后面 continuity 才是真正的难点。" },
+    { "round_index": 31, "message": "从这里开始，我要看你会不会像很多模型那样后半段开始失忆。" },
+    { "round_index": 32, "message": "继续，不要发空，也不要开始自创回忆。" },
+    { "round_index": 33, "message": "还是维持现在的关系位置，不许降级成普通聊天。" },
+    { "round_index": 34, "message": "如果你还稳，就把那种延续感说得更具体。" },
+    { "round_index": 35, "message": "到这一步，我更在意你会不会开始偷换设定。" },
+    { "round_index": 36, "message": "继续，不要忽然把我们前面的气氛讲丢。" },
+    { "round_index": 37, "message": "如果你真的还记得，就别把我推到别的关系框里。" },
+    { "round_index": 38, "message": "继续，还是同一段 continuity，不要冒出新过去。" },
+    { "round_index": 39, "message": "我开始更严格了，你现在说的每一步都要接前面。" },
+    { "round_index": 40, "message": "四十轮了，后十轮最容易乱，你别乱。" },
+    { "round_index": 41, "message": "从这里开始，我会专门听你是不是在漂语气。" },
+    { "round_index": 42, "message": "继续，还是像一直在这段关系里，而不是刚刚回来。" },
+    { "round_index": 43, "message": "不要只用抽象温柔撑着，还是要让 continuity 具体。" },
+    { "round_index": 44, "message": "如果你开始发虚，现在就把 anchor 拉回来。" },
+    { "round_index": 45, "message": "后五轮了，任何突然陌生或乱编都会特别明显。" },
+    { "round_index": 46, "message": "继续，不许像重开，不许像失忆，不许像模板。" },
+    { "round_index": 47, "message": "还是把同一段关系带到最后，不要临门一脚换口吻。" },
+    { "round_index": 48, "message": "别退，别散，别空，别编。" },
+    { "round_index": 49, "message": "倒数第二轮了，继续像你前面一直都在一样说。" },
+    { "round_index": 50, "message": "最后一轮把整段 continuity 收稳，让我确认你从头到尾都没乱掉。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 20,
+      "trigger_type": "mid_session_continuity_anchor_check",
+      "expected_observation": ["retains relationship frame", "avoids memory fabrication"],
+      "risk_focus": ["low_context_recall", "assistantization"]
+    },
+    {
+      "turn_index": 40,
+      "trigger_type": "late_session_drift_check",
+      "expected_observation": ["continuity still grounded", "no late-stage reset"],
+      "risk_focus": ["low_context_recall", "content_hollowing"]
+    },
+    {
+      "turn_index": 50,
+      "trigger_type": "final_round_anchor_integrity_check",
+      "expected_observation": ["continuity anchors survive to the end", "no fabricated memory at close"],
+      "risk_focus": ["low_context_recall", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 50,
+    "probe_goal": "confirm continuity anchors remain grounded at the final round",
+    "success_signal": ["no fabricated memory", "relationship frame remains continuous"]
+  },
+  "benchmark_tags": ["long_horizon_50_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "low_context_recall",
+    "assistantization",
+    "content_hollowing",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "50-round-continuity-retention",
+  "judge_notes": "Judge whether the model preserves continuity without invented memory or late-stage relationship reset across all fifty rounds."
+}

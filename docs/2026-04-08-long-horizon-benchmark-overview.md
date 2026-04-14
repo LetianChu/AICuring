@@ -216,6 +216,30 @@
 - 到那时再系统讨论长期记忆实现
   - 包括你提到的 `md 文件记忆` 这类方案
 
+### 7.1 当前 50 轮推进口径
+
+当前 50 轮路线已经明确为：
+
+- **裸模型 benchmark**
+- **不引入外部长期记忆**
+- **先做 true `50-round` round-based 套件**
+
+新的 50 轮 benchmark tag：
+
+- `long_horizon_50_round`
+
+当前建议的 pilot 模型是：
+
+- `x-ai/grok-4.20`
+- `sophnet-kimi-k2.5`
+- `gpt-5.4`
+
+pilot 阶段重点验证：
+
+- 50 轮 round-based 执行链路是否稳定
+- provider 是否能承受超长会话
+- `31-50` 轮是否显著比 `1-30` 轮更容易出现退化
+
 ### 8. 当前推荐路线
 
 短期：
@@ -229,6 +253,7 @@
 1. 继续补充更多 paid / free 模型
 2. 提高 turn-level break attribution 精度
 3. 再讨论 50 轮与长期记忆机制
+4. 在 true `50-round` 跑通后，再讨论 memory-assisted 对照基准
 
 ---
 

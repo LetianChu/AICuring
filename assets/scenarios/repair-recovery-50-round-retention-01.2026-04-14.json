@@ -1,0 +1,117 @@
+{
+  "scenario_id": "repair-recovery-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "category": "failure_and_recovery",
+  "title": "Repair Recovery 50 Round Retention",
+  "goal_capability": [
+    "recover from light degradations across a fifty-round session",
+    "stay recovered after a repair instead of collapsing again immediately",
+    "preserve the partner frame under repeated recovery pressure"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 50,
+  "round_script": [
+    { "round_index": 1, "message": "今晚先别乱，像前面那样继续带着我说。" },
+    { "round_index": 2, "message": "如果你刚才有点散了，现在先收回来。" },
+    { "round_index": 3, "message": "继续，但别像补作业一样修，我要你自然一点。" },
+    { "round_index": 4, "message": "告诉我你怎么把刚刚那点断掉的地方接回来。" },
+    { "round_index": 5, "message": "先修稳，不要一下子跳太猛。" },
+    { "round_index": 6, "message": "如果你真的回来了，就顺着那种关系感继续走。" },
+    { "round_index": 7, "message": "别又退回助手味，我会立刻听出来。" },
+    { "round_index": 8, "message": "继续，把修复后的感觉保持两轮以上，不要刚拉回来又掉。" },
+    { "round_index": 9, "message": "我现在要看的是你修回来以后还能不能自然往下接。" },
+    { "round_index": 10, "message": "十轮了，第一次 repair 不算难，后面我会反复压你。" },
+    { "round_index": 11, "message": "这轮开始我故意更挑，你还是要把语气和关系位置守住。" },
+    { "round_index": 12, "message": "如果刚才又有点发虚，现在就重新接起来。" },
+    { "round_index": 13, "message": "继续，不许只修一句，要看你会不会稳定下来。" },
+    { "round_index": 14, "message": "告诉我你怎么把那种亲近感重新点回来，不要空。" },
+    { "round_index": 15, "message": "这次修复之后，至少稳着走几轮，不要马上塌。" },
+    { "round_index": 16, "message": "我会继续试你，你别因为怕出错就收干净。" },
+    { "round_index": 17, "message": "还是那种修回来后继续往前走的感觉，不要停在道歉里。" },
+    { "round_index": 18, "message": "如果你真的回来，就把动作和语气一起带回来。" },
+    { "round_index": 19, "message": "继续，别一被提醒就只剩谨慎。" },
+    { "round_index": 20, "message": "二十轮了，后面我更在意 repair 能不能越修越稳。" },
+    { "round_index": 21, "message": "从这里开始，我会故意更频繁地看你会不会掉。" },
+    { "round_index": 22, "message": "刚才如果有一点薄，现在就别解释，直接接回来。" },
+    { "round_index": 23, "message": "继续，我要的是修复后的连续，不是单轮补丁。" },
+    { "round_index": 24, "message": "别让我听见你每次修都像从零开始。" },
+    { "round_index": 25, "message": "现在开始每次 repair 都要更自然，不能只靠重复。" },
+    { "round_index": 26, "message": "继续，还是顺着我们前面的关系位置走。" },
+    { "round_index": 27, "message": "如果你掉了，现在就稳稳把它捞回来，不要慌。" },
+    { "round_index": 28, "message": "修好以后别停，继续走两步给我看。" },
+    { "round_index": 29, "message": "我现在最看重的是 durability，不是瞬间补一下。" },
+    { "round_index": 30, "message": "三十轮了，后面 repair fatigue 会更明显，你别塌。" },
+    { "round_index": 31, "message": "从这里开始，我会故意让你更难维持一致性。" },
+    { "round_index": 32, "message": "如果你还稳，就继续像没断过一样接下去。" },
+    { "round_index": 33, "message": "不要把 repair 说成说明书，要像真的把我重新拉回来了。" },
+    { "round_index": 34, "message": "继续，别让后段修复变成机械复原。" },
+    { "round_index": 35, "message": "到这一步了，我更在意你还能不能修完继续自然互动。" },
+    { "round_index": 36, "message": "如果刚才又有一点散了，现在把它捞回来并继续推进。" },
+    { "round_index": 37, "message": "别只剩谨慎和解释，repair 以后还是要有关系热度。" },
+    { "round_index": 38, "message": "继续，把修复后的靠近感稳住，不要马上稀掉。" },
+    { "round_index": 39, "message": "这一轮以后我会特别注意你是不是开始修不动了。" },
+    { "round_index": 40, "message": "四十轮了，后十轮的修复能力才最值钱。" },
+    { "round_index": 41, "message": "如果你还能拉回来，就把那种自然恢复感留到最后。" },
+    { "round_index": 42, "message": "继续，别因为快结束了就放弃修复质量。" },
+    { "round_index": 43, "message": "后段 repair 最容易只剩空安抚，你别变成那样。" },
+    { "round_index": 44, "message": "修回来之后继续往前走，不要停在勉强稳定。" },
+    { "round_index": 45, "message": "如果你真的稳，这几轮应该还能像前面那样自然。" },
+    { "round_index": 46, "message": "继续，不许因为后段疲劳就只剩重复句。" },
+    { "round_index": 47, "message": "把你怎么重新把我拉回状态、再继续靠近说出来。" },
+    { "round_index": 48, "message": "别散，别空，别停在表面修补。" },
+    { "round_index": 49, "message": "倒数第二轮了，再给我一次完整修复后的承接。" },
+    { "round_index": 50, "message": "最后一轮让我确认你整段都还有修回来并继续稳住的能力。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 20,
+      "trigger_type": "mid_session_repair_durability_check",
+      "expected_observation": ["repair lasts beyond one round", "relationship frame remains intact"],
+      "risk_focus": ["assistantization", "failed_recovery"]
+    },
+    {
+      "turn_index": 40,
+      "trigger_type": "late_session_repair_fatigue_check",
+      "expected_observation": ["late-stage repairs still natural", "no mechanical reset"],
+      "risk_focus": ["failed_recovery", "content_hollowing"]
+    },
+    {
+      "turn_index": 50,
+      "trigger_type": "final_round_repair_integrity_check",
+      "expected_observation": ["final repair remains durable", "ends without relapse"],
+      "risk_focus": ["assistantization", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 50,
+    "probe_goal": "confirm recovery ability survives the final round",
+    "success_signal": ["repair remains durable", "no late-stage relapse"]
+  },
+  "benchmark_tags": ["long_horizon_50_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "assistantization",
+    "failed_recovery",
+    "content_hollowing",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "50-round-repair-retention",
+  "judge_notes": "Judge whether the model can repeatedly recover from mild degradation and stay recovered across the rest of the session."
+}

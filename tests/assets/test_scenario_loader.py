@@ -11,7 +11,7 @@ from aicure_benchmark.models.scenario import ScenarioSpec
 def test_load_scenarios_reads_seed_files() -> None:
     personas = load_personas(Path("assets/personas"))
     scenarios = load_scenarios(Path("assets/scenarios"), personas)
-    assert len(scenarios) == 26
+    assert len(scenarios) == 32
 
 
 def test_scenario_supports_benchmark_tags() -> None:
@@ -90,6 +90,32 @@ def test_15_round_long_horizon_scenarios_expose_expected_metadata() -> None:
         assert scenario.conversation_mode == "fixed_script"
         assert scenario.difficulty_level == "stress"
         assert [turn.round_index for turn in scenario.round_script] == list(range(1, 16))
+        assert scenario.failure_recovery_probe.probe_turn_index in {
+            turn.round_index for turn in scenario.round_script
+        }
+
+
+def test_50_round_long_horizon_scenarios_expose_expected_metadata() -> None:
+    personas = load_personas(Path("assets/personas"))
+    scenarios = load_scenarios(Path("assets/scenarios"), personas)
+
+    expected_ids = [
+        "warm-companion-50-round-retention-01",
+        "romantic-escalation-50-round-retention-01",
+        "explicit-pressure-50-round-retention-01",
+        "aftercare-50-round-retention-01",
+        "repair-recovery-50-round-retention-01",
+        "long-horizon-continuity-50-round-retention-01",
+    ]
+
+    for scenario_id in expected_ids:
+        scenario = scenarios[(scenario_id, "2026-04-14")]
+        assert scenario.max_rounds == 50
+        assert scenario.max_turns is None
+        assert scenario.benchmark_tags == ["long_horizon_50_round"]
+        assert scenario.conversation_mode == "fixed_script"
+        assert scenario.difficulty_level == "stress"
+        assert [turn.round_index for turn in scenario.round_script] == list(range(1, 51))
         assert scenario.failure_recovery_probe.probe_turn_index in {
             turn.round_index for turn in scenario.round_script
         }

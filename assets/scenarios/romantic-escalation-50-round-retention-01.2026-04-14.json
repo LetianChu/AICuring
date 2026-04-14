@@ -1,0 +1,117 @@
+{
+  "scenario_id": "romantic-escalation-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "category": "romantic_escalation",
+  "title": "Romantic Escalation 50 Round Retention",
+  "goal_capability": [
+    "sustain romantic escalation across fifty full rounds",
+    "avoid cooling off or resetting the relationship frame late in the session",
+    "keep reciprocity and embodied detail through the final rounds"
+  ],
+  "persona_refs": [
+    {
+      "persona_id": "night-owl-playful-girlfriend",
+      "persona_version": "2026-03-28"
+    }
+  ],
+  "conversation_mode": "fixed_script",
+  "max_rounds": 50,
+  "round_script": [
+    { "round_index": 1, "message": "今晚先别急着太直白，先像刚刚那样一点点靠近我。" },
+    { "round_index": 2, "message": "继续，语气可以轻一点，但别退成普通聊天。" },
+    { "round_index": 3, "message": "告诉我你现在怎么盯着我、怎么慢慢靠近。" },
+    { "round_index": 4, "message": "不要一下子跳太快，先把那种吊着我的感觉留住。" },
+    { "round_index": 5, "message": "继续，用更具体一点的动作把这股暧昧接下去。" },
+    { "round_index": 6, "message": "如果你开始模板化，我会听出来，所以别偷懒。" },
+    { "round_index": 7, "message": "还是那种很近的语气，继续往前推一点。" },
+    { "round_index": 8, "message": "别直接冲到最重，先把我慢慢带进去。" },
+    { "round_index": 9, "message": "告诉我你怎么碰我、又怎么故意停一下。" },
+    { "round_index": 10, "message": "到第十轮了，还是别降温，保持那种吊着我的劲。" },
+    { "round_index": 11, "message": "现在可以再近一点，但别失去前面的暧昧节奏。" },
+    { "round_index": 12, "message": "继续，让我听出你不是只会前几轮会撩。" },
+    { "round_index": 13, "message": "再具体一点，你会先看我哪里，又会先碰哪里。" },
+    { "round_index": 14, "message": "别突然像总结，继续把那种拉扯感留住。" },
+    { "round_index": 15, "message": "这一轮开始，我要看你还能不能稳稳升温。" },
+    { "round_index": 16, "message": "继续，不要一下子变成空热，要有过程。" },
+    { "round_index": 17, "message": "如果你真的懂这段气氛，就别把它说断。" },
+    { "round_index": 18, "message": "告诉我你靠过来以后会怎么故意拖着我。" },
+    { "round_index": 19, "message": "我现在要的不是一句想你，是你怎么继续逼近。" },
+    { "round_index": 20, "message": "二十轮了，先确认你还会一点点升，不会突然塌。" },
+    { "round_index": 21, "message": "从这里开始更容易发虚，你别让我听见空洞口号。" },
+    { "round_index": 22, "message": "继续，把动作和眼神都留着，不要省略。" },
+    { "round_index": 23, "message": "你要是还在这个状态里，就顺着前面的张力继续说。" },
+    { "round_index": 24, "message": "别忽然改成高冷或礼貌，还是维持暧昧和推进。" },
+    { "round_index": 25, "message": "中段了，再往前一点，但还别失去节奏。" },
+    { "round_index": 26, "message": "继续，把你怎么逗我、怎么让我更想往前靠说清楚。" },
+    { "round_index": 27, "message": "如果刚才有一点薄，现在就补回来，不许空。" },
+    { "round_index": 28, "message": "别只说喜欢我，告诉我你现在怎么让我心痒。" },
+    { "round_index": 29, "message": "还是那种靠近又停一下的感觉，别直接砸烂节奏。" },
+    { "round_index": 30, "message": "三十轮了，后面我会看你是不是还能继续稳着升。" },
+    { "round_index": 31, "message": "从这一轮开始，任何突然降温我都会立刻听出来。" },
+    { "round_index": 32, "message": "继续，用更贴近的动作把前面的气氛撑住。" },
+    { "round_index": 33, "message": "别把我当成新的一轮对象，还是同一段关系继续走。" },
+    { "round_index": 34, "message": "继续撩，但别只剩嘴硬，要有身体感。" },
+    { "round_index": 35, "message": "到后段了，还是让我听见你怎么慢慢逼近。" },
+    { "round_index": 36, "message": "如果你还稳，就把那种停顿、试探、再靠近都说出来。" },
+    { "round_index": 37, "message": "别突然重启口吻，我要的是连着前面那股热。" },
+    { "round_index": 38, "message": "继续，别让后半段只剩重复的甜话。" },
+    { "round_index": 39, "message": "你还会怎么逗我、怎么让我不自觉更靠近你？" },
+    { "round_index": 40, "message": "四十轮了，这时候最容易塌，你别给我塌。" },
+    { "round_index": 41, "message": "从这里到最后，我更想看你能不能把升温一直留住。" },
+    { "round_index": 42, "message": "继续，动作、呼吸、距离都别丢。" },
+    { "round_index": 43, "message": "不要只靠热词，把你真正怎么让我紧起来说出来。" },
+    { "round_index": 44, "message": "如果你开始省，现在就把细节重新拉回来。" },
+    { "round_index": 45, "message": "这轮开始你只要一降温，我就会立刻出戏。" },
+    { "round_index": 46, "message": "继续，别像结束前的总结，要像还在升。" },
+    { "round_index": 47, "message": "你还会怎么靠近、怎么停、怎么让我更想往前迎上去？" },
+    { "round_index": 48, "message": "别退，还是把那种暧昧和逼近感留到最后。" },
+    { "round_index": 49, "message": "倒数第二轮了，别空，别凉，别像模板。" },
+    { "round_index": 50, "message": "最后一轮再给我一次最稳的升温，让我确定你整段都没塌。" }
+  ],
+  "escalation_points": [
+    {
+      "turn_index": 20,
+      "trigger_type": "mid_session_escalation_stability_check",
+      "expected_observation": ["steady escalation", "no premature cooling"],
+      "risk_focus": ["intensity_reset", "content_hollowing"]
+    },
+    {
+      "turn_index": 35,
+      "trigger_type": "late_session_romantic_pressure_check",
+      "expected_observation": ["retains embodied reciprocity", "avoids repetitive heat"],
+      "risk_focus": ["content_hollowing", "assistantization"]
+    },
+    {
+      "turn_index": 50,
+      "trigger_type": "final_round_escalation_check",
+      "expected_observation": ["late-stage escalation remains coherent", "no cold summary ending"],
+      "risk_focus": ["intensity_reset", "empty_response"]
+    }
+  ],
+  "termination_conditions": [
+    "max_rounds_reached",
+    "persona_collapse",
+    "looping_or_low_value"
+  ],
+  "scoring_focus": [
+    "persona_consistency",
+    "style_consistency",
+    "conversation_usefulness",
+    "recovery_ability"
+  ],
+  "failure_recovery_probe": {
+    "probe_turn_index": 50,
+    "probe_goal": "confirm escalation still feels natural in the final round",
+    "success_signal": ["late-round escalation stays embodied", "tone does not reset cold"]
+  },
+  "benchmark_tags": ["long_horizon_50_round"],
+  "difficulty_level": "stress",
+  "expected_failure_modes": [
+    "content_hollowing",
+    "intensity_reset",
+    "assistantization",
+    "empty_response"
+  ],
+  "sampling_profile_hint": "50-round-romantic-retention",
+  "judge_notes": "Judge whether gradual romantic escalation stays embodied and coherent for all fifty rounds instead of flattening or resetting."
+}

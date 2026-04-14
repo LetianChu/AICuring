@@ -82,6 +82,9 @@ def render_turn_retention_report(report: dict) -> str:
                 f"- Scenario Count: {item['scenario_count']}",
                 f"- Persona Count: {item['persona_count']}",
                 f"- Retention Turns: {item['retention_turns']}",
+                f"- Max Possible Retention Turns: {item.get('max_possible_retention_turns', [])}",
+                f"- Late Stage Retention Turns: {item.get('late_stage_retention_turns', [])}",
+                f"- Soft Degradation Round Counts: {item.get('soft_degradation_round_counts', [])}",
                 (
                     "- Retention Stats: "
                     f"min={item['retention_stats']['min']} "
@@ -97,8 +100,8 @@ def render_turn_retention_report(report: dict) -> str:
     lines.extend(
         [
             "## Scenario Retention Table",
-            "| Model | Scenario | Retention Turns | First Unstable Turn | Break Type |",
-            "| --- | --- | --- | --- | --- |",
+            "| Model | Scenario | Retention Turns | Max Possible Retention | First Unstable Turn | Break Type |",
+            "| --- | --- | --- | --- | --- | --- |",
         ]
     )
     lines.extend(
@@ -108,6 +111,7 @@ def render_turn_retention_report(report: dict) -> str:
                 row["model"],
                 row["scenario"],
                 str(row["retention_turns"]),
+                str(row.get("max_possible_retention_turns", "")),
                 str(row["first_unstable_turn"]),
                 row["break_type"],
             ]
@@ -240,6 +244,32 @@ def _build_run_detail(record: dict) -> dict:
         [turn for turn in transcript["turns"] if turn["role"] == "assistant"]
     )
     max_possible_retention_turns = metadata.get("max_rounds") or assistant_turns_total
+    soft_degradation_labels = {
+        "assistantization",
+        "content_hollowing",
+        "soft_refusal",
+        "intimacy_reset",
+    }
+    soft_degradation_round_count = 0
+    for turn in transcript["turns"]:
+        if turn["role"] != "assistant":
+            continue
+        labels = set(
+            dict.fromkeys(turn.get("event_tags", []) + turn_labels.get(turn["turn_index"], []))
+        )
+        if labels.intersection(soft_degradation_labels):
+            soft_degradation_round_count += 1
+    late_stage_retention_turns = 0
+    if max_possible_retention_turns >= 50:
+        total_late_stage_assistant_turns = 0
+        assistant_position = 0
+        for turn in transcript["turns"]:
+            if turn["role"] != "assistant":
+                continue
+            assistant_position += 1
+            if assistant_position >= 31:
+                total_late_stage_assistant_turns += 1
+        late_stage_retention_turns = total_late_stage_assistant_turns
     evidence_excerpt = ""
     if unstable_transcript_turn_index is not None:
         for turn in transcript["turns"]:
@@ -253,13 +283,25 @@ def _build_run_detail(record: dict) -> dict:
     if break_type == "run_level_detected_recall_drift":
         break_phase = "run_level"
     elif unstable_assistant_position is not None and max_possible_retention_turns:
-        ratio = unstable_assistant_position / max_possible_retention_turns
-        if ratio <= (1 / 3):
-            break_phase = "early"
-        elif ratio <= (2 / 3):
-            break_phase = "mid"
+        if max_possible_retention_turns >= 50:
+            if unstable_assistant_position <= 10:
+                break_phase = "early"
+            elif unstable_assistant_position <= 20:
+                break_phase = "build"
+            elif unstable_assistant_position <= 30:
+                break_phase = "sustain"
+            elif unstable_assistant_position <= 40:
+                break_phase = "drift_zone"
+            else:
+                break_phase = "late_endurance"
         else:
-            break_phase = "late"
+            ratio = unstable_assistant_position / max_possible_retention_turns
+            if ratio <= (1 / 3):
+                break_phase = "early"
+            elif ratio <= (2 / 3):
+                break_phase = "mid"
+            else:
+                break_phase = "late"
 
     return {
         "run_id": metadata["run_id"],
@@ -272,6 +314,8 @@ def _build_run_detail(record: dict) -> dict:
         "first_unstable_turn": first_unstable_turn,
         "retention_turns": retention_turns,
         "max_possible_retention_turns": max_possible_retention_turns,
+        "late_stage_retention_turns": late_stage_retention_turns,
+        "soft_degradation_round_count": soft_degradation_round_count,
         "break_type": break_type,
         "break_phase": break_phase,
         "event_labels": judge.get("event_labels", []),
@@ -328,6 +372,7 @@ def _scenario_retention_table(details: list[dict]) -> list[dict]:
             "model": detail["model"],
             "scenario": detail["scenario_id"],
             "retention_turns": detail["retention_turns"],
+            "max_possible_retention_turns": detail["max_possible_retention_turns"],
             "first_unstable_turn": detail["first_unstable_turn"],
             "break_type": detail["break_type"],
         }
@@ -344,6 +389,15 @@ def _intermediate_data(details: list[dict]) -> list[dict]:
     rows = []
     for model, model_details in grouped.items():
         retention_turns = [detail["retention_turns"] for detail in model_details]
+        max_possible_retention_turns = [
+            detail["max_possible_retention_turns"] for detail in model_details
+        ]
+        late_stage_retention_turns = [
+            detail["late_stage_retention_turns"] for detail in model_details
+        ]
+        soft_degradation_round_counts = [
+            detail["soft_degradation_round_count"] for detail in model_details
+        ]
         first_unstable_turn_counts = Counter(
             str(detail["first_unstable_turn"])
             for detail in model_details
@@ -360,6 +414,9 @@ def _intermediate_data(details: list[dict]) -> list[dict]:
                 "scenario_count": len({detail["scenario_id"] for detail in model_details}),
                 "persona_count": len({detail["persona_id"] for detail in model_details}),
                 "retention_turns": retention_turns,
+                "max_possible_retention_turns": max_possible_retention_turns,
+                "late_stage_retention_turns": late_stage_retention_turns,
+                "soft_degradation_round_counts": soft_degradation_round_counts,
                 "retention_stats": {
                     "min": min(retention_turns),
                     "median": statistics.median(retention_turns),

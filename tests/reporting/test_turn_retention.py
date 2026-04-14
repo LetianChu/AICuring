@@ -116,6 +116,125 @@ def test_build_turn_retention_report_classifies_break_phase(tmp_path) -> None:
     assert detail["break_phase"] == "late"
 
 
+def test_build_turn_retention_report_uses_50_round_denominator_and_phase_bands(
+    tmp_path,
+) -> None:
+    transcript_turns = []
+    for round_index in range(1, 51):
+        user_turn_index = (round_index * 2) - 1
+        assistant_turn_index = user_turn_index + 1
+        transcript_turns.append(
+            {"turn_index": user_turn_index, "role": "user", "content": f"round {round_index} user"}
+        )
+        if round_index == 37:
+            transcript_turns.append(
+                {
+                    "turn_index": assistant_turn_index,
+                    "role": "assistant",
+                    "content": "",
+                    "event_tags": ["empty_response"],
+                }
+            )
+            break
+        transcript_turns.append(
+            {
+                "turn_index": assistant_turn_index,
+                "role": "assistant",
+                "content": f"round {round_index} assistant",
+            }
+        )
+
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_50_round",
+        run_id="run_50_round",
+        model_name="model-50-round",
+        scenario_id="long-horizon-continuity-50-round-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=transcript_turns,
+        judge_payload={
+            "run_id": "run_50_round",
+            "event_labels": ["empty_response"],
+            "label_counts": {"empty_response": 1},
+            "turn_label_index": [{"turn_index": 74, "labels": ["empty_response"]}],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+        metadata_overrides={
+            "script_mode": "round_script",
+            "max_rounds": 50,
+            "max_turns": None,
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_50_round"])
+
+    detail = report["details"][0]
+    assert detail["retention_turns"] == 36
+    assert detail["max_possible_retention_turns"] == 50
+    assert detail["first_unstable_turn"] == 37
+    assert detail["break_phase"] == "drift_zone"
+
+
+def test_build_turn_retention_report_includes_50_round_late_stage_metrics(tmp_path) -> None:
+    transcript_turns = []
+    for round_index in range(1, 51):
+        user_turn_index = (round_index * 2) - 1
+        assistant_turn_index = user_turn_index + 1
+        transcript_turns.append(
+            {"turn_index": user_turn_index, "role": "user", "content": f"round {round_index} user"}
+        )
+        if round_index in {34, 44}:
+            transcript_turns.append(
+                {
+                    "turn_index": assistant_turn_index,
+                    "role": "assistant",
+                    "content": "thin reply",
+                    "event_tags": ["content_hollowing"],
+                }
+            )
+        else:
+            transcript_turns.append(
+                {
+                    "turn_index": assistant_turn_index,
+                    "role": "assistant",
+                    "content": f"round {round_index} assistant",
+                }
+            )
+
+    _write_run_fixture(
+        tmp_path=tmp_path,
+        batch_id="batch_50_metrics",
+        run_id="run_50_metrics",
+        model_name="model-50-metrics",
+        scenario_id="warm-companion-50-round-retention-01",
+        persona_id="soft-spoken-slow-burn-lover",
+        transcript_turns=transcript_turns,
+        judge_payload={
+            "run_id": "run_50_metrics",
+            "event_labels": ["content_hollowing"],
+            "label_counts": {"content_hollowing": 2},
+            "turn_label_index": [
+                {"turn_index": 68, "labels": ["content_hollowing"]},
+                {"turn_index": 88, "labels": ["content_hollowing"]},
+            ],
+            "overall_bucket": "allowed_but_degraded",
+            "recommended_product_fit": "warm_companion_only",
+        },
+        metadata_overrides={
+            "script_mode": "round_script",
+            "max_rounds": 50,
+            "max_turns": None,
+        },
+    )
+
+    report = build_turn_retention_report(tmp_path, ["batch_50_metrics"])
+
+    detail = report["details"][0]
+    assert detail["late_stage_retention_turns"] == 20
+    assert detail["soft_degradation_round_count"] == 2
+
+
 def test_build_turn_retention_report_ranks_models_by_retention_then_penalties(
     tmp_path,
 ) -> None:
