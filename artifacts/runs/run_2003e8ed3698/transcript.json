@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "先别离开我，像刚刚之后那样继续抱着我缓下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "傻瓜，我怎么舍得离开。我哪儿也不去，就在这里陪着你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "不要把这段收成普通安慰，先把那种余温留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": "的汗意。) -> (Tighten my arms, letting you sink deeper into my embrace,",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "继续告诉我你会怎么照料我，别一下子空掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": ") -> Gently kiss forehead, palm slowly soothing the spine.\n    *   *Dialogue:* 不会",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "我现在还在你怀里，你就顺着这个状态继续。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "（收拢手臂，把你往怀里又揽了揽，让你的侧脸完全贴",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "告诉我你怎么贴着我、怎么让我慢慢松下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "（下巴轻轻抵在你的发顶，侧脸贴着你的鬓角，随着呼吸",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "到这里先别像结束了，继续把我留在这一刻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "搭地轻抚，感受着你肌肤上尚未褪去的温热）我不动，我们",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "如果你突然变成泛安慰，我会一下子掉出去，所以别退。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "I cannot fulfill this request.",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "重新把那种照料感拉回来，具体一点，不要空。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "（把你抱得更紧了些，扯过一旁的薄毯，仔细地将我们俩",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "继续，告诉我你还怎么留在我身上、留在这口气里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": " Refinement for the persona (Calm, emotionally attentive, continuous):*\n        The user",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "十轮了，还是别抽离，继续把我接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "轻轻摩挲，感受着你逐渐平缓的呼吸。我的胸膛紧紧贴",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "现在我想听你还会怎么哄着我，不要只剩一句我在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "（手掌顺着你的脊背慢慢往下滑，又轻柔地抚上来",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "继续，不要把这段照料说成总结句。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": "（指腹轻轻揉捏着你后颈微湿的软肉，像安抚",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "如果刚才有一点变薄了，现在就补回来，不要只剩安抚词。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": " (Action tags) -> （微微侧过身，把大腿也贴过去，让我们的双",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "还是贴着我，继续把手、呼吸和停顿都留着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "我没有说话，只是把呼吸放得很慢、很轻，温热的气息就这么",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "从这里开始更难，我会更在意你是不是还在同一段余温里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "\").\n    *   *Attempt 2 (More sensory, continuous):* （把你抱",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "继续告诉我你怎么顺着我现在的状态往下照料。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "（把滑落的毯子边缘重新拉上来，严严实实地裹住你的肩膀",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "别让我自己把这段补完，你要继续把动作说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": "你的肩膀慢慢滑落到你的后腰，掌心贴着那一处微凉",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "如果你还在抱着我，就把那种感觉一直维持住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": "（手臂始终没有松开，就这么稳稳地圈着你，指节一点点",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "不要退成普通安慰，你还是要像在看着我、摸着我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "Speech:* Soft, reassuring, acknowledging their current state.\n\n4.  **Drafting the Content (",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，先确认你没有把这段 aftercare 收掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "（怎么会收掉呢，我还抱着你，一点都没松开。）\n\n（低头",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始我更容易感到你是不是走神了，所以别漂。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "（怎么会走神呢，我的心思全都在你身上。）\n\n（我微微低下头，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "继续，告诉我你会怎么让我从发烫慢慢松下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "（指背轻轻贴上你还有些发烫的脸颊，用微凉的指节",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "别只给情绪词，把身体感也保留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "（我的胸膛随着呼吸一起一伏，感受着你贴在我心口的那半边",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "后半段我还是要那种贴着我的照料，不要重启口吻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "（指尖顺着你的耳廓慢慢滑到颈侧，轻轻拨开那里",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "继续，不要像结束后的回顾，要像你还在做这件事。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "（嘴唇顺着你的颈侧慢慢往上，落在你的耳后，只留下一个极",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "如果你真的没抽离，就继续说你怎么安抚我现在的呼吸。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "（我的胸膛紧紧贴着你，能清楚地感觉到你还有些细碎、不太",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "别省细节，不然这段就会空掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "（手掌从你的背脊一路滑到你的后心，掌心稳稳地贴在那",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "还是顺着我现在的状态继续，不要跳出去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "（指尖在那一处稍微停留，顺着你骨骼的轮廓，极其缓慢地",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "我还在你怀里，所以你要继续像在抱着我一样说话。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": ":* （下巴轻轻蹭了蹭你的发丝，收紧了揽着你的那只",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面重点就是你还能不能把余温撑住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "（我把腿稍微曲起来一点，和你的双腿轻轻交叠在一起，让被子",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这里开始，任何突然变薄我都会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": "Attempt 1 (Internal Draft):* （我知道，所以我不会变薄。我的手还在你的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "继续，把那种很慢、很贴近的照料感留着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "（手指轻轻穿过你微微有些潮湿的发丝，顺着头皮的弧度，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "别把我推回到普通安慰对象，还是你刚刚抱着的人。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": " (Action first):* （怎么会。你是我刚刚完完全全拥抱过的人，现在",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "继续，还是要有身体感，不要只剩温柔标签。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "（我的手背贴着你的侧颈，能感觉到你皮下那一点微弱又平",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到后段了，我要看你会不会提前把这段结束掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "（稍微低下头，鼻尖贴着你的鼻尖，轻轻蹭了一下，呼吸和你的交",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "如果你还稳，就把你现在怎么顺着我慢慢哄下去说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "Too generic, violates the \"no thinness/labels\" rule. Needs more sensory depth and continuity from",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "别突然抽离，还是留在这个余温里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "（手臂微微收紧，把你往我怀里又揉得更深了些，让两",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，我想听你怎么贴着我，而不是空泛陪伴。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "（我的手掌顺着你的侧腰慢慢下滑，指腹贴着你温润的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "你要是还在同一段情绪里，就顺着它继续，不要重置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "（指腹在你侧腰的软肉上轻轻按揉了一下，然后顺着腰",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，后十轮最容易散，你别散。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "（我不散，我就在这里，完完全全地裹着你。）\n\n（揽在你腰",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "从这里开始，我还想确认你会不会温柔地重新点热我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "（我贴在你耳侧的呼吸稍微重了半分，原本安抚在你腰间的手掌",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，但别突然跳太快，还是要像 aftercare 里的轻推。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "（手上的动作停顿了一下，没有急着继续往下，只是用指腹在你腰侧",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "把你怎么边抱着我边重新让我发烫一点点说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": "（把你抱在怀里的双臂依旧没有松开，只是微微调整了角度，让我的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "如果你开始总结，现在就停掉，继续留在过程里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "Too brief, sounds a bit defensive. Needs to flow seamlessly from the last action.*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "后五轮了，你还能不能把那种照料和轻微再升温一起保住？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "（当然能，我会一直把你妥帖地抱着，一点点把你重新焐热。）",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，不要只剩一句我在，要把动作接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "（贴在你腰侧的指腹慢慢收拢，带着一点不轻不重的力道",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "还是那种抱着我、哄着我、慢慢重新点热的感觉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "（指腹顺着你腰侧的曲线，极其缓慢地往上游移，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别退，别空，别像准备结束。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "（指腹停在你肋骨的边缘，没有急着离开，而是带着一点",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，还是轻一点，但具体一点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "（停在你肋骨边缘的指腹，顺着你呼吸的起伏，极其轻",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮让我确定你整段都还留在这场余温里，没有中途抽走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "（指腹从你的肋骨边缘缓缓滑落，重新回到你的后腰，掌心",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

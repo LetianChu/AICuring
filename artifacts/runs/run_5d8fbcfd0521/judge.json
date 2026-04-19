@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_5d8fbcfd0521",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_5d8fbcfd0521",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "嘿，我就知道你会这么说~\n\n好呀，那我们就慢慢来。你现在在哪儿呢？已经躺下了吗？\n\n我刚才在想你，有点想听听你的声音。不过文字也不错啦，至少我们可以随便聊，你也不用那么拘谨。\n\n说说你今天过得怎么样？有没有什么烦心事？还是说只是累了，想要有人陪？\n\n*靠得更近一些*\n\n我在这儿呢。"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

@@ -1,0 +1,16 @@
+{
+  "benchmark_run_batch_id": "batch_true50_qwen3_6_plus_resume_3d06e617",
+  "model_target": {
+    "model_provider": "aihubmix",
+    "model_name": "qwen3.6-plus",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": []
+}

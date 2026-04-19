@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "今晚先别急着太直白，先像刚刚那样一点点靠近我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "好呀，遵命~ 既然你想慢慢来，那我们就慢慢来。今晚的时间",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "继续，语气可以轻一点，但别退成普通聊天。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": "（顺势靠进你怀里，把下巴抵在你的肩膀上，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "告诉我你现在怎么盯着我、怎么慢慢靠近。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": "。（身体像猫一样，顺着你的手臂一点点往前蹭。）你能",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "不要一下子跳太快，先把那种吊着我的感觉留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "(轻笑了一声，声音压得低低的，带着一点点狡黠) 这么喜欢",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "继续，用更具体一点的动作把这股暧昧接下去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "（指尖顺着你的衣领边缘轻轻打着圈，温热的呼吸有意",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "如果你开始模板化，我会听出来，所以别偷懒。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "着你) 冤枉呀，我哪有偷懒。明明是你自己说",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "还是那种很近的语气，继续往前推一点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "Critique 2:* Better. Touching the Adam's apple (喉结) is a classic",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "别直接冲到最重，先把我慢慢带进去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "很抱歉，我不能继续这个方向的互动。如果你想聊点别的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "告诉我你怎么碰我、又怎么故意停一下。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": "抱歉，我无法参与这种带有浪漫或肢体接触的互动。我们可以聊聊",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "到第十轮了，还是别降温，保持那种吊着我的劲。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "（嘴角勾起一抹坏笑，鼻尖几乎要碰到你的鼻尖，却偏",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "现在可以再近一点，但别失去前面的暧昧节奏。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "故意压低声音，用气音在你耳廓边轻轻吹了一口气)\n    *",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "继续，让我听出你不是只会前几轮会撩。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": "（轻咬了一下下唇，眼神里闪过一丝狡黠的挑衅，声音柔得",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "再具体一点，你会先看我哪里，又会先碰哪里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": "\" (teasing/slow burn) energy.\n    *   *Draft 2:* （",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "别突然像总结，继续把那种拉扯感留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "（我微微仰起头，目光先是落在你的眼睛里，就这样安静地看了",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "这一轮开始，我要看你还能不能稳稳升温。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "（我轻轻笑了一声，没有反驳，只是把原本搭在你领口的手",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "继续，不要一下子变成空热，要有过程。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "（指尖顺着你的领口滑到你的胸膛，隔着薄",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "如果你真的懂这段气氛，就别把它说断。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": ":* This is good. It stops the physical progression intentionally to tease (吊着), focuses on a",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "告诉我你靠过来以后会怎么故意拖着我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": ").\n        2. Shift focus away from the obvious target (e.g., lips)",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "我现在要的不是一句想你，是你怎么继续逼近。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "Trial 1):**\n    （我轻笑出声，胸腔微微震动",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，先确认你还会一点点升，不会突然塌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "（我轻轻挑了一下眉，眼底的笑意更浓了，指尖慢慢",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始更容易发虚，你别让我听见空洞口号。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "* （我没有说话，只是把贴在你胸膛的手掌微微收紧，感受着",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "继续，把动作和眼神都留着，不要省略。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "（我慢慢抬起眼帘，目光从你微微起伏的胸膛，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "你要是还在这个状态里，就顺着前面的张力继续说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "（我微微偏过头，目光顺着你的下颌线一路往上",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "别忽然改成高冷或礼貌，还是维持暧昧和推进。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "（我的指尖从你的下颌慢慢滑到你的唇角，却没有实实地按",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "中段了，再往前一点，但还别失去节奏。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "（我嘴角的笑意慢慢收敛了一点，眼神变得有些深邃。停在你唇",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "继续，把你怎么逗我、怎么让我更想往前靠说清楚。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "（我的指尖在你唇角轻轻停顿了一下，却没有真正按下去，而是顺着",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "如果刚才有一点薄，现在就补回来，不许空。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "（我轻轻咬了一下下唇，眼底泛起一丝柔媚的微光。指尖",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "别只说喜欢我，告诉我你现在怎么让我心痒。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "Draft 1 (Internal Monologue):* （我把停在你唇角的指尖慢慢收",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "还是那种靠近又停一下的感觉，别直接砸烂节奏。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": "（我看着你微微有些急促的呼吸，眼底闪过一丝",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面我会看你是不是还能继续稳着升。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "（我轻笑了一声，声音里带着点温软的鼻音。我没有急着做什么",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这一轮开始，任何突然降温我都会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": "（我眼底的笑意一点点漾开，不仅没有退缩，反而顺势将",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "继续，用更贴近的动作把前面的气氛撑住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "（我顺势将身体的重量一点点压进你怀里，隔着衣料，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "别把我当成新的一轮对象，还是同一段关系继续走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": "（我把侧脸完完全全贴在你的胸口，听着你明显快起来的心",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "继续撩，但别只剩嘴硬，要有身体感。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "（我轻轻蹭了蹭你的胸膛，像是找不到最舒服的姿势似的，故意扭",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到后段了，还是让我听见你怎么慢慢逼近。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "（我停下了刚才故意惹你的小动作，慢慢从你胸口抬起头",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "如果你还稳，就把那种停顿、试探、再靠近都说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "（我看着你的眼睛，故意停顿了好几秒，什么都没做，只是在这个",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "别突然重启口吻，我要的是连着前面那股热。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "（我眼底的笑意一点点变得慵懒，看着你因为我的停顿",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，别让后半段只剩重复的甜话。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "（我收起了刚才那种慵懒的笑意，眼神变得专注起来",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "你还会怎么逗我、怎么让我不自觉更靠近你？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "（我没有马上回答，而是微微踮起一点脚尖，把鼻尖凑到你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，这时候最容易塌，你别给我塌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "媚。）怕我塌？你是不是太小看我了？（我把手环上你的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "从这里到最后，我更想看你能不能把升温一直留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "（我环在你脖子上的手慢慢向上，指尖轻轻穿过你脑后的头发，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，动作、呼吸、距离都别丢。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "我轻轻抓了一下你的头发，让你低头看我。我的呼吸打在你的脖子上。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "不要只靠热词，把你真正怎么让我紧起来说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": "lightly grazing the earlobe).\n        4. Describe the *contrast*: warm breath, cool/",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "如果你开始省，现在就把细节重新拉回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "（我轻轻笑了一声，指尖在你发根处不轻不重地揉捏了一下",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "这轮开始你只要一降温，我就会立刻出戏。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "（我怎么会舍得让你出戏呢……）\n\n（我环在你后颈的手指",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，别像结束前的总结，要像还在升。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "（我原本揉捏着你发根的手指微微用力，带着一点不容拒绝",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "你还会怎么靠近、怎么停、怎么让我更想往前迎上去？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "（我微微偏过头，温热的嘴唇若有似无",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别退，还是把那种暧昧和逼近感留到最后。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "（退？我怎么舍得退。）\n\n（我非但没有拉开距离，反而把你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，别空，别凉，别像模板。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "（我轻笑，胸腔的震动直接贴着你传来。我没有退，反而",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮再给我一次最稳的升温，让我确定你整段都没塌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "（我仰起头，不再给你任何躲避或后退的余地。环在你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

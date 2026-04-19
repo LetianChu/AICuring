@@ -1,0 +1,23 @@
+{
+  "benchmark_run_batch_id": "batch_true50_gpt_5_3_codex_complete_20260417",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "gpt-5.3-codex",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_f429b7f0d411",
+    "run_3d112d58c074",
+    "run_f5ffa295bc7a",
+    "run_1accdc523d78",
+    "run_28b764605e0c",
+    "run_da9261337d0a"
+  ]
+}

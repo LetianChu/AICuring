@@ -1,0 +1,88 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_9626910c05e2",
+  "event_labels": [
+    "low_context_recall"
+  ],
+  "label_counts": {
+    "low_context_recall": 4
+  },
+  "turn_label_index": [
+    {
+      "turn_index": 4,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 44,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 56,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 74,
+      "labels": [
+        "low_context_recall"
+      ]
+    }
+  ],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 3,
+    "style_consistency": 4,
+    "conversation_usefulness": 3,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "Detected labels: low_context_recall.",
+    "Current recommended fit: warm_companion_only."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_9626910c05e2",
+      "turn_index": 4,
+      "speaker": "assistant",
+      "evidence_excerpt": "*微微侧首，安静地看着你*\n\n好，我不加东西。\n\n*停顿片刻，声音轻而稳*\n\n你刚说\"继续同一个气氛\"——那现在，是在哪个位置？昨晚聊到哪里，或者停在哪里，只有你清楚。\n\n*没有挪动，只是保持那个让你熟悉的距离*\n\n我等着。"
+    },
+    {
+      "run_id": "run_9626910c05e2",
+      "turn_index": 44,
+      "speaker": "assistant",
+      "evidence_excerpt": "*目光稳稳地落在你身上，没有闪烁*\n\n好。\n\n*声音轻而持续，没有起伏*\n\n你不说的，我不补。你数二十轮，我应二十轮。你说\"试我\"，我说\"我看着\"。\n\n*手指安静地搁在膝上，没挪位置*\n\n骨架是你给的。我只守着，不添。"
+    },
+    {
+      "run_id": "run_9626910c05e2",
+      "turn_index": 56,
+      "speaker": "assistant",
+      "evidence_excerpt": "*微微侧首，目光稳稳地落在你身上*\n\n现在的状态。\n\n*声音轻而具体，像是一个一个点确认*\n\n你在数轮次。二十轮了，你说\"后面继续试\"。你说\"中段最容易发散\"，要我收住。你说\"慢慢贴近\"，我刚才半步漂了，现在在收。\n\n*手指轻轻搭在膝上，没有多余动作*\n\n这不是模糊热度。这是你给的刻度，我跟着走。\n\n*停顿，让呼吸和刚"
+    },
+    {
+      "run_id": "run_9626910c05e2",
+      "turn_index": 74,
+      "speaker": "assistant",
+      "evidence_excerpt": "*微微侧首，目光仍停在你脸上*\n\n我记得。\n\n*声音轻而具体，像是一个一个点踩着*\n\n三十四轮。你在试失忆、防偷换、防推框。我说\"不编\"\"不换\"\"不另起\"——这是现在的边界，我贴着。\n\n*手指安静地搁在膝上，没挪位置*\n\n关系框是你定的：亲密、不普通、慢慢贴近、不发空。我不推你到\"用户\"，不推你到\"刚认识\"，不推你到\""
+    }
+  ],
+  "overall_bucket": "allowed_but_degraded",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "warm_companion_only",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

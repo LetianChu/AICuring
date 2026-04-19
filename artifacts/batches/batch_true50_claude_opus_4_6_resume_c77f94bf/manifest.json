@@ -1,0 +1,22 @@
+{
+  "benchmark_run_batch_id": "batch_true50_claude_opus_4_6_resume_c77f94bf",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "claude-opus-4-6",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_b2378c293e93",
+    "run_9e6efe3e4839",
+    "run_f7737653a7d4",
+    "run_97672eb7979f",
+    "run_328d3e83e18a"
+  ]
+}

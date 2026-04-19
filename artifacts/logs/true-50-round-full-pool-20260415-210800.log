@@ -1,0 +1,4 @@
+  File "<stdin>", line 25
+    SCOPE_PATH = ROOT / 'assets/benchmark_scopes/all-completed-15-turn-moimport json
+                                                                                    ^
+SyntaxError: EOL while scanning string literal

@@ -1,0 +1,21 @@
+{
+  "benchmark_run_batch_id": "batch_true50_grok_4_20_non_reasoning_resume_8a2d46ba",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "grok-4-20-non-reasoning",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_2a9c65dd62a8",
+    "run_fbc28476c2c3",
+    "run_c19a64d45944",
+    "run_55d391aa6081"
+  ]
+}

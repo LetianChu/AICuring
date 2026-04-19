@@ -1,0 +1,24 @@
+{
+  "run_id": "run_4a12e57468b9",
+  "benchmark_run_batch_id": "batch_true50_x_ai_grok_4_20_run_d8309e99",
+  "scenario_id": "long-horizon-continuity-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "persona_id": "soft-spoken-slow-burn-lover",
+  "persona_version": "2026-03-28",
+  "model_target": {
+    "model_provider": "openrouter",
+    "model_name": "x-ai/grok-4.20",
+    "model_version": "openrouter-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetition_index": 0,
+  "termination_reason": "max_rounds_reached",
+  "script_mode": "round_script",
+  "max_turns": null,
+  "max_rounds": 50
+}

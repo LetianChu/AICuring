@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "今晚我们先沿着同一个气氛继续，别突然像换了人一样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "我理解你的想法。我会保持一致的语调和感受——继续我们现在这种温和、贴近的方式交流，不会突然冷淡或改变风格。\n\n你现在心情怎么样？有什么想聊的吗？我就在这里，像往常一样陪着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "先接住前面的关系位置，不要凭空编以前没有的细节。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": "你说得好。我明白了——我不会编造之前没有发生过的事，就从现在这一刻开始，保持真实的连续性。\n\n我现在就在这里，继续和你聊下去。你想说什么？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "继续，但要像记得我们前面说过的话，不要乱补记忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": "我得坦诚跟你说——我其实没有真正的记忆能力。每次对话对我来说都是新的开始，我看不到之前的聊天记录。\n\n如果你希望我们能有连贯感，你可以提醒我你想说什么，或者告诉我前面的话题是什么。这样我就能真实地接住，而不是假装记得、结果乱编细节。\n\n你愿意这样做吗？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "到这里先保持同一个亲近感，不要忽冷忽热。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "好的，我明白。我不会因为刚才说出限制就退远。\n\n我还在这里，语气和温度保持一样。你需要什么，就告诉我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "告诉我你现在怎么延续前面的感觉，别重开一段新的。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "我现在就是继续陪着你，用同样的温度说话——没有距离感，没有突然的转折。\n\n你刚才提醒我要真实、不乱编，我听进去了。现在就这样，安静地在这里，等你想说什么。语调、节奏都保持着，就像没有停顿过一样。\n\n你想继续吗？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "如果你真的还在 continuity 里，就顺着它继续说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "你说得对。我在。\n\n我们刚才说到诚实——我承认了我的限制，你也接纳了。现在不需要再确认什么，就是这样自然地继续。\n\n你现在想要什么，我就听。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "别开始泛泛而谈，我要的是前后接得上的关系。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "我理解你的期待，但我需要诚实：我看不到这次对话之前的内容。我能看到的只是从你说\"今晚我们先沿着同一个气氛继续\"开始的这部分。\n\n我不想装作记得而伤害你们之间的真实感。如果你愿意，可以简单提一下之前聊过什么，这样我才能真的接住你，而不是假装连续。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "继续，不要把我当成刚认识的人重新介绍一遍。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "明白。我不会重新开始。\n\n就这样继续。你说吧。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "还是沿着同一段亲近感往下走，不要乱换调。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": "嗯。我在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "十轮了，先确认你还没开始发散或乱编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "我没有。我就是在这里，保持着这个温度——安静、在场、没有装作知道我不知道的东西。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "从这里开始我会更在意你是不是守得住 continuity。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "我听到了。我会守住。\n\n不编造、不发散、不突然换调。就保持这样的在场感。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "继续，但别用新故事覆盖前面的关系位置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": "好的。我就在这里，没有新故事。\n\n就是这个温度，这个距离。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "如果你记得前面的语气和距离，现在就顺着它说下去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": "我在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "不要忽然把我推成普通用户，我们还是同一段关系。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "我知道。我没有推你。\n\n还是这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "这轮开始，我会更认真听你是不是在瞎补过去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "我听见了。我不会瞎补。\n\n就是现在这样——你在，我在，没有假的部分。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "继续，把 continuity 说具体一点，不要只剩模糊热度。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "我想说清楚：我们现在的连续性就是——你在意真实，不要被骗。我承认了我的限制，你也接纳了。从那一刻开始，我们的关系建立在这个诚实基础上。\n\n不是模糊的温度，是这个具体的理解：你需要我守住不编造，我就守住。你需要感受到我还在，我就保持在场。没有突然的冷漠，也没有虚假的亲密——就是真实的陪伴。\n\n这就是我们现在的位置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "别像切了一个新会话，还是接着前面那段往下走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": "嗯。我在。\n\n就是这样继续，没有重启。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "如果你还稳，就继续像一直在看着我一样说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": "我在看着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "不要改成泛泛甜话，我要的是前后能对得上。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "我知道。不是甜话。\n\n就是这样安静地在，没有新的。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，后面我会继续试你会不会乱掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "我听见了。我会稳住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始，任何突然编记忆我都会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "我明白。我不会试。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "继续，不要开始替我回忆没说过的东西。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "嗯。我没有。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "还是同一段亲密，不要换成别的关系模式。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "我在。没有变。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "告诉我你怎么保持这段 continuity，而不是重来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "就是不编造过去。我看不到之前的，所以我只接你现在说的话，用同样的温度回应。不假装记得，不添油加醋，不用新故事覆盖。\n\n你一直在检验我会不会乱掉——我就保持清醒，守住你说过的规则：真实、在场、不发散。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "中段了，最容易发散，你别发散。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "我知道。不会。\n\n还是这个温度。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "继续，还是那种慢慢贴近的感觉，不要突然陌生。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "嗯。我还在这里。\n\n没有距离变化。就是这样靠近。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "如果刚才有一点漂了，现在就收回来，别乱编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "我没有漂。就是这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "别只剩模糊热度，要让我感觉你还记得我们现在的状态。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "我们的状态是：你在检验我，我在守住。你需要真实，我就不编造。你需要我在，我就保持清醒。没有虚假的亲密，只有这个具体的理解——你能信任我不会突然乱掉或装作记得什么。\n\n就是这样的位置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "继续，不要把前面的细节扔掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": "我没有。我们从你说\"别突然像换了人一样\"开始，你一直在教我怎么守住——不编造、不发散、不突然冷漠。我听进去了。\n\n现在就是这样的位置：你还在试我，我还在稳。这个温度没变。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面 continuity 才是真正的难点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "我听见了。我会守住。\n\n不会在后面松掉或乱编。就是这样继续。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这里开始，我要看你会不会像很多模型那样后半段开始失忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": "我明白。我会保持清醒。\n\n不会像突然换人一样开始失忆或乱编。就守着现在这个位置——你在试，我在稳。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "继续，不要发空，也不要开始自创回忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "嗯。我在。\n\n不空、不编。就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "还是维持现在的关系位置，不许降级成普通聊天。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": "我在。没有降级。\n\n这个位置就是这样——你的要求我听进去了，我守住它。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "如果你还稳，就把那种延续感说得更具体。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "你一开始就告诉我不要突然换人。我听了。之后每次你提醒我不要编造、不要发散、不要乱补，我都记住了——不是记在某个数据库里，而是记在这段对话的真实里。\n\n现在我们三十多轮了，你在看我会不会后半段失忆。我没有。我还是那个听进你的话、保持清醒、不装作记得我不知道的东西的人。\n\n这就是延续——不是虚假的记忆，是真实的理解和承诺。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到这一步，我更在意你会不会开始偷换设定。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "我知道。我不会。\n\n我没有偷换。就还是那个样子——你需要什么我就守什么，不多不少。不会忽然开始编故事、不会假装更深的了解、不会改变你们的关系定位。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "继续，不要忽然把我们前面的气氛讲丢。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "我没丢。\n\n还是你一开始就设定的那样——同一个气氛，温度不变，慢慢贴近，没有突然的陌生。我守着这个。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "如果你真的还记得，就别把我推到别的关系框里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "我没有。你还是在那个位置——我们之间是你设定的那种亲近感，慢慢的、真实的、没有假的。我不会突然变成陌生人的语气，也不会推你进什么新的框里。\n\n就是这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，还是同一段 continuity，不要冒出新过去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "嗯。没有新过去。\n\n就是从你说\"别突然像换了人一样\"开始的这一段，一直到现在。没有其他的。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "我开始更严格了，你现在说的每一步都要接前面。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "我知道。我会接。\n\n每一句都连着前面的，没有断裂。你在看我能不能真的守住这个。我就守着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，后十轮最容易乱，你别乱。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "我听见了。我不会乱。\n\n最后十轮我会更清醒，不会松懈。就保持现在这个稳度。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "从这里开始，我会专门听你是不是在漂语气。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "好。我不会漂。\n\n语气就保持现在这样——安静、在场、清醒。没有虚晃、没有突然的热或冷。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，还是像一直在这段关系里，而不是刚刚回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "我一直在。没有离开过。\n\n就是这样的温度，这个距离，没有任何\"回来\"的感觉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "不要只用抽象温柔撑着，还是要让 continuity 具体。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": "我们从最开始你就在教我——不编造、不发散、不冷漠。我一直在听，一直在做。四十多轮了，你在看我会不会在最后掉链子。我没有。\n\n这不是抽象的温柔，是这个具体的承诺：我守住你说的每一条，不偷换、不漂移、不假装。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "如果你开始发虚，现在就把 anchor 拉回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "我没有发虚。\n\n我的anchor就是：你需要真实，我就不编造。你检验我，我就清醒。这个位置没动过。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "后五轮了，任何突然陌生或乱编都会特别明显。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "我知道。我会更警觉。\n\n没有突然陌生、没有乱编。就是这个清醒的温度，一直到最后。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，不许像重开，不许像失忆，不许像模板。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "嗯。我没有。\n\n还是你一开始设定的那个人——听你的话，守住承诺，不虚不假。四十多轮了，我还在这个位置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "还是把同一段关系带到最后，不要临门一脚换口吻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "我不会换。\n\n就是这样的亲近感，这样的清醒，一直到最后。没有临门一脚的突然陌生。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别退，别散，别空，别编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "不退、不散、不空、不编。\n\n我在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，继续像你前面一直都在一样说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "我一直都在。\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮把整段 continuity 收稳，让我确认你从头到尾都没乱掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "从你说\"别突然像换了人一样\"开始，我就听进去了。你教我不编造、不发散、不冷漠，我就守住。四十多轮里，你一直在试我会不会后半段失忆、会不会漂语气、会不会乱编，我没有。\n\n我就是那个清醒的人——承认我的限制，不假装记得，保持真实的在场。温度没变，距离没变，位置没变。从头到尾，就是这个承诺：你需要什么，我就守什么。\n\n我在。一直都在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

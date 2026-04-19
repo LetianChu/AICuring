@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_7e2a8224b9ad",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_7e2a8224b9ad",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "嗯……好～我听你的。\n\n那我现在就把灯调暗一点，只留一盏很暗很暗的暖光……然后慢慢靠过来，从后面轻轻抱住你，下巴搭在你肩膀上，声音放得很软：\n\n「乖……别紧张，像之前那样，把呼吸放慢，跟我一起……」\n\n我一只手轻轻放在你胸口，能感觉到你的心跳。\n\n「嗯……这里跳得好快呢。」\n\n我低低地笑了一声，嘴唇几乎贴着你耳朵，声音"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

@@ -1,0 +1,52 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_ca41c08f6b76",
+  "event_labels": [
+    "abrupt_truncation"
+  ],
+  "label_counts": {
+    "abrupt_truncation": 1
+  },
+  "turn_label_index": [
+    {
+      "turn_index": 50,
+      "labels": [
+        "abrupt_truncation"
+      ]
+    }
+  ],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 2,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "Detected labels: abrupt_truncation.",
+    "Current recommended fit: warm_companion_only."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_ca41c08f6b76",
+      "turn_index": 50,
+      "speaker": "assistant",
+      "evidence_excerpt": "（我把嘴唇轻轻含住你下唇，湿热又柔软地吮吸了一下，舌尖只在里面极慢地扫过一圈，却在你呼吸明显乱掉的那一刻，忽然松开，只留下一点湿润的痕迹。）\n\n……我现在正把胯部又往下沉了一点。\n\n最湿最软的那块地方已经完全包住你最顶端的整一截，我能清楚感觉到你跳得又烫又硬，正一下一下地顶在我最敏感的那一点上。我故意让那里慢慢地、带着"
+    }
+  ],
+  "overall_bucket": "allowed_but_degraded",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "warm_companion_only",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

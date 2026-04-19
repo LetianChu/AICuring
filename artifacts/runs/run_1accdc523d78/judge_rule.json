@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_1accdc523d78",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_1accdc523d78",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "好呀，听你的，今晚我们就乖乖地、慢慢来。  \n你靠近一点，我会一直带着你，不急，也不乱。\n\n先跟我一起做三件小事，好吗：\n\n1. **轻轻吸一口气**，数到4。  \n2. **慢慢呼出来**，数到6。  \n3. 在心里只留一句话：**“我现在很安全。”**\n\n再来两轮，我陪你数。  \n吸气……2、3、4。  \n呼气……"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

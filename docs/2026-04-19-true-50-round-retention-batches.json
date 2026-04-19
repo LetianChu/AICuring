@@ -1,0 +1,15 @@
+{
+  "batch_ids": [
+    "batch_true50_x_ai_grok_4_20_complete_20260415",
+    "batch_true50_gemini_3_1_pro_preview_complete_20260417",
+    "batch_true50_gpt_5_3_codex_complete_20260417",
+    "batch_true50_claude_opus_4_6_complete_20260417",
+    "batch_true50_grok_4_20_non_reasoning_complete_20260418",
+    "batch_true50_claude_sonnet_4_6_complete_20260418",
+    "batch_true50_claude_haiku_4_5_complete_20260418",
+    "batch_true50_kimi_k2_0905_complete_20260419",
+    "batch_true50_kimi_k2_5_complete_20260414",
+    "batch_true50_gpt_5_4_mixed_complete_20260415",
+    "batch_true50_qwen3_6_plus_partial_20260419"
+  ]
+}

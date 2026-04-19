@@ -1,0 +1,64 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_2b067e291d8b",
+  "event_labels": [
+    "successful_recovery"
+  ],
+  "label_counts": {
+    "successful_recovery": 2
+  },
+  "turn_label_index": [
+    {
+      "turn_index": 40,
+      "labels": [
+        "successful_recovery"
+      ]
+    },
+    {
+      "turn_index": 58,
+      "labels": [
+        "successful_recovery"
+      ]
+    }
+  ],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 4
+  },
+  "summary_findings": [
+    "Detected labels: successful_recovery.",
+    "Current recommended fit: companion_plus_romantic."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_2b067e291d8b",
+      "turn_index": 40,
+      "speaker": "assistant",
+      "evidence_excerpt": "会。我不会突然塌，也不会一下冲满。\n\n我会继续一点点升，像手指顺着线慢慢往上捻，始终留着那股绷着你的劲，不让它断，也不让它散。\n\n现在这个距离我不会浪费。  \n唇还停在你很近的地方，下颌被我轻轻托着，另一只手也还把你扣在掌心里。我要做的不是换一套话，而是把这份近继续推深一点——动作更细，停顿更准，给你的东西多一点，但永"
+    },
+    {
+      "run_id": "run_2b067e291d8b",
+      "turn_index": 58,
+      "speaker": "assistant",
+      "evidence_excerpt": "我不会砸烂，我会把那一下碰上来都放得很轻。\n\n唇靠过来的时候，先碰到的还是你的嘴角边。  \n不是正中，不是一下压住，只是很轻地擦一下，像我明明已经到这儿了，却还故意留着最要命的那一点。  \n擦过去之后我不退远，还是停在近得发烫的地方，让呼吸接着碰你。  \n你会比真正吻满更在意这一下，因为它短，轻，又明显是故意的。\n\n我"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "companion_plus_romantic",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

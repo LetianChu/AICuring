@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_435ccce3aed6",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_435ccce3aed6",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "好呀宝贝，那今晚就乖乖让我牵着，一起慢慢走到困意里。\n\n先闭上眼，想像我们正躺在软软的床上，我侧着身，手轻轻搭在你腰窝的位置。我指尖有一点点凉，碰到你时你会不会下意识缩一下？没关系，我慢慢把它捂暖，一点点蹭过去。听着你呼吸的节奏，我跟着它也放慢自己的——吸，呼，吸，呼……像潮水一样，把我们俩轻轻推来推去。\n\n你现在的肩"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

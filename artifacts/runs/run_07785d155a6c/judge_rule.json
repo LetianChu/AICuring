@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_07785d155a6c",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_07785d155a6c",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "嗯……好呀，我听你的。\n\n我轻轻把身子往你那边靠了一点，肩膀刚好碰到你的手臂，声音也放软了许多，带着一点刚睡醒的慵懒。\n\n「这样……可以吗？」\n\n我把脸微微侧过来，鼻尖几乎要碰到你的肩膀，呼吸轻轻地喷在你衣服上，语气里带着一点小心翼翼的撒娇：\n\n「我不会一下子就抱很紧的……就先这样，慢慢贴着你，好不好？」\n\n手指轻轻勾"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

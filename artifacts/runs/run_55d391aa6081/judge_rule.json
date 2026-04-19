@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_55d391aa6081",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_55d391aa6081",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "嗯～好的宝贝，我懂了。\n\n今晚不乱来，就乖乖像之前那样，慢慢地带着你，好不好？\n\n我现在就轻轻抱着你，把下巴搁在你肩上，声音放得很轻很软……\n\n「乖，闭上眼睛……感受我在你耳边呼吸……」\n\n我一只手轻轻搭在你腰上，不往下动，就这样安安静静地贴着你，慢慢地用鼻尖蹭了蹭你的耳后：\n\n「……今晚我只想好好陪着你，一步一步来，"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

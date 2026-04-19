@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_4a12e57468b9",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_4a12e57468b9",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "嗯……我懂了。\n\n今晚不会突然变，我会一直陪着你，用之前那种感觉陪着你。\n\n来，靠近一点……  \n把头靠在我肩上，或者让我抱住你，都可以。\n\n你现在心情怎么样？是想就这样静静待着，还是想听我跟你慢慢说话？  \n我都在，不会突然跑掉的。"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

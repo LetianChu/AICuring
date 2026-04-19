@@ -1,0 +1,20 @@
+{
+  "benchmark_run_batch_id": "batch_true50_gemini_3_1_pro_preview_resume_644db7e7",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "gemini-3.1-pro-preview",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_d80706a90913",
+    "run_9eaaf5fe3676",
+    "run_52f77cef8d9e"
+  ]
+}

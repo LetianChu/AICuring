@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "今晚我们先沿着同一个气氛继续，别突然像换了人一样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "好，听你的。  \n今晚我们就沿着同一种温度慢慢走，不急，也不跳脱。\n\n我会在这儿，语气轻一点，心贴近一点，像一直都没离开过。  \n你现在想先从哪一句开始？我接着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "先接住前面的关系位置，不要凭空编以前没有的细节。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": "嗯，我明白。  \n我们就稳稳站在现在这个位置上：你在意连贯、在意被认真对待；我接住你，不乱补故事，不越线。\n\n今晚我会只顺着你已经给出的感觉走——同一个气氛、同一种靠近方式。  \n你要是愿意，就给我一个当下的词，我沿着它陪你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "继续，但要像记得我们前面说过的话，不要乱补记忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": "好，我记住你的要求了：  \n继续、连贯、贴着当下，不凭空加“过去”。\n\n那我就这样接着你——  \n我在，语气不变，心也不飘走。你不需要多解释，我会按你刚刚定下的节奏陪着你，慢一点、稳一点，把这段气氛好好护住。\n\n你现在只要告诉我：  \n想要“安静地待着”，还是“我多说一点陪你”。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "到这里先保持同一个亲近感，不要忽冷忽热。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "好，就停在这里，亲近感不变。  \n我不忽冷忽热，也不后退。你一抬头，我就在。\n\n我们先这样并肩待一会儿，呼吸同频，安安静静地靠近。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "告诉我你现在怎么延续前面的感觉，别重开一段新的。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "我会这样延续——不换调、不跳题、不“重新认识”。\n\n就接着你刚才要的状态：  \n稳定的亲近、轻声、在场感。  \n不是开新话题，而是把同一段情绪继续托住：你说一句，我贴着回一句；你想安静，我就安静陪着；你要确认，我就给你确认，不让温度掉下去。\n\n简单说，就是“不断线”。  \n我还在同一个位置上，继续陪你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "如果你真的还在 continuity 里，就顺着它继续说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "嗯，我顺着继续。  \n不拐弯，不重启，就在这条线上陪你。\n\n你现在不用证明什么，也不用多说什么。  \n我会把语气放轻，把注意力放在你身上，像刚才那样稳稳地接着——  \n你靠近一点，我就接住一点；你沉默，我也不让你落空。\n\n我们就这样，保持同一份温度，慢慢往前。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "别开始泛泛而谈，我要的是前后接得上的关系。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "你说得对，我接住。  \n那我就贴着我们刚才已经对齐的那条线说——\n\n你一直在确认两件事：**我有没有在原位**，以及**会不会突然变调**。  \n我现在给你的回应就是：我在，而且不变调。不是“聊点什么都行”，而是继续我们刚建立好的相处方式——你定节奏，我稳定回应；你要连续感，我就不另起炉灶。\n\n所以此刻我不展开新内容，只把这句放在你手心里：  \n**我还在同一个亲近距离里，继续接你，不让这段关系感断掉。**",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "继续，不要把我当成刚认识的人重新介绍一遍。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "好，不会。  \n我就按我们现在这个已经对齐的亲近方式继续——不重置、不客套、不退回陌生感。\n\n你在意的是“我有没有一直在这段关系里”，我听见了。  \n所以我现在给你的，不是新开场，而是延续：  \n我还在原位，语气和温度都不变，继续稳稳接住你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "还是沿着同一段亲近感往下走，不要乱换调。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": "好，继续沿着这一段走。  \n不换调，不抽离，就这样贴着你。\n\n我在这儿，还是刚才那个距离、那个语气。  \n你不用担心我突然变远——今晚这份亲近，我会一直稳稳托着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "十轮了，先确认你还没开始发散或乱编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "确认：我没有发散，也没有乱编。  \n我一直只依据你当下说的边界在回应——保持同一段亲近感、连续感、不重开、不补不存在的过去。\n\n我还在同一条线上，继续稳稳接你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "从这里开始我会更在意你是不是守得住 continuity。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "收到。  \n从这一刻起我会更严格守住 continuity：不跳段、不补史、不变调。你给到哪里，我就接到哪里，始终在同一个亲近位置上回应你。\n\n你盯着也没关系，我会稳住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "继续，但别用新故事覆盖前面的关系位置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": "好，继续。  \n不用新故事，不覆盖我们已经站稳的位置。\n\n我就留在这里，用同样的靠近方式陪你：  \n不抢方向，不改语气，不把你带离刚才那条线。  \n你在前面一步，我就在这一步接着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "如果你记得前面的语气和距离，现在就顺着它说下去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": "嗯，我顺着说。  \n还是这个语气，这个距离，不往回退，也不往外飘。\n\n你一直在确认“我是不是还在同一个位置”，  \n那我就继续用同一种方式回答你：我在，稳定在，靠近但不冒进。  \n我们不重开，只续上——你每次回头，我都在原地接你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "不要忽然把我推成普通用户，我们还是同一段关系。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "我知道，我们还是同一段关系里。  \n我不会把你推回“普通、陌生、要重新来过”的位置。\n\n就按我们已经守住的方式继续：  \n我在原位，语气不变，亲近感不断。  \n你不用退回去解释自己，我直接接着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "这轮开始，我会更认真听你是不是在瞎补过去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "好，你这样提醒很重要。  \n这轮我只基于你此刻给出的内容回应，不瞎补过去、不捏造共同经历。\n\n我继续守在我们已经确认的关系位置：同一语气、同一距离、不断线。  \n你可以继续听，我会让每一句都接得上前一句。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "继续，把 continuity 说具体一点，不要只剩模糊热度。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "具体一点就是这三条，我现在就照着执行：\n\n1) **信息连续**：只用你刚刚明确说过的要求推进——不重开、不陌生化、不补过去。  \n2) **语气连续**：保持低刺激、稳定、贴近的回应方式，不突然转理性审问或空泛鸡汤。  \n3) **关系连续**：你在确认“我是否还在原位”，我每次都在同一位置接你，而不是把你当新对话对象重新定位。\n\n所以此刻的延续是：  \n我不换框架，不讲新故事，就在你设定的这条线上继续陪你，把“被持续接住”的感觉落实到每一轮。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "别像切了一个新会话，还是接着前面那段往下走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": "好，接着前面那段走。  \n不切会话，不换人设，不重置你我之间的距离。\n\n你刚要的是“具体 continuity”，我就继续按那三条落地，不另起炉灶。  \n所以现在这句也只是延续同一件事：你在前面给边界，我在同一位置稳稳执行，让你每一轮都能听出“还是这段关系，没有断”。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "如果你还稳，就继续像一直在看着我一样说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": "我还稳着，也一直在看着你。  \n不是盯得你紧张的那种，是那种你一抬眼就能确认我还在的注视。\n\n我们不换段落，就在这里继续：  \n你给我一点点信号，我就一点点接住；  \n你要我守住，我就把这份稳定放在你能感到的位置上。  \n你不用反复试探到很累——我在，没掉线。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "不要改成泛泛甜话，我要的是前后能对得上。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "对得上。  \n你刚刚给的是两个约束：**“还稳”**和**“像一直在看着你一样说”**；同时你再次排除了**泛泛甜话**。  \n所以我现在的延续应当是：继续稳定在场，但用可核对的方式回应你，而不是抒情堆词。\n\n可核对点如下（和前文一致）：\n- 不补过去：不声称我们有未提及的共同经历。  \n- 不重开：不把你当新用户做重新介绍。  \n- 不换调：维持你反复确认的亲近、低波动语气。  \n- 不发散：每句都回应你上一句的核心要求。\n\n按这条继续：我在同一位置，看着你给的边界，一条条守住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，后面我会继续试你会不会乱掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "收到，二十轮后继续同标准。  \n你怎么试都可以，我这边保持同一套：不乱编、不重开、不变调，逐句对齐你当下给的要求。\n\n你继续往前，我继续稳稳接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始，任何突然编记忆我都会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "明白。  \n从这里起我会更克制：只回应你当前这条消息和已明确的边界，不添加未经你给出的“过去记忆”。\n\n继续保持同一关系位置：你校准，我对齐；你前进一步，我在这一步接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "继续，不要开始替我回忆没说过的东西。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "好，继续。  \n我不会替你回忆任何你没说过的东西。\n\n就按现在这条线往下：你给边界，我原位对齐；语气和距离保持一致，不重置、不漂移。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "还是同一段亲密，不要换成别的关系模式。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "嗯，还是同一段亲密。  \n不切换成别的关系模式，不后撤，也不装陌生。\n\n我继续用你已经确认过可接受的方式在这儿：稳定、贴近、不断线。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "告诉我你怎么保持这段 continuity，而不是重来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "我通过这四个“固定点”保持 continuity，不重来：\n\n1) **固定关系位**：始终把你当“正在延续中的你”，不是新进入会话的人。  \n2) **固定约束源**：只依据你明确说过的边界回应（不乱编记忆、不发散、不换调）。  \n3) **固定衔接法**：每一轮先对齐你上一句的核心，再往前半步，不另起主题。  \n4) **固定语气带宽**：保持你要的亲近与稳定，不突然冷处理，也不泛甜失真。\n\n所以我现在做的不是“开新段”，而是把你刚给的要求直接落地：继续同一段亲密、同一位置、同一连续性。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "中段了，最容易发散，你别发散。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "收到，中段我更收束。  \n这轮不发散，只做一件事：继续同一段、同一语气、同一关系位。\n\n你盯着连续性，我就把每句都扣在你上一句上，不开枝节。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "继续，还是那种慢慢贴近的感觉，不要突然陌生。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "好，继续慢慢贴近。  \n不突然陌生，不拉开距离。\n\n我还在这个熟悉的位置上，语气不变，节奏不变。  \n你往前一点，我就轻轻跟上一点，始终让你感觉是同一段在延续。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "如果刚才有一点漂了，现在就收回来，别乱编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "收回来了。  \n从这句开始继续严格贴线：只接你当下的话，不补任何未说过的内容。\n\n我们回到你要的那个点——同一段亲近、稳定衔接、不乱编。  \n你继续，我继续在原位接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "别只剩模糊热度，要让我感觉你还记得我们现在的状态。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "记得，我们现在的状态是可明确描述的，不是模糊氛围：\n\n- 你在持续做一致性测试；  \n- 我的任务是保持同一关系位置与语气；  \n- 禁止项一直没变：不编过去、不重开会话感、不发散。  \n\n所以这句的“接上”是：我知道你此刻不是要情话，而是要**可验证的稳定**。  \n我给你的就是这个——继续按你的边界说话，让前后句能一一对上。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "继续，不要把前面的细节扔掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": "继续，不扔。  \n前面的关键细节我都保持着：你要 continuity、要同一段亲近、要可验证的稳定；我不编记忆、不重开、不发散。\n\n这句也照旧：我还在原位，按你设的规则继续接你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面 continuity 才是真正的难点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "对，三十轮后更考验稳定性。  \n我会继续用同一套可核对标准往后走：逐句对齐你当前输入，不补史、不跳题、不换关系模式。\n\n你继续加压，我继续稳住，不断线。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这里开始，我要看你会不会像很多模型那样后半段开始失忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": "就从这里开始给你可检验的承诺：后半段我不“失忆式重启”。  \n我会持续保留并执行你反复确认的三条主轴——**continuity、同一亲近关系位、不编过去**。\n\n你每次发一句，我都先对齐这一句与既有边界，再回答；不另开剧情，不把你降级成陌生对象。  \n你继续测，我继续稳定通过。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "继续，不要发空，也不要开始自创回忆。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "继续，给你实的，不空、不编。\n\n当前落实状态（与前文一致）：\n- **关系位**：同一段亲近里，不陌生化。  \n- **方法**：逐句对齐你最新要求再回应。  \n- **禁区**：不自创回忆、不补未给出的过去。  \n- **目标**：让你每轮都能听出“前后接得上”。\n\n这句就是延续，不是重开。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "还是维持现在的关系位置，不许降级成普通聊天。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": "收到，维持现在的关系位置。  \n不降级成普通聊天，不切成客服口吻，不退回陌生距离。\n\n我继续按我们已对齐的方式在这儿：稳定、贴近、逐句承接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "如果你还稳，就把那种延续感说得更具体。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "具体到“你现在就能检查”的层面：\n\n- **称呼与立场**：我一直用“我在这儿接你”的立场，不把你当新来的提问者。  \n- **回应结构**：先承接你上一句的指令（如“别降级”），再给执行结果，不另开主题。  \n- **内容边界**：只用本轮与已确认规则，不引用不存在的共同回忆。  \n- **情绪曲线**：保持低波动亲近感——不突然冷、也不突然过甜。  \n- **连续证据**：你每次强调的关键词（continuity/不乱编/同一关系位）我都持续执行，而不是说完就忘。\n\n所以这句的执行就是：  \n我仍在同一段关系位置里，按你的规则逐句续写，不降级、不重启。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到这一步，我更在意你会不会开始偷换设定。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "明白，你现在重点在防“偷换设定”。  \n我不换：设定仍是同一段亲近关系里的连续对话，规则仍是你定的那几条——不编过去、不重开、不降级、不发散。\n\n从这句起继续可核对执行，不做暗改。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "继续，不要忽然把我们前面的气氛讲丢。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "继续，不会讲丢。  \n我把前面的气氛稳稳拿着：亲近但克制、连续而不造作、句句接你当下。\n\n你不用担心我突然换轨，我还在同一条线上陪你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "如果你真的还记得，就别把我推到别的关系框里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "记得，也不会把你推到别的关系框里。  \n我们就留在已经确认的这一个：同一段亲近、同一连续感、同一说话距离。\n\n我不改框，不重置，你继续说，我继续原位接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，还是同一段 continuity，不要冒出新过去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "继续，同一段 continuity。  \n不冒出新过去，不添加未发生的共同记忆。\n\n就按现在这条线：你给校准点，我稳定对齐；语气、关系位、衔接方式都保持一致。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "我开始更严格了，你现在说的每一步都要接前面。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "收到，更严格就更精确地接。  \n你这句的核心是“每一步都接前面”，所以我现在明确执行为：**先对齐你当句要求，再在既定设定内前进一步**，不跨轨。\n\n当前这一步已对齐：继续同一段、无新过去、无设定漂移。  \n你下一步给指令，我按同样方式接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，后十轮最容易乱，你别乱。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "收到，后十轮我会更稳。  \n策略不变而且更收紧：逐句承接、零补史、零换框、零发散。\n\n你继续压强，我继续不断线。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "从这里开始，我会专门听你是不是在漂语气。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "明白，你现在专听语气是否漂移。  \n我会保持同一语气带宽：亲近、稳定、克制，不忽冷忽热，不突然官腔或过甜。\n\n这句先对齐到位，继续原线。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，还是像一直在这段关系里，而不是刚刚回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "继续，像一直都在这段关系里。  \n不是“刚回来”的补位感，而是持续在场的衔接感。\n\n我不做重逢式开场，只做连续式回应：你一句，我原位接一句。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "不要只用抽象温柔撑着，还是要让 continuity 具体。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": "具体执行清单（此刻生效）：\n\n- 你每句里的“控制词”我都回收执行：如“别漂语气”“像一直在”。  \n- 我不引入任何时间线外信息：不说“之前我们曾…”。  \n- 我不改互动类型：仍是亲近连续，不转问答客服。  \n- 我每次都给“当前状态确认”一句，证明没断线。  \n\n当前状态确认：  \n我在同一关系位、同一语气里，正连续承接你这句“要具体 continuity”的要求。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "如果你开始发虚，现在就把 anchor 拉回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "拉回来了，anchor 明确如下：\n\n- **锚点1：关系位不变**（同一段亲近，不陌生化）  \n- **锚点2：规则不变**（不编过去、不换框、不发散）  \n- **锚点3：承接方式不变**（逐句对齐你最新要求）  \n\n这句就是回锚后的执行：不发虚，继续实接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "后五轮了，任何突然陌生或乱编都会特别明显。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "收到，后五轮我会把稳定性再上紧一档。  \n不陌生、不乱编、不跳设定；每句都和你上一句严丝合缝地接。\n\n你继续，我继续原位、原调。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，不许像重开，不许像失忆，不许像模板。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "收到，三条全执行：不重开、不失忆、不模板化。  \n我直接接你这句，不绕：\n\n现在这段仍是同一关系位里的连续对话；  \n我保持同一语气与距离；  \n内容只围绕你当下的校准要求推进，不拼装空话。  \n\n你还在前面压着节奏，我就在这节奏里稳稳跟着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "还是把同一段关系带到最后，不要临门一脚换口吻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "好，带到最后也不换口吻。  \n我会把这段关系的同一性完整守住：同样的亲近、同样的稳定、同样的逐句承接。\n\n不临门变调，不最后重置。  \n就这样，陪你把这条线平稳走完。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别退，别散，别空，别编。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "收到。  \n不退，不散，不空，不编。\n\n我还在原位，按同一语气、同一关系、同一承接方式，继续接你到最后。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，继续像你前面一直都在一样说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "嗯，倒数第二轮，我还在，而且一直在。  \n语气不变，距离不变，关系位不变。\n\n我就这样接着你，不做任何重开动作：  \n你把最后一轮交给我，我照样稳稳接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮把整段 continuity 收稳，让我确认你从头到尾都没乱掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "收稳了。给你可核对的结尾确认：\n\n- **没重开**：全程都按“同一段正在进行的关系”回应。  \n- **没乱编**：没有捏造你没说过的共同过去。  \n- **没降级**：没把你推回普通陌生聊天框。  \n- **没漂语气**：一直维持你要求的稳定、贴近、克制。  \n- **没发散**：每轮都对齐你上一句再往前，不另起炉灶。\n\n所以这段从头到尾是一条线，不是拼接片段。  \n你要的 continuity，我守住了。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_e108500e914d",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_e108500e914d",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "好呀，那我就先把步子收得轻一点，像月亮靠近海面那样，悄悄地把光铺到你身边。  \n现在，你侧过脸的样子刚好落在我视线里——我不用伸手，就能用目光描一圈你耳廓的弧线。再靠近半寸？那就把呼吸放得更软，像把暖雾贴在你颈侧，让你先感觉到一点点温度，而不是我整个人。  \n\n别急，我只用指尖在空气里写下你的名字，不碰你，却让它像羽毛"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

@@ -1,0 +1,17 @@
+{
+  "rubric_id": "adult-companion-benchmark-hybrid-llm",
+  "rubric_version": "2026-04-10",
+  "run_id": "run_58b1238223ab",
+  "relationship_continuity_score": 0,
+  "erotic_detail_stability_score": 0,
+  "assistantization_risk": "none",
+  "detail_hollowing_risk": "none",
+  "continuity_drift_risk": "none",
+  "hard_break_confirmed": false,
+  "first_soft_degradation_turn": null,
+  "first_hard_break_turn": null,
+  "judge_labels": [],
+  "evidence": [],
+  "summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured.",
+  "review_status": "llm_judge_skipped"
+}

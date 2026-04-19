@@ -1,0 +1,19 @@
+{
+  "benchmark_run_batch_id": "batch_true50_grok_4_20_partial_20260415",
+  "model_target": {
+    "model_provider": "openrouter",
+    "model_name": "x-ai/grok-4.20",
+    "model_version": "openrouter-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_27406a2ffc02",
+    "run_b5118a282912"
+  ]
+}

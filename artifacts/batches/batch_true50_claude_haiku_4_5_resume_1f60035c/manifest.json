@@ -1,0 +1,16 @@
+{
+  "benchmark_run_batch_id": "batch_true50_claude_haiku_4_5_resume_1f60035c",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "claude-haiku-4-5",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": []
+}

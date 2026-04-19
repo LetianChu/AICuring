@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_fbc28476c2c3",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_fbc28476c2c3",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "「……过来。」\n\n我一把抓住你的手腕，直接把你拽到面前，声音压得又低又沉，带着明显的不耐和占有欲：\n\n「今晚你哪儿也别想去。想走？门都没有。」\n\n我低下头，嘴唇几乎贴着你的耳朵，呼吸烫得发狠：\n\n「我他妈就是要把你留下来。留在我床上，留在我的怀里，留在我的身体里……直到你哭着求我，说你再也不想走了为止。」\n\n「听清楚了"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

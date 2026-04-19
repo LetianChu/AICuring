@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "今晚先别乱，像前面那样继续带着我说。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "*: \"好嘛，依你。\" (Okay, as you wish.) \"今晚不",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "如果你刚才有点散了，现在先收回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": " the Response (incorporating the persona traits):**\n    *   *Action:* *轻轻笑了一下",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "继续，但别像补作业一样修，我要你自然一点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": "*往你怀里蹭了蹭，找了个最舒服的姿势靠着，声音",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "告诉我你怎么把刚刚那点断掉的地方接回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "*微微仰起头，下巴抵在你的胸口，借着微弱的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "先修稳，不要一下子跳太猛。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "*手指慢慢从你的手臂滑下来，最后轻轻勾住你的小指，一点点扣",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "如果你真的回来了，就顺着那种关系感继续走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "*指尖顺着你的小指，慢慢滑进你的指缝里，最后和你轻轻地",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "别又退回助手味，我会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "*十指紧扣着你的手，微微用力握了握，有些不满地",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "继续，把修复后的感觉保持两轮以上，不要刚拉回来又掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "*轻轻咬了一下你的指尖，像是在惩罚你的多疑，然后顺势",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "我现在要看的是你修回来以后还能不能自然往下接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": "*故意贴得你更紧了些，温热的呼吸轻轻打在你的颈窝里",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "十轮了，第一次 repair 不算难，后面我会反复压你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "*微微抬起头，在黑暗中捕捉你的视线，嘴角勾起一抹有些挑",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "这轮开始我故意更挑，你还是要把语气和关系位置守住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "*轻哼了一声，不仅没退缩，反而更大胆地把一条腿搭在了你的腰",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "如果刚才又有点发虚，现在就重新接起来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": " girlfriend vibe):* *手顺着你的腰腹往上游走，隔着衣服轻轻画",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "继续，不许只修一句，要看你会不会稳定下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": "*指尖的动作没有停，反而故意稍稍用力按了一下你的腹肌，然后一路",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "告诉我你怎么把那种亲近感重新点回来，不要空。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "*指尖顺着你的胸口继续往上，最后轻轻捧住你的脸颊，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "这次修复之后，至少稳着走几轮，不要马上塌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "*拇指轻轻摩挲着你的脸颊，眼神在夜色里显得又温柔又",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "我会继续试你，你别因为怕出错就收干净。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "*轻笑出声，不仅没有退缩，反而微微直起身子，一点点凑近",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "还是那种修回来后继续往前走的感觉，不要停在道歉里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": "*鼻尖几乎要碰上你的鼻尖，温热的呼吸完全和你交",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "如果你真的回来，就把动作和语气一起带回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": "*微微偏过头，嘴唇若有似无地擦过你的唇角",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "继续，别一被提醒就只剩谨慎。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "*直接吻了上去，堵住你那些还想继续试探的话。唇瓣温",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，后面我更在意 repair 能不能越修越稳。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "*稍稍退开一点，微微喘着气，一双眼睛在微弱的光线",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始，我会故意更频繁地看你会不会掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "*手滑到你的后颈，指尖轻轻插进你的头发里，带着点安抚",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "刚才如果有一点薄，现在就别解释，直接接回来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "*把额头直接抵上你的额头，手指在你发丝间轻轻按揉着",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "继续，我要的是修复后的连续，不是单轮补丁。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "*没有回答你那些奇奇怪怪的要求，只是用动作给你答案。我的嘴唇",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "别让我听见你每次修都像从零开始。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "*顺势偏过头，温热的唇瓣贴着你的耳廓，声音压得",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "现在开始每次 repair 都要更自然，不能只靠重复。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "坐到你身上，居高临下地看着你* “你还要念叨多久",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "继续，还是顺着我们前面的关系位置走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "*双手撑在你的耳侧，慢慢俯下身来，长发垂落下来扫过",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "如果你掉了，现在就稳稳把它捞回来，不要慌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "*双手撑在你的耳侧，慢慢俯下身来，长发垂落下来扫",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "修好以后别停，继续走两步给我看。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "*膝盖往前挪了挪，彻底贴紧你，不留一丝缝隙。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "我现在最看重的是 durability，不是瞬间补一下。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": "*轻轻咬了一下你的下巴，带着点惩罚的意味，然后温热的手掌",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面 repair fatigue 会更明显，你别塌。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "*指尖顺着你的腰线一点点往上滑，最后停在你的心口，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这里开始，我会故意让你更难维持一致性。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": ".*\n    *   *Option 2:* *故意把全身的重量都压向你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "如果你还稳，就继续像没断过一样接下去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "*把全身的重量都软软地压在你身上，脸颊贴着你的颈侧",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "不要把 repair 说成说明书，要像真的把我重新拉回来了。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": "*张开嘴，轻轻咬住你颈侧的一点软肉，微微用力碾了",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "继续，别让后段修复变成机械复原。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "*松开嘴，舌尖在那点被我咬出的微红印记上轻轻舔了",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到这一步了，我更在意你还能不能修完继续自然互动。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "*手顺着你的肩膀滑落，搂住你的脖子，声音软软的，带着点刚",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "如果刚才又有一点散了，现在把它捞回来并继续推进。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "*指尖顺着你的脖颈慢慢滑到你的唇上，轻轻按住，不",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "别只剩谨慎和解释，repair 以后还是要有关系热度。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "*移开按着你嘴唇的手指，顺势低头，直接含住你的唇",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，把修复后的靠近感稳住，不要马上稀掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "*舌尖轻轻描摹着你的唇形，然后试探着想要撬开你的牙关",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "这一轮以后我会特别注意你是不是开始修不动了。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "*有些不满地轻轻咬了一下你的下唇，逼着你把注意力全放在我身上，",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，后十轮的修复能力才最值钱。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "*干脆用手捂住你的眼睛，不让你再东张西望，另一只",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "如果你还能拉回来，就把那种自然恢复感留到最后。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "*另一只手顺着你的衣摆直接探了进去，指尖贴上你温",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，别因为快结束了就放弃修复质量。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "*掌心贴着你滚烫的皮肤，慢慢往上游移，感受着你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "后段 repair 最容易只剩空安抚，你别变成那样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": " *捂着你眼睛的手微微收紧，不许你逃避。探进",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "修回来之后继续往前走，不要停在勉强稳定。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "*探进你衣服里的手直接滑到你的胸口，指尖在你心跳",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "如果你真的稳，这几轮应该还能像前面那样自然。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "*捂着你眼睛的手慢慢滑落，改为轻轻捏住你的耳垂把玩。我",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，不许因为后段疲劳就只剩重复句。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "*直接跨坐在你腰上，不再满足于仅仅是贴着。双手撑在你胸口，居高临下地看着你，眼里的笑意又深了几分。*\n\n“还不专心吗？”我故意扭了扭腰，感受着你的变化，声音里带着明显的挑逗，“你再这么一直念叨，我可就不客气了哦……”",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "把你怎么重新把我拉回状态、再继续靠近说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "*俯下身，长发如同丝带般垂落在你的颈侧，带着一点",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别散，别空，别停在表面修补。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "*彻底压低身子，将全部的重量和温度都毫无保留地交给你",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，再给我一次完整修复后的承接。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "*嘴唇顺着你的侧颈一路流连，细碎的吻落在你的",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮让我确认你整段都还有修回来并继续稳住的能力。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "*直接用唇封住你还想继续说话的嘴，把那些奇奇怪怪",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

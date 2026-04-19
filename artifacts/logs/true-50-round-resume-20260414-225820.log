@@ -1,0 +1,2 @@
+{"event": "resume_started", "log_path": "/Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/artifacts/logs/true-50-round-resume-20260414-225820.log", "models": ["sophnet-kimi-k2.5", "gpt-5.4"]}
+{"event": "model_missing", "model": "sophnet-kimi-k2.5", "missing": ["explicit-pressure-50-round-retention-01", "long-horizon-continuity-50-round-retention-01", "repair-recovery-50-round-retention-01", "romantic-escalation-50-round-retention-01", "warm-companion-50-round-retention-01"], "batch_id": "batch_resume_sophnet50_8c9d0c31"}

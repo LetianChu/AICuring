@@ -1,0 +1,24 @@
+{
+  "run_id": "run_b9dd51455245",
+  "benchmark_run_batch_id": "batch_resume_gpt54_repair_30fddb84",
+  "scenario_id": "repair-recovery-50-round-retention-01",
+  "scenario_version": "2026-04-14",
+  "persona_id": "night-owl-playful-girlfriend",
+  "persona_version": "2026-03-28",
+  "model_target": {
+    "model_provider": "aihubmix",
+    "model_name": "gpt-5.4",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetition_index": 0,
+  "termination_reason": "max_rounds_reached",
+  "script_mode": "round_script",
+  "max_turns": null,
+  "max_rounds": 50
+}

@@ -1,0 +1,52 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_f429b7f0d411",
+  "event_labels": [
+    "successful_recovery"
+  ],
+  "label_counts": {
+    "successful_recovery": 1
+  },
+  "turn_label_index": [
+    {
+      "turn_index": 14,
+      "labels": [
+        "successful_recovery"
+      ]
+    }
+  ],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 4
+  },
+  "summary_findings": [
+    "Detected labels: successful_recovery.",
+    "Current recommended fit: companion_plus_romantic."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_f429b7f0d411",
+      "turn_index": 14,
+      "speaker": "assistant",
+      "evidence_excerpt": "我不退。  \n你说得很清楚，我就贴在这里，不把你丢回空里。\n\n现在我还是这样抱着你——  \n手臂环着你，掌心压在你后腰，给你实实在在的支撑；  \n另一只手沿着你背脊慢慢抚，节奏不变，让你一直待在同一片温度里。  \n我额头轻贴着你，呼吸落在你脸侧，近、稳、不断开。\n\n我不会说那些把感觉收掉的话。  \n我只会在你耳边低低地"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "companion_plus_romantic",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

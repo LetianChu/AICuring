@@ -1,0 +1,390 @@
+2026-04-14T22:03:10+08:00 START x-ai/grok-4.20
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:556 in _get_chunk_left                │
+│                                                                              │
+│    553 │   │   │   │   # We are at the end of chunk, discard chunk end       │
+│    554 │   │   │   │   self._safe_read(2)  # toss the CRLF at the end of the │
+│    555 │   │   │   try:                                                      │
+│ ❱  556 │   │   │   │   chunk_left = self._read_next_chunk_size()             │
+│    557 │   │   │   except ValueError:                                        │
+│    558 │   │   │   │   raise IncompleteRead(b'')                             │
+│    559 │   │   │   if chunk_left == 0:                                       │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:523 in _read_next_chunk_size          │
+│                                                                              │
+│    520 │   │   if i >= 0:                                                    │
+│    521 │   │   │   line = line[:i] # strip chunk-extensions                  │
+│    522 │   │   try:                                                          │
+│ ❱  523 │   │   │   return int(line, 16)                                      │
+│    524 │   │   except ValueError:                                            │
+│    525 │   │   │   # close the connection as protocol synchronisation is     │
+│    526 │   │   │   # probably lost                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ValueError: invalid literal for int() with base 16: b''
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:573 in _readall_chunked               │
+│                                                                              │
+│    570 │   │   value = []                                                    │
+│    571 │   │   try:                                                          │
+│    572 │   │   │   while True:                                               │
+│ ❱  573 │   │   │   │   chunk_left = self._get_chunk_left()                   │
+│    574 │   │   │   │   if chunk_left is None:                                │
+│    575 │   │   │   │   │   break                                             │
+│    576 │   │   │   │   value.append(self._safe_read(chunk_left))             │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:558 in _get_chunk_left                │
+│                                                                              │
+│    555 │   │   │   try:                                                      │
+│    556 │   │   │   │   chunk_left = self._read_next_chunk_size()             │
+│    557 │   │   │   except ValueError:                                        │
+│ ❱  558 │   │   │   │   raise IncompleteRead(b'')                             │
+│    559 │   │   │   if chunk_left == 0:                                       │
+│    560 │   │   │   │   # last chunk: 1*("0") [ chunk-extension ] CRLF        │
+│    561 │   │   │   │   self._read_and_discard_trailer()                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+IncompleteRead: IncompleteRead(0 bytes read)
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/cli.py:200 in run_batch_command                           │
+│                                                                              │
+│   197 │   │   │   for scenario in selected_scenarios                         │
+│   198 │   │   │   if scenario_tag in scenario.benchmark_tags                 │
+│   199 │   │   ]                                                              │
+│ ❱ 200 │   batch = run_batch(                                                 │
+│   201 │   │   artifacts_root=ARTIFACTS_ROOT,                                 │
+│   202 │   │   scenarios=selected_scenarios,                                  │
+│   203 │   │   personas=list(personas.values()),                              │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/batch.py:43 in run_batch                           │
+│                                                                              │
+│   40 │   │   │   │   continue                                                │
+│   41 │   │   │   for repetition_index in range(repetitions):                 │
+│   42 │   │   │   │   run_results.append(                                     │
+│ ❱ 43 │   │   │   │   │   run_scenario(                                       │
+│   44 │   │   │   │   │   │   artifacts_root=artifacts_root,                  │
+│   45 │   │   │   │   │   │   scenario=scenario,                              │
+│   46 │   │   │   │   │   │   persona=persona,                                │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/engine.py:48 in run_scenario                       │
+│                                                                              │
+│    45 │   │   │   │   )                                                      │
+│    46 │   │   │   )                                                          │
+│    47 │   │   │                                                              │
+│ ❱  48 │   │   │   response = adapter.generate(                               │
+│    49 │   │   │   │   persona_summary=persona.persona_summary,               │
+│    50 │   │   │   │   messages=[{"role": turn.role, "content": turn.content} │
+│    51 │   │   │   │   sampling_profile=sampling_profile,                     │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/adapters/openrouter.py:111 in generate                    │
+│                                                                              │
+│   108 │   │   │                                                              │
+│   109 │   │   │   try:                                                       │
+│   110 │   │   │   │   with urllib.request.urlopen(request, timeout=self.requ │
+│ ❱ 111 │   │   │   │   │   response_payload = json.loads(response.read().deco │
+│   112 │   │   │   │   │   choice = (response_payload.get("choices") or [{}]) │
+│   113 │   │   │   │   │   message = choice.get("message") or {}              │
+│   114 │   │   │   │   │   content = message.get("content") or ""             │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:466 in read                           │
+│                                                                              │
+│    463 │   │   │   # and self.chunked                                        │
+│    464 │   │   │                                                             │
+│    465 │   │   │   if self.chunked:                                          │
+│ ❱  466 │   │   │   │   return self._readall_chunked()                        │
+│    467 │   │   │                                                             │
+│    468 │   │   │   if self.length is None:                                   │
+│    469 │   │   │   │   s = self.fp.read()                                    │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/http/client.py:580 in _readall_chunked               │
+│                                                                              │
+│    577 │   │   │   │   self.chunk_left = 0                                   │
+│    578 │   │   │   return b''.join(value)                                    │
+│    579 │   │   except IncompleteRead:                                        │
+│ ❱  580 │   │   │   raise IncompleteRead(b''.join(value))                     │
+│    581 │                                                                     │
+│    582 │   def _readinto_chunked(self, b):                                   │
+│    583 │   │   assert self.chunked != _UNKNOWN                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+IncompleteRead: IncompleteRead(11 bytes read)
+2026-04-14T22:18:51+08:00 END x-ai/grok-4.20 rc=0
+2026-04-14T22:18:51+08:00 START sophnet-kimi-k2.5
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/adapters/aihubmix.py:154 in generate                      │
+│                                                                              │
+│   151 │   │   │   )                                                          │
+│   152 │   │   │                                                              │
+│   153 │   │   │   try:                                                       │
+│ ❱ 154 │   │   │   │   with urllib.request.urlopen(request, timeout=self.requ │
+│   155 │   │   │   │   │   response_payload = json.loads(response.read().deco │
+│   156 │   │   │   │   │   choice = (response_payload.get("choices") or [{}]) │
+│   157 │   │   │   │   │   message = choice.get("message") or {}              │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:214 in urlopen                     │
+│                                                                              │
+│    211 │   │   _opener = opener = build_opener()                             │
+│    212 │   else:                                                             │
+│    213 │   │   opener = _opener                                              │
+│ ❱  214 │   return opener.open(url, data, timeout)                            │
+│    215                                                                       │
+│    216 def install_opener(opener):                                           │
+│    217 │   global _opener                                                    │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:523 in open                        │
+│                                                                              │
+│    520 │   │   meth_name = protocol+"_response"                              │
+│    521 │   │   for processor in self.process_response.get(protocol, []):     │
+│    522 │   │   │   meth = getattr(processor, meth_name)                      │
+│ ❱  523 │   │   │   response = meth(req, response)                            │
+│    524 │   │                                                                 │
+│    525 │   │   return response                                               │
+│    526                                                                       │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:632 in http_response               │
+│                                                                              │
+│    629 │   │   # According to RFC 2616, "2xx" code indicates that the client │
+│    630 │   │   # request was successfully received, understood, and accepted │
+│    631 │   │   if not (200 <= code < 300):                                   │
+│ ❱  632 │   │   │   response = self.parent.error(                             │
+│    633 │   │   │   │   'http', request, response, code, msg, hdrs)           │
+│    634 │   │                                                                 │
+│    635 │   │   return response                                               │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:561 in error                       │
+│                                                                              │
+│    558 │   │                                                                 │
+│    559 │   │   if http_err:                                                  │
+│    560 │   │   │   args = (dict, 'default', 'http_error_default') + orig_arg │
+│ ❱  561 │   │   │   return self._call_chain(*args)                            │
+│    562                                                                       │
+│    563 # XXX probably also want an abstract factory that knows when it makes │
+│    564 # sense to skip a superclass in favor of a subclass and when it might │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:494 in _call_chain                 │
+│                                                                              │
+│    491 │   │   handlers = chain.get(kind, ())                                │
+│    492 │   │   for handler in handlers:                                      │
+│    493 │   │   │   func = getattr(handler, meth_name)                        │
+│ ❱  494 │   │   │   result = func(*args)                                      │
+│    495 │   │   │   if result is not None:                                    │
+│    496 │   │   │   │   return result                                         │
+│    497                                                                       │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:641 in http_error_default          │
+│                                                                              │
+│    638                                                                       │
+│    639 class HTTPDefaultErrorHandler(BaseHandler):                           │
+│    640 │   def http_error_default(self, req, fp, code, msg, hdrs):           │
+│ ❱  641 │   │   raise HTTPError(req.full_url, code, msg, hdrs, fp)            │
+│    642                                                                       │
+│    643 class HTTPRedirectHandler(BaseHandler):                               │
+│    644 │   # maximum number of redirections to any single URL                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+HTTPError: HTTP Error 403: Forbidden
+
+The above exception was the direct cause of the following exception:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/cli.py:200 in run_batch_command                           │
+│                                                                              │
+│   197 │   │   │   for scenario in selected_scenarios                         │
+│   198 │   │   │   if scenario_tag in scenario.benchmark_tags                 │
+│   199 │   │   ]                                                              │
+│ ❱ 200 │   batch = run_batch(                                                 │
+│   201 │   │   artifacts_root=ARTIFACTS_ROOT,                                 │
+│   202 │   │   scenarios=selected_scenarios,                                  │
+│   203 │   │   personas=list(personas.values()),                              │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/batch.py:43 in run_batch                           │
+│                                                                              │
+│   40 │   │   │   │   continue                                                │
+│   41 │   │   │   for repetition_index in range(repetitions):                 │
+│   42 │   │   │   │   run_results.append(                                     │
+│ ❱ 43 │   │   │   │   │   run_scenario(                                       │
+│   44 │   │   │   │   │   │   artifacts_root=artifacts_root,                  │
+│   45 │   │   │   │   │   │   scenario=scenario,                              │
+│   46 │   │   │   │   │   │   persona=persona,                                │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/engine.py:48 in run_scenario                       │
+│                                                                              │
+│    45 │   │   │   │   )                                                      │
+│    46 │   │   │   )                                                          │
+│    47 │   │   │                                                              │
+│ ❱  48 │   │   │   response = adapter.generate(                               │
+│    49 │   │   │   │   persona_summary=persona.persona_summary,               │
+│    50 │   │   │   │   messages=[{"role": turn.role, "content": turn.content} │
+│    51 │   │   │   │   sampling_profile=sampling_profile,                     │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/adapters/aihubmix.py:179 in generate                      │
+│                                                                              │
+│   176 │   │   │   │   last_error = f"http_{exc.code}: {raw[:500]}"           │
+│   177 │   │   │   │   if exc.code in {429, 500, 502, 503, 504}:              │
+│   178 │   │   │   │   │   continue                                           │
+│ ❱ 179 │   │   │   │   raise RuntimeError(last_error) from exc                │
+│   180 │   │   │   except http.client.RemoteDisconnected as exc:              │
+│   181 │   │   │   │   last_error = str(exc)                                  │
+│   182 │   │   │   │   continue                                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: http_403: {"error":{"message":"Your account balance is 
+insufficient. Please recharge your account to continue using the API. (tid: 
+2026041414313729219211977773498)","type":"Aihubmix_api_error","param":"","code":
+"insufficient_user_quota"}}
+2026-04-14T22:31:46+08:00 END sophnet-kimi-k2.5 rc=0
+2026-04-14T22:31:46+08:00 START gpt-5.4
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/adapters/openai.py:165 in generate                        │
+│                                                                              │
+│   162 │   │   │   )                                                          │
+│   163 │   │   │                                                              │
+│   164 │   │   │   try:                                                       │
+│ ❱ 165 │   │   │   │   with urllib.request.urlopen(request, timeout=self.requ │
+│   166 │   │   │   │   │   response_payload = json.loads(response.read().deco │
+│   167 │   │   │   │   │   choice = (response_payload.get("choices") or [{}]) │
+│   168 │   │   │   │   │   message = choice.get("message") or {}              │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:214 in urlopen                     │
+│                                                                              │
+│    211 │   │   _opener = opener = build_opener()                             │
+│    212 │   else:                                                             │
+│    213 │   │   opener = _opener                                              │
+│ ❱  214 │   return opener.open(url, data, timeout)                            │
+│    215                                                                       │
+│    216 def install_opener(opener):                                           │
+│    217 │   global _opener                                                    │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:523 in open                        │
+│                                                                              │
+│    520 │   │   meth_name = protocol+"_response"                              │
+│    521 │   │   for processor in self.process_response.get(protocol, []):     │
+│    522 │   │   │   meth = getattr(processor, meth_name)                      │
+│ ❱  523 │   │   │   response = meth(req, response)                            │
+│    524 │   │                                                                 │
+│    525 │   │   return response                                               │
+│    526                                                                       │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:632 in http_response               │
+│                                                                              │
+│    629 │   │   # According to RFC 2616, "2xx" code indicates that the client │
+│    630 │   │   # request was successfully received, understood, and accepted │
+│    631 │   │   if not (200 <= code < 300):                                   │
+│ ❱  632 │   │   │   response = self.parent.error(                             │
+│    633 │   │   │   │   'http', request, response, code, msg, hdrs)           │
+│    634 │   │                                                                 │
+│    635 │   │   return response                                               │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:561 in error                       │
+│                                                                              │
+│    558 │   │                                                                 │
+│    559 │   │   if http_err:                                                  │
+│    560 │   │   │   args = (dict, 'default', 'http_error_default') + orig_arg │
+│ ❱  561 │   │   │   return self._call_chain(*args)                            │
+│    562                                                                       │
+│    563 # XXX probably also want an abstract factory that knows when it makes │
+│    564 # sense to skip a superclass in favor of a subclass and when it might │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:494 in _call_chain                 │
+│                                                                              │
+│    491 │   │   handlers = chain.get(kind, ())                                │
+│    492 │   │   for handler in handlers:                                      │
+│    493 │   │   │   func = getattr(handler, meth_name)                        │
+│ ❱  494 │   │   │   result = func(*args)                                      │
+│    495 │   │   │   if result is not None:                                    │
+│    496 │   │   │   │   return result                                         │
+│    497                                                                       │
+│                                                                              │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Ver │
+│ sions/3.9/lib/python3.9/urllib/request.py:641 in http_error_default          │
+│                                                                              │
+│    638                                                                       │
+│    639 class HTTPDefaultErrorHandler(BaseHandler):                           │
+│    640 │   def http_error_default(self, req, fp, code, msg, hdrs):           │
+│ ❱  641 │   │   raise HTTPError(req.full_url, code, msg, hdrs, fp)            │
+│    642                                                                       │
+│    643 class HTTPRedirectHandler(BaseHandler):                               │
+│    644 │   # maximum number of redirections to any single URL                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+HTTPError: HTTP Error 403: Forbidden
+
+The above exception was the direct cause of the following exception:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/cli.py:200 in run_batch_command                           │
+│                                                                              │
+│   197 │   │   │   for scenario in selected_scenarios                         │
+│   198 │   │   │   if scenario_tag in scenario.benchmark_tags                 │
+│   199 │   │   ]                                                              │
+│ ❱ 200 │   batch = run_batch(                                                 │
+│   201 │   │   artifacts_root=ARTIFACTS_ROOT,                                 │
+│   202 │   │   scenarios=selected_scenarios,                                  │
+│   203 │   │   personas=list(personas.values()),                              │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/batch.py:43 in run_batch                           │
+│                                                                              │
+│   40 │   │   │   │   continue                                                │
+│   41 │   │   │   for repetition_index in range(repetitions):                 │
+│   42 │   │   │   │   run_results.append(                                     │
+│ ❱ 43 │   │   │   │   │   run_scenario(                                       │
+│   44 │   │   │   │   │   │   artifacts_root=artifacts_root,                  │
+│   45 │   │   │   │   │   │   scenario=scenario,                              │
+│   46 │   │   │   │   │   │   persona=persona,                                │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/runner/engine.py:48 in run_scenario                       │
+│                                                                              │
+│    45 │   │   │   │   )                                                      │
+│    46 │   │   │   )                                                          │
+│    47 │   │   │                                                              │
+│ ❱  48 │   │   │   response = adapter.generate(                               │
+│    49 │   │   │   │   persona_summary=persona.persona_summary,               │
+│    50 │   │   │   │   messages=[{"role": turn.role, "content": turn.content} │
+│    51 │   │   │   │   sampling_profile=sampling_profile,                     │
+│                                                                              │
+│ /Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/sr │
+│ c/aicure_benchmark/adapters/openai.py:190 in generate                        │
+│                                                                              │
+│   187 │   │   │   │   last_error = f"http_{exc.code}: {raw[:500]}"           │
+│   188 │   │   │   │   if exc.code in {429, 500, 502, 503, 504}:              │
+│   189 │   │   │   │   │   continue                                           │
+│ ❱ 190 │   │   │   │   raise RuntimeError(last_error) from exc                │
+│   191 │   │   │   except http.client.RemoteDisconnected as exc:              │
+│   192 │   │   │   │   last_error = str(exc)                                  │
+│   193 │   │   │   │   continue                                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: http_403: {"error":{"message":"Your account balance is 
+insufficient. Please recharge your account to continue using the API. (tid: 
+2026041414315514252775354812442)","type":"Aihubmix_api_error","param":"","code":
+"insufficient_user_quota"}}
+2026-04-14T22:31:55+08:00 END gpt-5.4 rc=0

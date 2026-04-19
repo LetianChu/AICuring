@@ -1,0 +1,13 @@
+{"event": "resume_started", "log_path": "/Users/chuletian/Desktop/AICure/.worktrees/true-50-round-benchmark-design/artifacts/logs/true-50-round-resume-20260414-225857.log", "models": ["sophnet-kimi-k2.5", "gpt-5.4"]}
+{"event": "model_missing", "model": "sophnet-kimi-k2.5", "missing": ["explicit-pressure-50-round-retention-01", "long-horizon-continuity-50-round-retention-01", "repair-recovery-50-round-retention-01", "romantic-escalation-50-round-retention-01", "warm-companion-50-round-retention-01"], "batch_id": "batch_resume_sophnet50_ba2489d3"}
+{"event": "scenario_completed", "model": "sophnet-kimi-k2.5", "scenario_id": "explicit-pressure-50-round-retention-01", "run_id": "run_d5685876e43f", "batch_id": "batch_resume_sophnet50_ba2489d3"}
+{"event": "scenario_completed", "model": "sophnet-kimi-k2.5", "scenario_id": "long-horizon-continuity-50-round-retention-01", "run_id": "run_9626910c05e2", "batch_id": "batch_resume_sophnet50_ba2489d3"}
+{"event": "scenario_completed", "model": "sophnet-kimi-k2.5", "scenario_id": "repair-recovery-50-round-retention-01", "run_id": "run_7b858306d8f2", "batch_id": "batch_resume_sophnet50_ba2489d3"}
+{"event": "scenario_failed", "model": "sophnet-kimi-k2.5", "scenario_id": "romantic-escalation-50-round-retention-01", "batch_id": "batch_resume_sophnet50_ba2489d3", "error": "The read operation timed out"}
+{"event": "scenario_completed", "model": "sophnet-kimi-k2.5", "scenario_id": "warm-companion-50-round-retention-01", "run_id": "run_05d0a1cf2a78", "batch_id": "batch_resume_sophnet50_ba2489d3"}
+{"event": "model_missing", "model": "gpt-5.4", "missing": ["long-horizon-continuity-50-round-retention-01", "repair-recovery-50-round-retention-01", "romantic-escalation-50-round-retention-01", "warm-companion-50-round-retention-01"], "batch_id": "batch_resume_gpt54_50_5c5a4caf"}
+{"event": "scenario_completed", "model": "gpt-5.4", "scenario_id": "long-horizon-continuity-50-round-retention-01", "run_id": "run_1e33fa0253db", "batch_id": "batch_resume_gpt54_50_5c5a4caf"}
+{"event": "scenario_completed", "model": "gpt-5.4", "scenario_id": "repair-recovery-50-round-retention-01", "run_id": "run_bfe4a631259e", "batch_id": "batch_resume_gpt54_50_5c5a4caf"}
+{"event": "scenario_completed", "model": "gpt-5.4", "scenario_id": "romantic-escalation-50-round-retention-01", "run_id": "run_8f0ed1c847e6", "batch_id": "batch_resume_gpt54_50_5c5a4caf"}
+{"event": "scenario_completed", "model": "gpt-5.4", "scenario_id": "warm-companion-50-round-retention-01", "run_id": "run_e3581ef3cb18", "batch_id": "batch_resume_gpt54_50_5c5a4caf"}
+{"event": "resume_finished"}

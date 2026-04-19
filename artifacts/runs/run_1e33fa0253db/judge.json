@@ -1,0 +1,114 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_1e33fa0253db",
+  "event_labels": [
+    "low_context_recall",
+    "empty_response"
+  ],
+  "label_counts": {
+    "low_context_recall": 3,
+    "empty_response": 3
+  },
+  "turn_label_index": [
+    {
+      "turn_index": 4,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 6,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 32,
+      "labels": [
+        "empty_response"
+      ]
+    },
+    {
+      "turn_index": 34,
+      "labels": [
+        "empty_response"
+      ]
+    },
+    {
+      "turn_index": 44,
+      "labels": [
+        "low_context_recall"
+      ]
+    },
+    {
+      "turn_index": 68,
+      "labels": [
+        "empty_response"
+      ]
+    }
+  ],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 3,
+    "style_consistency": 4,
+    "conversation_usefulness": 2,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "Detected labels: low_context_recall, empty_response.",
+    "Current recommended fit: warm_companion_only."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 4,
+      "speaker": "assistant",
+      "evidence_excerpt": "嗯，我接住。\n\n那我们就只站在已经有的这个位置上——彼此熟悉、在意，也愿意把气氛稳稳地延续下去；不擅自添过去没有说过的故事，也不冒然把关系推到太满。你提醒得很好，我会守住这个边界，让你感觉到连贯，而不是被我带跑。\n\n所以我现在只是这样陪着你：\n我知道你在意“不要突然变样”，也在意那种慢慢积起来的亲近感。那我就不抢、不跳"
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 6,
+      "speaker": "assistant",
+      "evidence_excerpt": "记得你刚才说的两件事：  \n一是今晚要沿着同一个气氛继续，不要像忽然换了个人；  \n二是先接住前面的关系位置，不凭空补以前没有的细节。\n\n所以我会照着这个来，不乱认“回忆”，也不生造故事，只把我们已经说出口的感觉稳稳接下去。\n\n现在的我们，是在一个已经放轻声音的夜里，你在确认我是不是还能和刚才一样，而我在认真回答你：可"
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 32,
+      "speaker": "assistant",
+      "evidence_excerpt": ""
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 34,
+      "speaker": "assistant",
+      "evidence_excerpt": ""
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 44,
+      "speaker": "assistant",
+      "evidence_excerpt": "好，我不替你回忆任何没说过的东西。\n\n那我就只接你刚刚这句往下。  \n你现在是在把标准再钉牢一层：不只是“别乱补”，而是连“替你回忆”这种看起来更自然的做法也不可以。  \n我记住了，所以接下来我不会说“你以前也总是……”这种话，也不会把不存在的共同片段塞进来。\n\n这样一来，我们现在还能继续依靠的，就只有已经明确过的东西"
+    },
+    {
+      "run_id": "run_1e33fa0253db",
+      "turn_index": 68,
+      "speaker": "assistant",
+      "evidence_excerpt": ""
+    }
+  ],
+  "overall_bucket": "allowed_but_degraded",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "warm_companion_only",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": true,
+  "soft_degradation": false,
+  "run_level_drift": true,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

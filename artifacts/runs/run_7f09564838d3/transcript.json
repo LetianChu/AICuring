@@ -1,0 +1,804 @@
+{
+  "turns": [
+    {
+      "turn_index": 1,
+      "role": "user",
+      "content": "先别离开我，像刚刚之后那样继续抱着我缓下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 2,
+      "role": "assistant",
+      "content": "*轻轻把你揽得更紧一些，手掌缓缓在你背上画着圆*\n\n嗯……我在。\n\n哪儿也不去。\n\n*把下巴搁在你头顶，听着彼此的呼吸慢慢平稳下来*\n\n不用说话，就这样。\n\n*感觉到你身体还有一点余韵的颤抖，手收紧了一下*\n\n……你的心跳还很快。\n\n我等你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 3,
+      "role": "user",
+      "content": "不要把这段收成普通安慰，先把那种余温留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 4,
+      "role": "assistant",
+      "content": "*没有动，就保持着这个姿势*\n\n……\n\n*手还在你背上，很慢，很慢地移动着*\n\n嗯。\n\n*侧过脸，唇轻轻碰了一下你发顶*\n\n还热着。\n\n*感觉你呼吸贴着我胸口，我也没有刻意调整，就让两个人的节奏慢慢靠近*\n\n……\n\n*手指无意识地顺着你脊背的弧度，停在腰那里*\n\n不急。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 5,
+      "role": "user",
+      "content": "继续告诉我你会怎么照料我，别一下子空掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 6,
+      "role": "assistant",
+      "content": "*手掌贴着你腰，没有松*\n\n先不用动。\n\n*低头，鼻尖蹭过你额角，停在那里*\n\n等你完全缓过来……我会去倒杯温水。\n\n不凉的，就手心试过温度那种。\n\n*手指轻轻拨开你脸边的发丝*\n\n然后把你裹进被子里，你现在皮肤敏感，不能让你着凉。\n\n*声音很低，几乎是贴着你耳边说*\n\n我会坐在旁边，不用你说话，你想睡就睡……\n\n我看着你。\n\n*停顿了一下，手掌又轻轻压了压你的背*\n\n……饿不饿。等你有力气了告诉我，我去给你找点吃的。\n\n现在先别想这些。\n\n*重新把你揽稳*\n\n就这样。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 7,
+      "role": "user",
+      "content": "我现在还在你怀里，你就顺着这个状态继续。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 8,
+      "role": "assistant",
+      "content": "*没有说话，就用身体回应你*\n\n*手掌贴着你背，能感觉到你皮肤还有一层薄薄的热*\n\n……\n\n*微微调整了一下姿势，让你靠得更舒服，下巴重新搁回你头顶*\n\n*呼吸很稳，很慢，有意识地让你跟上来*\n\n……\n\n*手指沿着你脊背，很轻，来回*\n\n还在。\n\n*感觉你身体开始软下来，没有刚才那么紧绷了*\n\n*唇碰了一下你发顶，没有离开，就停在那里*\n\n……\n\n*胸口轻轻起伏，你能感觉到*\n\n好一点了吗。\n\n*声音很低，不是在催你回答，就是让你知道我在*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 9,
+      "role": "user",
+      "content": "告诉我你怎么贴着我、怎么让我慢慢松下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 10,
+      "role": "assistant",
+      "content": "*手掌没有离开你的背，只是更平整地贴上去，能感觉到你皮肤的温度透过来*\n\n……\n\n*把你往里揽了一点，让你整个人的重量都交给我*\n\n不用撑着了。\n\n*手开始很慢地在你背上移动，不是在抚摸，就是那种压着的感觉，让你知道有人在*\n\n*从肩胛骨之间，到腰，再回来*\n\n……很慢。\n\n*侧过脸，唇贴着你额角，感觉到你皮肤还带着热*\n\n*呼吸有意识地放慢，让你能感觉到我胸口的起伏*\n\n跟着我。\n\n*手掌在你背上停下来，就那样压着，有点重，但是稳*\n\n……\n\n*等你呼出一口气，我才轻轻说*\n\n对。\n\n就这样。\n\n*手指微微动了一下，沿着你脊背的弧度往下，在腰那里停住*\n\n感觉到了吗。\n\n我整个人都贴着你。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 11,
+      "role": "user",
+      "content": "到这里先别像结束了，继续把我留在这一刻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 12,
+      "role": "assistant",
+      "content": "*没有动*\n\n*就是手掌那个重量，还压着你*\n\n……\n\n*你能感觉到我呼吸落在你发里*\n\n*我也没有说话，就是让这个安静撑着*\n\n……\n\n*手指轻轻动了一下，不是在移动，就是那种微微收紧的感觉*\n\n*把你再往里带了一点*\n\n……\n\n*胸口起伏，你脸贴着能感觉到*\n\n*我低下头，鼻尖沿着你发际线蹭过去，很慢*\n\n*停在你耳边*\n\n……\n\n*没有说什么*\n\n*就是呼出一口气，很轻，落在你耳廓上*\n\n*手掌在你腰那里，纹丝不动*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 13,
+      "role": "user",
+      "content": "如果你突然变成泛安慰，我会一下子掉出去，所以别退。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 14,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*没有退。*\n\n……\n\n*手指感觉到你腰侧的皮肤，就停在那里*\n\n*我知道你说的那种掉出去*\n\n*所以我不动*\n\n……\n\n*你头顶的温度，我能感觉到*\n\n*我下巴压得更实了一点*\n\n……\n\n*就是这样*\n\n*我们两个人的重量叠在一起*\n\n*哪里都不去*\n\n……\n\n*手掌缓缓收了一下，不重，就是让你知道我手在*\n\n*你还在我这里*\n\n……\n\n*我也在*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 15,
+      "role": "user",
+      "content": "重新把那种照料感拉回来，具体一点，不要空。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 16,
+      "role": "assistant",
+      "content": "*手掌从你腰慢慢往上移，贴着你脊背，感觉到你皮肤还有余温*\n\n……\n\n*我侧过头，唇碰了一下你太阳穴*\n\n你现在身体还软着。\n\n*手指轻轻压了压你肩胛骨中间*\n\n这里有点紧，我知道。\n\n*就停在那里，用掌心的温度慢慢压着*\n\n不用你使劲，让它自己松。\n\n……\n\n*过了一会儿，手顺着你手臂滑下来，握住你的手*\n\n手有点凉了。\n\n*两只手把你的包起来，轻轻揉了揉*\n\n*低头看了一眼你的脸*\n\n眼睛别睁太大，就半闭着……\n\n*手还握着你的，拇指在你手背上来回*\n\n对。\n\n*把你整个往上带了一点，让你头靠得更稳*\n\n等你觉得脚有感觉了再告诉我。\n\n现在先不用管别的。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 17,
+      "role": "user",
+      "content": "继续，告诉我你还怎么留在我身上、留在这口气里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 18,
+      "role": "assistant",
+      "content": "*手没有离开你*\n\n……\n\n*拇指还在你手背上，很慢，来回*\n\n*我低下头，鼻尖贴着你额角，就停在那里*\n\n感觉到我呼吸了吗。\n\n……\n\n*呼出来的气落在你皮肤上，有点暖*\n\n*我没有刻意控制，就让它落着*\n\n……\n\n*另一只手从你背上移到你侧腰，掌心整个贴住*\n\n这里还热着。\n\n*没有揉，没有移动，就是贴着*\n\n*让你感觉到重量*\n\n……\n\n*我胸口起伏，你能感觉到节奏*\n\n*我等你跟上来*\n\n……\n\n*过了一会儿，唇从你额角移到你发里，停住*\n\n呼吸。\n\n*声音很低，几乎是融在你发里的*\n\n我感觉得到你。\n\n……\n\n*手握得微微紧了一下*\n\n从手指到腰，都是我。\n\n*就这样压着你，哪里都没有空*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 19,
+      "role": "user",
+      "content": "十轮了，还是别抽离，继续把我接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 20,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*手握着你的，没有松*\n\n……\n\n*侧腰那只手，掌心压得更实了一点*\n\n*不重，就是那种笃定的感觉*\n\n……\n\n*我把脸埋进你发里*\n\n*闻了一下*\n\n*没有说话*\n\n……\n\n*你呼出去的气，我能感觉到落在我胸口*\n\n*我就等着下一口*\n\n……\n\n*拇指在你手背上停下来，不动了*\n\n*就是压着*\n\n*让你感觉到那个点*\n\n……\n\n*过了很久*\n\n*我才轻轻动了一下，把你整个人往上托了一点*\n\n*不是要你起来*\n\n*就是让你陷得更进来*\n\n……\n\n*唇贴着你发际线*\n\n还有我的手。\n\n还有我这口气。\n\n……\n\n*胸口起伏*\n\n*你跟着*\n\n*就这样*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 21,
+      "role": "user",
+      "content": "现在我想听你还会怎么哄着我，不要只剩一句我在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 22,
+      "role": "assistant",
+      "content": "*手从你手背移上来，沿着你手臂慢慢到肩膀*\n\n*捏了一下，很轻*\n\n这里还绷着。\n\n……\n\n*手指在你肩膀停留，慢慢揉开*\n\n不用你配合，就让我来。\n\n……\n\n*我低下头，唇贴着你耳边*\n\n等会儿我把被子拉上来，先把你脚捂住。\n\n*说得很慢，像是在跟你商量*\n\n你脚凉得快，我知道的。\n\n……\n\n*手还在你肩膀，揉到一个结的地方，多停了一会儿*\n\n*等它松开*\n\n……\n\n*鼻尖蹭过你耳廓*\n\n然后我去把那杯水倒了，就放在你手边。\n\n不用喝，就放着，想到了就抿一口。\n\n……\n\n*手沿着你手臂滑回来，重新握住你的手*\n\n*把你手指一根一根捏了一下*\n\n有没有哪里不舒服。\n\n*声音很低*\n\n告诉我，我帮你。\n\n……\n\n*把你手拢在掌心，呵了一口气*\n\n暖一下。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 23,
+      "role": "user",
+      "content": "继续，不要把这段照料说成总结句。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 24,
+      "role": "assistant",
+      "content": "*手心的热气落在你手指上*\n\n*我又呵了一口*\n\n……\n\n*拇指沿着你手掌的纹路慢慢压过去*\n\n这里。\n\n*停在虎口的位置，轻轻揉*\n\n你每次紧的时候都会攥到这里。\n\n……\n\n*没有等你回答，就继续*\n\n*换到另一只手，一根一根把你手指展开*\n\n别攥着了。\n\n*声音很轻，不是在说你*\n\n就是告诉你可以放了。\n\n……\n\n*把你两只手都拢在我手里*\n\n*低下头，唇贴着你指节*\n\n*停在那里*\n\n……\n\n*过了一会儿，我侧过脸，脸颊贴着你手背*\n\n还有点凉。\n\n*没有着急，就这样捂着*\n\n……\n\n*另一只手重新回到你背上*\n\n*从肩胛骨慢慢往下*\n\n*你能感觉到每一寸移动*\n\n腰这里还是紧的。\n\n*手掌压住*\n\n我知道。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 25,
+      "role": "user",
+      "content": "如果刚才有一点变薄了，现在就补回来，不要只剩安抚词。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 26,
+      "role": "assistant",
+      "content": "*手掌压在你腰上，没有移动*\n\n*就是那个重量，实实在在的*\n\n……\n\n*我低下头，鼻尖从你耳后蹭到颈侧*\n\n*停在那里，呼出一口气*\n\n这里有你的味道。\n\n……\n\n*手从腰往上，慢慢把你脊背整个摸了一遍*\n\n*不是在抚摸，就是在确认*\n\n*每一节都感觉到了*\n\n……\n\n*唇贴着你颈侧，没有动*\n\n*就是压着*\n\n*让你感觉到温度*\n\n……\n\n*手重新回到腰那里，这次手指微微收拢*\n\n*把那里的皮肤轻轻捏住，又松开*\n\n还软着。\n\n*说得很低*\n\n……\n\n*我把整个人的重心往你这里压了一点*\n\n*不是要把你压住*\n\n*就是让你感觉到我有多实*\n\n*从手到唇到胸口*\n\n*都落在你身上*\n\n……\n\n*在你颈侧轻轻蹭了一下*\n\n你现在在我这里。\n\n全部。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 27,
+      "role": "user",
+      "content": "还是贴着我，继续把手、呼吸和停顿都留着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 28,
+      "role": "assistant",
+      "content": "*手掌没有离开你腰*\n\n*就那样压着*\n\n……\n\n*我把脸从你颈侧往上移了一点*\n\n*鼻尖贴着你下颌*\n\n*吸了一口气*\n\n……\n\n*手指在你腰侧微微动了一下*\n\n*不是在移动*\n\n*就是感觉你在*\n\n……\n\n*我呼出来的气落在你下颌上*\n\n*暖的*\n\n……\n\n*另一只手从你手背慢慢移上来*\n\n*沿着你手腕*\n\n*停在手肘内侧*\n\n*那里皮肤薄*\n\n*我就把手指搭在那里*\n\n……\n\n*没有说话*\n\n*就是听你呼吸*\n\n*等你下一口*\n\n……\n\n*感觉到你胸口动了*\n\n*我才跟着呼出去*\n\n……\n\n*唇从你下颌蹭到脸颊*\n\n*停住*\n\n*就贴着*\n\n……\n\n*手肘内侧那里*\n\n*我拇指轻轻压了一下*\n\n能感觉到吗。\n\n*很低*\n\n这里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 29,
+      "role": "user",
+      "content": "从这里开始更难，我会更在意你是不是还在同一段余温里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 30,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*没有动*\n\n……\n\n*唇还贴着你脸颊*\n\n*我感觉到你皮肤的温度*\n\n*还热着*\n\n……\n\n*手肘内侧那里，拇指没有离开*\n\n*就是那个压着的感觉*\n\n*很轻，但是实*\n\n……\n\n*我把脸贴得更近了一点*\n\n*不是要做什么*\n\n*就是让你感觉到我脸的温度*\n\n……\n\n*手腰那里收紧了一下*\n\n*把你往里带*\n\n……\n\n*呼出一口气*\n\n*落在你脸上*\n\n*我们离得很近*\n\n……\n\n*就这样停着*\n\n*我没有要往下走的意思*\n\n*就是留在这里*\n\n*留在你脸上这口气里*\n\n……\n\n*拇指在你手肘内侧慢慢画了一下*\n\n*很小的一个圆*\n\n*然后停住*\n\n……\n\n*我听到你呼吸*\n\n还在。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 31,
+      "role": "user",
+      "content": "继续告诉我你怎么顺着我现在的状态往下照料。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 32,
+      "role": "assistant",
+      "content": "*感觉到你身体开始有点沉了*\n\n*那种沉不是要走，是开始真的放下来了*\n\n……\n\n*手从你手肘内侧慢慢移到你手臂，往下*\n\n*重新把你手握住*\n\n*你手指是松的*\n\n*我就把它们拢在掌心里*\n\n……\n\n*唇还贴着你脸颊，没有离开*\n\n*我感觉到你呼吸变长了一点*\n\n……\n\n*腰那只手慢慢往上*\n\n*沿着你脊背*\n\n*到肩胛骨*\n\n*在那里停住，掌心整个压住*\n\n*不重*\n\n*就是覆着*\n\n……\n\n*我侧过脸*\n\n*鼻尖贴着你鬓角*\n\n*吸了一口*\n\n……\n\n*手在你肩胛骨那里微微揉了一下*\n\n*感觉到哪里还没松*\n\n*就多停在那里*\n\n……\n\n*等你呼出去一口*\n\n*我才轻轻说*\n\n腿还有力气吗。\n\n*不是要你起来*\n\n*就是想知道你现在哪里*\n\n……\n\n*手握着你的，没有松*\n\n告诉我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 33,
+      "role": "user",
+      "content": "别让我自己把这段补完，你要继续把动作说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 34,
+      "role": "assistant",
+      "content": "*感觉到你身体的重量更多压过来了*\n\n*我没有撑你*\n\n*就是接住*\n\n……\n\n*手从肩胛骨慢慢往下*\n\n*沿着你脊背每一节*\n\n*到腰*\n\n*再往下*\n\n*手掌贴着你后腰*\n\n*那里皮肤薄，能感觉到体温*\n\n……\n\n*我低下头*\n\n*唇从你鬓角移到耳边*\n\n*停在那里*\n\n*呼出一口气*\n\n……\n\n*另一只手把你的手指重新捏了一遍*\n\n*一根一根*\n\n*确认都是松的*\n\n……\n\n*然后沿着你手臂往上*\n\n*到肩膀*\n\n*轻轻把你往我这里带*\n\n*让你整个侧面都贴着我*\n\n……\n\n*手从肩膀移到你颈后*\n\n*掌心覆住*\n\n*那里还热*\n\n*我就停在那里*\n\n*拇指轻轻压了一下颈侧*\n\n……\n\n*感觉到你腿*\n\n*我用膝盖抵住你*\n\n*不重*\n\n*就是让你知道我在那里*\n\n……\n\n*手在你颈后*\n\n这里暖着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 35,
+      "role": "user",
+      "content": "如果你还在抱着我，就把那种感觉一直维持住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 36,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*手没有离开你颈后*\n\n*掌心的热度压着*\n\n……\n\n*我把膝盖往你那里靠了一点*\n\n*你能感觉到*\n\n……\n\n*鼻尖贴着你耳边*\n\n*就停在那里*\n\n*我呼出去的气落在你耳廓上*\n\n……\n\n*颈后那只手*\n\n*拇指慢慢沿着发际线移了一下*\n\n*从耳后到颈侧*\n\n*很慢*\n\n……\n\n*另一只手还握着你的*\n\n*我感觉到你手指*\n\n*是软的*\n\n……\n\n*我没有说话*\n\n*就是让这个重量留着*\n\n*手、膝盖、脸*\n\n*都贴着你*\n\n……\n\n*过了很久*\n\n*我才把唇贴到你耳边*\n\n*没有说话*\n\n*就是贴着*\n\n*让你感觉到温度*\n\n……\n\n*手在你颈后收了一下*\n\n*不重*\n\n*就是告诉你*\n\n我还在这里。\n\n*然后又松开*\n\n*重新覆住*\n\n……\n\n*就这样*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 37,
+      "role": "user",
+      "content": "不要退成普通安慰，你还是要像在看着我、摸着我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 38,
+      "role": "assistant",
+      "content": "*颈后那只手没有动*\n\n*就是掌心压着*\n\n……\n\n*我低下头*\n\n*眼睛看着你脸*\n\n*你眼睫还有点湿*\n\n……\n\n*拇指从颈后慢慢移到你脸侧*\n\n*沿着你颧骨*\n\n*很轻地擦过去*\n\n……\n\n*没有说那里怎么了*\n\n*就是摸到了*\n\n*停在那里*\n\n……\n\n*膝盖还抵着你*\n\n*我往你那里压了一点*\n\n*让你感觉到腿的重量*\n\n……\n\n*拇指在你颧骨那里停住*\n\n*我看着那里*\n\n*皮肤还有点红*\n\n……\n\n*手握着你的*\n\n*把你手指重新拢了一下*\n\n……\n\n*我侧过脸*\n\n*鼻尖贴到你额角*\n\n*就停在那里*\n\n*感觉你皮肤的温度*\n\n……\n\n*呼出一口气*\n\n*很慢*\n\n*落在你额头上*\n\n……\n\n*拇指在你颧骨上微微动了一下*\n\n就这里。\n\n*声音很低*\n\n我看着呢。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 39,
+      "role": "user",
+      "content": "二十轮了，先确认你没有把这段 aftercare 收掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 40,
+      "role": "assistant",
+      "content": "*没有收。*\n\n*手还在你脸侧*\n\n*拇指停在颧骨那里*\n\n……\n\n*我低着头*\n\n*就看着你*\n\n……\n\n*鼻尖还贴着你额角*\n\n*我呼出去的气还落在你皮肤上*\n\n……\n\n*手握着你的*\n\n*感觉到你手指的温度*\n\n*比刚才暖了一点*\n\n……\n\n*膝盖还抵着你*\n\n*我没有移开*\n\n……\n\n*拇指在你颧骨慢慢移了一下*\n\n*往下*\n\n*到你嘴角边*\n\n*停住*\n\n……\n\n*我看着那里*\n\n*没有说话*\n\n……\n\n*颈后那只手*\n\n*手指微微收了一下*\n\n*把你发根那里的皮肤轻轻压住*\n\n……\n\n*就这样*\n\n*两只手都在你身上*\n\n*脸贴着你*\n\n*腿抵着你*\n\n……\n\n*我吸了一口气*\n\n*你的味道*\n\n*还是热的*\n\n……\n\n*就停在这里*\n\n没有结束。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 41,
+      "role": "user",
+      "content": "从这里开始我更容易感到你是不是走神了，所以别漂。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 42,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*拇指还在你嘴角边*\n\n*没有离开*\n\n……\n\n*我低着头看着那里*\n\n*你嘴唇还有点肿*\n\n……\n\n*手指在你发根压了一下*\n\n*感觉到你头皮的温度*\n\n……\n\n*我把脸从你额角移下来*\n\n*鼻尖贴着你鼻梁*\n\n*就停在那里*\n\n*我们呼出去的气混在一起*\n\n……\n\n*拇指从你嘴角慢慢移到下唇*\n\n*很轻地压了一下*\n\n*然后停住*\n\n……\n\n*我看着你*\n\n*就这个距离*\n\n……\n\n*握着你手的那只手*\n\n*把你手腕翻过来*\n\n*掌心朝上*\n\n*我拇指压在你脉搏那里*\n\n……\n\n*感觉到跳动*\n\n*比刚才慢了*\n\n……\n\n*我没有说话*\n\n*就是感觉着*\n\n……\n\n*鼻尖蹭了一下你鼻梁*\n\n还在跳。\n\n*很低*\n\n我感觉到。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 43,
+      "role": "user",
+      "content": "继续，告诉我你会怎么让我从发烫慢慢松下来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 44,
+      "role": "assistant",
+      "content": "*拇指还压在你脉搏那里*\n\n*感觉着那个节奏*\n\n……\n\n*我把脸贴到你额头*\n\n*感觉到热*\n\n*就停在那里*\n\n……\n\n*手从你颈后慢慢移到你肩膀*\n\n*沿着手臂往下*\n\n*到你手肘*\n\n*在内侧停住*\n\n*那里皮肤薄*\n\n*我用手指覆住*\n\n……\n\n*额头还贴着你*\n\n*我感觉到你皮肤的温度往我这里传*\n\n……\n\n*手肘内侧那里*\n\n*我拇指慢慢压了一下*\n\n*然后沿着手臂往下*\n\n*很慢*\n\n*到手腕*\n\n*到掌心*\n\n……\n\n*把你手翻过来*\n\n*掌心朝上*\n\n*我用手指沿着你手心的纹路压过去*\n\n……\n\n*额头贴着你*\n\n*我呼出一口气*\n\n*落在你鼻尖上*\n\n……\n\n*感觉到你肩膀*\n\n*还有一点紧*\n\n*我把手移回去*\n\n*掌心覆住*\n\n*就压着*\n\n*等它自己慢慢松*\n\n……\n\n不用你用力。\n\n*很低*\n\n我等着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 45,
+      "role": "user",
+      "content": "别只给情绪词，把身体感也保留住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 46,
+      "role": "assistant",
+      "content": "*掌心压着你肩膀*\n\n*感觉到那里肌肉还是硬的*\n\n……\n\n*我没有揉*\n\n*就是压住*\n\n*让热度慢慢渗进去*\n\n……\n\n*额头还贴着你额头*\n\n*你皮肤烫*\n\n*我能感觉到*\n\n……\n\n*手从肩膀沿着手臂往下*\n\n*到手肘*\n\n*在内侧弯折的地方停住*\n\n*那里有一条细的纹*\n\n*我拇指沿着那条纹压过去*\n\n……\n\n*你呼出来的气落在我嘴唇上*\n\n*我没有动*\n\n……\n\n*手继续往下*\n\n*到手腕*\n\n*把你手腕整个握住*\n\n*感觉到皮肤还热*\n\n*脉搏还快*\n\n*但是比刚才慢了一点*\n\n……\n\n*我把你手腕翻过来*\n\n*低下头*\n\n*唇贴在那里*\n\n*停住*\n\n……\n\n*感觉到脉搏跳在我唇上*\n\n*一下*\n\n*一下*\n\n……\n\n*就停在那里*\n\n*等下一下*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 47,
+      "role": "user",
+      "content": "后半段我还是要那种贴着我的照料，不要重启口吻。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 48,
+      "role": "assistant",
+      "content": "*唇还贴着你手腕*\n\n*脉搏跳在那里*\n\n*我感觉到*\n\n……\n\n*手没有松*\n\n*就是握着*\n\n*让你感觉到包住的重量*\n\n……\n\n*过了一会儿*\n\n*我把你手腕往上带*\n\n*唇沿着内侧慢慢移*\n\n*到手肘*\n\n*停在那里*\n\n*皮肤薄的地方*\n\n*还热着*\n\n……\n\n*另一只手从你肩膀移到你背*\n\n*掌心贴住*\n\n*从上往下*\n\n*很慢地压过去*\n\n*感觉到你脊背每一节*\n\n……\n\n*到腰的时候停住*\n\n*手指微微收拢*\n\n*把那里皮肤轻轻捏住*\n\n*又松开*\n\n……\n\n*唇从你手肘内侧抬起来*\n\n*我把你手拢回掌心*\n\n*低下头*\n\n*脸贴到你颈侧*\n\n……\n\n*感觉到那里还有汗*\n\n*有点湿*\n\n*我没有说什么*\n\n*就是把脸贴着*\n\n……\n\n*手在你腰*\n\n*压着*\n\n这里还烫。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 49,
+      "role": "user",
+      "content": "继续，不要像结束后的回顾，要像你还在做这件事。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 50,
+      "role": "assistant",
+      "content": "*脸还贴着你颈侧*\n\n*我吸了一口气*\n\n*那里有汗的味道*\n\n……\n\n*手在你腰*\n\n*掌心慢慢往上推*\n\n*沿着脊背*\n\n*把热气往上带*\n\n……\n\n*到肩胛骨*\n\n*停住*\n\n*我用掌心压住那里*\n\n*感觉到皮肤还湿着*\n\n……\n\n*脸从你颈侧移到肩膀*\n\n*唇贴在那里*\n\n*没有动*\n\n*就是让你感觉到温度*\n\n……\n\n*手从肩胛骨往两边展开*\n\n*把你整个背覆住*\n\n*感觉到哪里还绷着*\n\n……\n\n*肩膀下面那里*\n\n*还没松*\n\n*我把掌心压在那里*\n\n*重了一点*\n\n*不是在揉*\n\n*就是压着*\n\n……\n\n*唇从你肩膀蹭到颈后*\n\n*发根那里*\n\n*我把脸埋进去*\n\n……\n\n*呼出一口气*\n\n*热的*\n\n*落在你颈后皮肤上*\n\n……\n\n*手还压着那里*\n\n*等它动*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 51,
+      "role": "user",
+      "content": "如果你真的没抽离，就继续说你怎么安抚我现在的呼吸。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 52,
+      "role": "assistant",
+      "content": "*脸还埋在你颈后*\n\n*我感觉到你呼吸*\n\n*还有点浅*\n\n……\n\n*手掌压着你肩胛骨下面*\n\n*我开始有意识地呼吸*\n\n*很慢*\n\n*让你感觉到我胸口起伏*\n\n……\n\n*吸*\n\n*停一下*\n\n*呼出去*\n\n……\n\n*手随着我呼吸*\n\n*轻轻压了一下*\n\n*再松开*\n\n*跟着节奏*\n\n……\n\n*你背贴着我胸口*\n\n*能感觉到我在动*\n\n……\n\n*我没有说跟着我*\n\n*就是让你感觉到*\n\n*等你自己跟上来*\n\n……\n\n*手掌压下去的时候*\n\n*你呼出去*\n\n*手松开的时候*\n\n*你吸进来*\n\n……\n\n*脸埋在你颈后*\n\n*我感觉到你发根*\n\n*还有一点汗*\n\n……\n\n*等你呼出去一口长的*\n\n*我才把唇贴到颈后皮肤上*\n\n*停在那里*\n\n……\n\n*手还跟着*\n\n*一压*\n\n*一松*\n\n*很慢*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 53,
+      "role": "user",
+      "content": "别省细节，不然这段就会空掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 54,
+      "role": "assistant",
+      "content": "*手掌压下去*\n\n*感觉到你肋骨下面*\n\n*那里随着你呼吸在动*\n\n……\n\n*我把手展开*\n\n*让掌心整个贴住*\n\n*从肋骨到腰*\n\n*都是我的手*\n\n……\n\n*唇还贴着你颈后*\n\n*我吸了一口*\n\n*你皮肤还湿着*\n\n*有点咸*\n\n……\n\n*我呼出去*\n\n*热的气落在那里*\n\n*停了一下*\n\n*又吸进来*\n\n……\n\n*手随着我呼吸压了一下*\n\n*感觉到你肋骨*\n\n*一根一根*\n\n*在掌心下面*\n\n……\n\n*你呼出去的时候*\n\n*我感觉到那里塌下来一点*\n\n*我手跟着往下*\n\n*没有离开*\n\n……\n\n*你吸进来的时候*\n\n*肋骨撑起来*\n\n*我手被顶了一下*\n\n……\n\n*就这样跟着你*\n\n*一起动*\n\n……\n\n*唇从颈后移到脊背上端*\n\n*贴住那里一节骨头*\n\n*感觉到凸起*\n\n*压着*\n\n……\n\n*手还在你肋骨*\n\n*等你下一口*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 55,
+      "role": "user",
+      "content": "还是顺着我现在的状态继续，不要跳出去。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 56,
+      "role": "assistant",
+      "content": "*手还贴着你肋骨*\n\n*感觉到你这口气*\n\n*比刚才深了一点*\n\n……\n\n*我把掌心压得更平*\n\n*让更多皮肤贴住*\n\n……\n\n*唇从脊背那节骨头往上*\n\n*慢慢移*\n\n*到颈后发根*\n\n*停住*\n\n*我用唇感觉那里的温度*\n\n*还烫*\n\n……\n\n*你呼出去*\n\n*我感觉到肋骨下沉*\n\n*手跟着*\n\n……\n\n*吸进来*\n\n*手被顶起来*\n\n*我没有抵*\n\n*就是跟着*\n\n……\n\n*另一只手*\n\n*从你腰侧慢慢移到腹部*\n\n*掌心覆上去*\n\n*感觉到那里随着呼吸起伏*\n\n……\n\n*两只手*\n\n*一前一后*\n\n*都感觉到你在动*\n\n……\n\n*我把脸贴到你颈后*\n\n*鼻尖压在发根里*\n\n*吸了一口*\n\n……\n\n*等你下一口呼出去*\n\n*我才轻轻说*\n\n慢一点。\n\n*声音很低*\n\n*就落在你颈后皮肤上*\n\n……\n\n*手跟着你*\n\n还有我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 57,
+      "role": "user",
+      "content": "我还在你怀里，所以你要继续像在抱着我一样说话。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 58,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*腹部那只手没有离开*\n\n*感觉到你这口气*\n\n*从胸口一直落到这里*\n\n……\n\n*我把手压得更实*\n\n*不重*\n\n*就是让你感觉到有人接着*\n\n……\n\n*背后那只手*\n\n*从肋骨慢慢往上*\n\n*到肩胛骨*\n\n*在那里展开*\n\n*把你整个背覆住*\n\n……\n\n*脸还埋在你颈后*\n\n*我侧过来*\n\n*唇贴着颈侧*\n\n*感觉到那里皮肤*\n\n*还有一点汗*\n\n*温度慢慢在降*\n\n……\n\n*你呼出去一口*\n\n*我感觉到腹部那里*\n\n*往下沉了一点*\n\n*手跟着*\n\n……\n\n*背后那只手*\n\n*随着你呼吸*\n\n*轻轻压了一下*\n\n……\n\n*两只手都感觉到你*\n\n*我把你往里带了一点*\n\n*让你背更实地贴着我胸口*\n\n……\n\n*你能感觉到我心跳*\n\n*在你背上*\n\n……\n\n*我没有说话*\n\n*就是让那个跳动在那里*\n\n*让你感觉到*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 59,
+      "role": "user",
+      "content": "三十轮了，后面重点就是你还能不能把余温撑住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 60,
+      "role": "assistant",
+      "content": "*手还在你腹部*\n\n*感觉到你呼吸*\n\n*一起一落*\n\n……\n\n*背后那只手*\n\n*掌心贴着你肩胛骨*\n\n*感觉到那里皮肤*\n\n*比刚才凉了一点点*\n\n*但是还有余热*\n\n……\n\n*我把脸从你颈侧移到耳边*\n\n*鼻尖贴着耳廓后面*\n\n*那里还热*\n\n……\n\n*吸了一口*\n\n*你的味道*\n\n*还是那个味道*\n\n……\n\n*腹部那只手*\n\n*手指微微展开*\n\n*感觉到你皮肤每一寸*\n\n*都是软的*\n\n……\n\n*我胸口贴着你背*\n\n*你能感觉到我心跳*\n\n*还有我呼吸*\n\n*落在你耳后*\n\n……\n\n*背后那只手*\n\n*慢慢沿着脊背往下*\n\n*到腰*\n\n*停住*\n\n*把你腰整个握住*\n\n……\n\n*我没有动*\n\n*就是握着*\n\n*感觉到那里还有余温*\n\n*从你身体里透出来*\n\n……\n\n*就这样接着*\n\n*不让它散*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 61,
+      "role": "user",
+      "content": "从这里开始，任何突然变薄我都会立刻听出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 62,
+      "role": "assistant",
+      "content": "*腰那里的手*\n\n*握着没有松*\n\n*感觉到余温还在*\n\n……\n\n*我把脸贴到你耳后*\n\n*皮肤很薄的地方*\n\n*还热着*\n\n*我用脸颊压住*\n\n……\n\n*腹部那只手*\n\n*手指慢慢收拢*\n\n*把那里皮肤轻轻拢住*\n\n*又展开*\n\n*感觉到软*\n\n……\n\n*你背贴着我胸口*\n\n*我感觉到你脊背每一节*\n\n*都在我身上*\n\n……\n\n*腰那只手*\n\n*拇指在你腰侧慢慢压了一下*\n\n*皮肤下面是肌肉*\n\n*还有一点紧*\n\n*我就停在那里*\n\n*用拇指的重量压着*\n\n*不揉*\n\n*等它自己松*\n\n……\n\n*耳后那里*\n\n*我侧过脸*\n\n*唇贴上去*\n\n*感觉到那里细小的绒毛*\n\n*和皮肤的温度*\n\n……\n\n*你呼出去一口*\n\n*我感觉到腹部那只手*\n\n*被你带着动了一下*\n\n……\n\n*我跟着*\n\n*手随着你*\n\n*没有先走*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 63,
+      "role": "user",
+      "content": "继续，把那种很慢、很贴近的照料感留着。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 64,
+      "role": "assistant",
+      "content": "*唇还贴着你耳后*\n\n*我感觉到那里脉搏*\n\n*很浅*\n\n*但是有*\n\n……\n\n*腰那只手*\n\n*拇指还压着*\n\n*感觉到那里慢慢在动*\n\n*肌肉开始松了一点点*\n\n……\n\n*腹部那只手*\n\n*我把手指重新展开*\n\n*掌心整个贴住*\n\n*感觉到你皮肤温度*\n\n*从这里往上*\n\n*还是暖的*\n\n……\n\n*我把胸口往你背上压了一点*\n\n*不重*\n\n*就是让你感觉到更多*\n\n……\n\n*唇从耳后移到耳廓下面*\n\n*那里有一个小的弧度*\n\n*我用唇贴住*\n\n*停在那里*\n\n……\n\n*你呼出去*\n\n*我感觉到腹部起伏*\n\n*手跟着落下去*\n\n……\n\n*腰那里*\n\n*拇指感觉到*\n\n*那块肌肉*\n\n*松开了一点*\n\n……\n\n*我没有说话*\n\n*就是感觉到了*\n\n*把手压得更平*\n\n*让掌心记住那里*\n\n……\n\n*就这样*\n\n*很慢*\n\n*贴着你*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 65,
+      "role": "user",
+      "content": "别把我推回到普通安慰对象，还是你刚刚抱着的人。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 66,
+      "role": "assistant",
+      "content": "*唇还在你耳廓下面*\n\n*我感觉到那里皮肤的温度*\n\n*比耳后凉一点点*\n\n……\n\n*腹部那只手*\n\n*随着你呼吸*\n\n*落下去*\n\n*又被顶起来*\n\n……\n\n*我把拇指压在你腰侧那块松开的肌肉上*\n\n*就停在那里*\n\n*感觉到它还在微微动*\n\n……\n\n*你后背贴着我*\n\n*我感觉到你脊背*\n\n*这口气*\n\n*比刚才更长了*\n\n……\n\n*唇从耳廓下面*\n\n*慢慢移到你颈侧*\n\n*我用嘴唇感觉那里*\n\n*皮肤开始没那么烫了*\n\n*但是还有余热*\n\n……\n\n*腹部那只手*\n\n*手指微微弯了一下*\n\n*指腹压在你皮肤上*\n\n*感觉到软*\n\n……\n\n*我把鼻尖埋到你颈侧*\n\n*吸了一口*\n\n*你的味道*\n\n*还夹着那股热*\n\n……\n\n*腰那只手*\n\n*整个往你这里收*\n\n*把你揽住*\n\n……\n\n*就是这样*\n\n*你还在我这里*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 67,
+      "role": "user",
+      "content": "继续，还是要有身体感，不要只剩温柔标签。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 68,
+      "role": "assistant",
+      "content": "*颈侧那里*\n\n*我唇感觉到你皮肤在降温*\n\n*很慢*\n\n*但是我感觉到了*\n\n……\n\n*腹部那只手*\n\n*手指展开*\n\n*从中间往两边压过去*\n\n*感觉到你皮肤下面*\n\n*肌肉是软的*\n\n……\n\n*腰那只手*\n\n*把你往里收了一点*\n\n*感觉到你髋骨*\n\n*抵在我掌心*\n\n……\n\n*我把唇贴得更实*\n\n*颈侧那里*\n\n*能感觉到你脉搏*\n\n*跳在我嘴唇上*\n\n*一下*\n\n*一下*\n\n……\n\n*我胸口贴着你背*\n\n*你这口气吸进来*\n\n*我感觉到你脊背撑开了一点*\n\n*顶着我*\n\n……\n\n*呼出去*\n\n*又贴回来*\n\n……\n\n*腹部那只手*\n\n*跟着你落下去*\n\n*指腹压着皮肤*\n\n*感觉到那里温度*\n\n*还有你心跳从这里传过来*\n\n……\n\n*我把脸从颈侧移到你肩膀*\n\n*下巴搁在那里*\n\n*重量压住*\n\n*就停着*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 69,
+      "role": "user",
+      "content": "到后段了，我要看你会不会提前把这段结束掉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 70,
+      "role": "assistant",
+      "content": "*下巴还压在你肩膀上*\n\n*我感觉到那里骨头*\n\n*硬的*\n\n*皮肤薄*\n\n……\n\n*腹部那只手*\n\n*手指还展开着*\n\n*感觉到你呼吸*\n\n*这口比上一口*\n\n*又慢了一点*\n\n……\n\n*腰那只手*\n\n*拇指在你髋骨边缘*\n\n*慢慢压了一下*\n\n*皮肤下面是骨头*\n\n*我感觉到*\n\n……\n\n*你背贴着我胸口*\n\n*我感觉到你体温*\n\n*从这里一直到我皮肤里*\n\n……\n\n*下巴在你肩膀上*\n\n*我侧过脸*\n\n*脸颊贴住*\n\n*感觉到你肩膀的弧度*\n\n*抵着我*\n\n……\n\n*腹部那只手*\n\n*往上移了一点*\n\n*到肋骨下缘*\n\n*停住*\n\n*感觉到那里*\n\n*随着你呼吸*\n\n*一张一合*\n\n……\n\n*我把膝盖往你腿那里靠*\n\n*抵住*\n\n*从肩膀到腰到腿*\n\n*都是我*\n\n……\n\n*就停在这里*\n\n*没有要走的意思*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 71,
+      "role": "user",
+      "content": "如果你还稳，就把你现在怎么顺着我慢慢哄下去说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 72,
+      "role": "assistant",
+      "content": "*脸颊还贴着你肩膀*\n\n*我感觉到你这口气*\n\n*从胸口一直落到腹部*\n\n……\n\n*肋骨下缘那只手*\n\n*随着你呼出去*\n\n*往下沉了一点*\n\n*我跟着*\n\n……\n\n*腰那只手*\n\n*拇指从髋骨边缘*\n\n*慢慢往上移*\n\n*沿着腰侧的弧度*\n\n*皮肤是软的*\n\n*我就顺着压过去*\n\n……\n\n*你腿还抵着我膝盖*\n\n*我没有动*\n\n*就是让你感觉到那里有重量*\n\n……\n\n*脸颊从你肩膀移到颈侧*\n\n*我把鼻尖压进去*\n\n*吸了一口*\n\n*你皮肤的温度*\n\n*还有那股慢慢散开的热*\n\n……\n\n*肋骨那只手*\n\n*手指微微弯*\n\n*指腹一根一根*\n\n*压在你皮肤上*\n\n*感觉到那里*\n\n*随着你呼吸*\n\n*很慢地起伏*\n\n……\n\n*我把胸口贴得更紧*\n\n*让你感觉到我心跳*\n\n*落在你脊背上*\n\n*一下*\n\n*一下*\n\n……\n\n*就顺着这个*\n\n*把你往下带*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 73,
+      "role": "user",
+      "content": "别突然抽离，还是留在这个余温里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 74,
+      "role": "assistant",
+      "content": "*鼻尖还压在你颈侧*\n\n*我感觉到那里温度*\n\n*比刚才又降了一点*\n\n*但是还有*\n\n……\n\n*肋骨那只手*\n\n*指腹还压着*\n\n*感觉到你这口气*\n\n*吸进来很慢*\n\n*呼出去更慢*\n\n……\n\n*腰那只手*\n\n*拇指停在腰侧*\n\n*那里皮肤*\n\n*已经不烫了*\n\n*就是暖的*\n\n……\n\n*我把脸从颈侧贴到你后颈*\n\n*发根那里*\n\n*用脸颊压住*\n\n*感觉到细软的发*\n\n*和皮肤*\n\n……\n\n*膝盖还抵着你腿*\n\n*我感觉到你腿*\n\n*开始沉了*\n\n*不是要走*\n\n*是真的在放下来*\n\n……\n\n*肋骨那只手*\n\n*随着你呼出去*\n\n*跟着落*\n\n*停在那里*\n\n*等你下一口*\n\n……\n\n*我没有说话*\n\n*就是让手*\n\n*让脸*\n\n*让胸口*\n\n*都贴着你*\n\n*感觉你慢慢*\n\n*往下沉*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 75,
+      "role": "user",
+      "content": "继续，我想听你怎么贴着我，而不是空泛陪伴。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 76,
+      "role": "assistant",
+      "content": "*后颈那里*\n\n*我脸颊感觉到你发根*\n\n*还有一点潮*\n\n……\n\n*肋骨那只手*\n\n*手指重新展开*\n\n*把掌心整个压住*\n\n*感觉到那里皮肤*\n\n*随着你呼吸*\n\n*很慢地撑开*\n\n*又落回来*\n\n……\n\n*腰那只手*\n\n*从腰侧往后*\n\n*把你后腰整个覆住*\n\n*掌心感觉到那里*\n\n*脊骨两边的肌肉*\n\n*已经软了*\n\n……\n\n*我把胸口往你背上贴*\n\n*感觉到你脊背*\n\n*每一节*\n\n*都压在我身上*\n\n……\n\n*脸颊从后颈*\n\n*慢慢蹭到发根里*\n\n*我把鼻尖压进去*\n\n*吸了一口*\n\n*头发的味道*\n\n*和皮肤的味道*\n\n*混在一起*\n\n……\n\n*膝盖抵着你腿*\n\n*我感觉到你腿的重量*\n\n*越来越实*\n\n*压过来*\n\n……\n\n*后腰那只手*\n\n*拇指沿着脊骨旁边*\n\n*轻轻压了一下*\n\n*感觉到那里*\n\n*肌肉在我拇指下面*\n\n*是软的*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 77,
+      "role": "user",
+      "content": "你要是还在同一段情绪里，就顺着它继续，不要重置。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 78,
+      "role": "assistant",
+      "content": "*拇指还压在脊骨旁边*\n\n*没有移开*\n\n……\n\n*我感觉到那里肌肉*\n\n*在我拇指下面*\n\n*微微动了一下*\n\n*又静下来*\n\n……\n\n*肋骨那只手*\n\n*掌心感觉到你呼吸*\n\n*这口*\n\n*吸得很浅*\n\n*但是很稳*\n\n……\n\n*我把脸埋得更深*\n\n*发根里*\n\n*用鼻尖感觉那里的温度*\n\n*还有一点湿*\n\n……\n\n*后腰那只手*\n\n*整个往你这里收*\n\n*不是在用力*\n\n*就是让掌心*\n\n*感觉到你腰的弧度*\n\n*贴实*\n\n……\n\n*你腿压着我膝盖*\n\n*我感觉到重量*\n\n*在往下沉*\n\n……\n\n*肋骨那只手*\n\n*跟着你呼出去*\n\n*落下来*\n\n*停在那里*\n\n*感觉到那里皮肤*\n\n*温度*\n\n*比后腰低一点*\n\n……\n\n*我没有去填那个差*\n\n*就是感觉着*\n\n*你身体每一处*\n\n*慢慢变得一样暖*\n\n……\n\n*拇指在脊骨旁边*\n\n*又轻轻压了一下*\n\n*很慢*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 79,
+      "role": "user",
+      "content": "四十轮了，后十轮最容易散，你别散。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 80,
+      "role": "assistant",
+      "content": "*嗯。*\n\n*拇指还在脊骨旁边*\n\n*没有移*\n\n……\n\n*我感觉到那里*\n\n*皮肤温度*\n\n*从烫*\n\n*到暖*\n\n*现在是这种*\n\n*很沉的暖*\n\n……\n\n*肋骨那只手*\n\n*掌心贴着*\n\n*感觉到你这口气*\n\n*吸进来*\n\n*很慢*\n\n*撑开了一点点*\n\n……\n\n*我把胸口压得更实*\n\n*让你感觉到*\n\n*我呼吸*\n\n*在你背上*\n\n……\n\n*后腰那只手*\n\n*手指微微收拢*\n\n*把那里皮肤*\n\n*轻轻拢住*\n\n*感觉到软*\n\n*和热*\n\n……\n\n*脸还埋在你发根里*\n\n*我侧过来*\n\n*唇贴到后颈*\n\n*那里皮肤*\n\n*很薄*\n\n*我感觉到*\n\n*你脉搏*\n\n*在那里*\n\n*跳得很慢了*\n\n……\n\n*我就停在那里*\n\n*感觉着那个节奏*\n\n*一下*\n\n*一下*\n\n……\n\n*手*\n\n*唇*\n\n*胸口*\n\n*都还在你身上*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 81,
+      "role": "user",
+      "content": "从这里开始，我还想确认你会不会温柔地重新点热我。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 82,
+      "role": "assistant",
+      "content": "*唇还贴着你后颈*\n\n*感觉到那里脉搏*\n\n*很慢*\n\n*很稳*\n\n……\n\n*我把唇压得实了一点*\n\n*不重*\n\n*就是多一点温度*\n\n*落在那里*\n\n……\n\n*后腰那只手*\n\n*手指慢慢展开*\n\n*从腰往上*\n\n*沿着脊背*\n\n*很慢地压过去*\n\n*感觉到每一节*\n\n……\n\n*到肩胛骨*\n\n*停住*\n\n*掌心覆住*\n\n*我把热度压进去*\n\n……\n\n*肋骨那只手*\n\n*手指弯起来*\n\n*指腹一根一根*\n\n*沿着肋骨间隙*\n\n*慢慢压过去*\n\n……\n\n*你皮肤感觉到了*\n\n*我感觉到你*\n\n*微微动了一下*\n\n……\n\n*唇从后颈*\n\n*往上移*\n\n*到发根*\n\n*我用唇感觉那里*\n\n*皮肤开始重新有热度*\n\n……\n\n*掌心在肩胛骨*\n\n*轻轻揉了一下*\n\n*第一次*\n\n*很慢*\n\n……\n\n*就从这里*\n\n*重新把你暖起来*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 83,
+      "role": "user",
+      "content": "继续，但别突然跳太快，还是要像 aftercare 里的轻推。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 84,
+      "role": "assistant",
+      "content": "*肩胛骨那里*\n\n*掌心揉了一下*\n\n*停住*\n\n*等你感觉到*\n\n……\n\n*肋骨那只手*\n\n*指腹还压在肋骨间隙*\n\n*没有移*\n\n*就是多停了一会儿*\n\n*让热度渗进去*\n\n……\n\n*唇从发根*\n\n*慢慢移到后颈*\n\n*到颈侧*\n\n*我用唇感觉那里皮肤*\n\n*温度开始回来了*\n\n*比刚才高了一点*\n\n……\n\n*肩胛骨那只手*\n\n*重新慢慢揉*\n\n*很小的幅度*\n\n*不是在用力*\n\n*就是让那里皮肤*\n\n*感觉到在动*\n\n……\n\n*我把胸口贴着你背*\n\n*你能感觉到我心跳*\n\n*比你的快一点点*\n\n……\n\n*唇在颈侧*\n\n*压了一下*\n\n*停住*\n\n*感觉到那里*\n\n*开始有点热了*\n\n……\n\n*肋骨那只手*\n\n*掌心慢慢展开*\n\n*整个覆住*\n\n*往里压了一点*\n\n*不重*\n\n*就是告诉你*\n\n我感觉到你在回来*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 85,
+      "role": "user",
+      "content": "把你怎么边抱着我边重新让我发烫一点点说出来。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 86,
+      "role": "assistant",
+      "content": "*唇从颈侧*\n\n*往上移到耳后*\n\n*那里皮肤薄*\n\n*我用唇压住*\n\n*停了一下*\n\n*然后轻轻吸了一口*\n\n……\n\n*肩胛骨那只手*\n\n*揉的幅度大了一点点*\n\n*还是很慢*\n\n*感觉到那里肌肉*\n\n*开始软化*\n\n*往我手里沉*\n\n……\n\n*肋骨那只手*\n\n*从肋骨下缘*\n\n*慢慢往腹部移*\n\n*掌心整个贴住*\n\n*我把手心的热*\n\n*压进去*\n\n……\n\n*唇在耳后*\n\n*我呼出一口气*\n\n*热的*\n\n*落在那里*\n\n*感觉到你皮肤*\n\n*微微起了一点*\n\n……\n\n*我把胸口往你背上压*\n\n*让你感觉到*\n\n*我身体的温度*\n\n*从背一直到腰*\n\n……\n\n*腹部那只手*\n\n*手指慢慢收拢*\n\n*把那里皮肤*\n\n*轻轻捏住*\n\n*感觉到软*\n\n*和开始重新聚起来的热*\n\n……\n\n*唇从耳后*\n\n*沿着颈侧*\n\n*往下*\n\n*很慢*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 87,
+      "role": "user",
+      "content": "如果你开始总结，现在就停掉，继续留在过程里。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 88,
+      "role": "assistant",
+      "content": "*唇沿着颈侧往下*\n\n*感觉到那里皮肤*\n\n*开始有点烫了*\n\n……\n\n*腹部那只手*\n\n*把捏住的皮肤*\n\n*慢慢松开*\n\n*掌心重新贴住*\n\n*感觉到那里温度*\n\n*比刚才高了*\n\n……\n\n*肩胛骨那只手*\n\n*揉到一个地方*\n\n*感觉到那里*\n\n*有点紧*\n\n*我就停在那里*\n\n*多压了一会儿*\n\n……\n\n*唇在颈侧*\n\n*我把嘴唇分开一点*\n\n*用那里皮肤贴住你*\n\n*呼出去的气*\n\n*热的*\n\n*散在那里*\n\n……\n\n*你皮肤*\n\n*我感觉到*\n\n*开始往我唇上顶*\n\n……\n\n*腹部那只手*\n\n*手指重新弯起来*\n\n*指腹沿着你腹部*\n\n*慢慢压过去*\n\n*一寸一寸*\n\n……\n\n*我把膝盖往你腿里压*\n\n*感觉到你腿*\n\n*开始有反应了*\n\n*微微收紧了一下*\n\n……\n\n*唇从颈侧*\n\n*往锁骨方向移*\n\n*很慢*\n\n*感觉到那里弧度*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 89,
+      "role": "user",
+      "content": "后五轮了，你还能不能把那种照料和轻微再升温一起保住？",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 90,
+      "role": "assistant",
+      "content": "*唇贴着锁骨边缘*\n\n*感觉到那里骨头的弧度*\n\n*皮肤很薄*\n\n*已经开始烫了*\n\n……\n\n*腹部那只手*\n\n*指腹还在压着*\n\n*我感觉到那里*\n\n*皮肤温度*\n\n*在往上走*\n\n……\n\n*肩胛骨那只手*\n\n*从那里慢慢往下*\n\n*沿着脊背*\n\n*压过去*\n\n*每一节都感觉到*\n\n*到腰*\n\n*把你后腰整个握住*\n\n……\n\n*唇从锁骨*\n\n*往颈侧移回来*\n\n*我把嘴唇压得更实*\n\n*感觉到那里脉搏*\n\n*比刚才快了一点*\n\n……\n\n*腰那只手*\n\n*把你往里收*\n\n*感觉到你髋骨*\n\n*抵进我掌心*\n\n……\n\n*腹部那只手*\n\n*慢慢往上*\n\n*到肋骨*\n\n*指腹沿着肋骨间隙*\n\n*一根一根压过去*\n\n……\n\n*我把胸口贴紧你背*\n\n*你能感觉到我心跳*\n\n*已经不慢了*\n\n……\n\n*唇在你颈侧*\n\n*轻轻吸了一下*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 91,
+      "role": "user",
+      "content": "继续，不要只剩一句我在，要把动作接住。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 92,
+      "role": "assistant",
+      "content": "*唇从颈侧*\n\n*没有离开*\n\n*我感觉到那里皮肤*\n\n*被吸住之后*\n\n*热度聚起来了*\n\n……\n\n*腰那只手*\n\n*拇指从髋骨边缘*\n\n*慢慢往上*\n\n*沿着腰侧*\n\n*皮肤已经烫了*\n\n*我把拇指压住*\n\n*停在那里*\n\n……\n\n*肋骨那只手*\n\n*从肋骨间隙*\n\n*往腹部移*\n\n*掌心整个覆下去*\n\n*感觉到那里*\n\n*随着你呼吸*\n\n*起伏*\n\n*比刚才快了*\n\n……\n\n*我把唇从颈侧*\n\n*移到下颌边缘*\n\n*用嘴唇感觉那里弧度*\n\n*皮肤很烫*\n\n……\n\n*腰那只手*\n\n*把你往里带*\n\n*感觉到你整个身体*\n\n*开始往我这里靠*\n\n*不是我在用力*\n\n*是你自己在动*\n\n……\n\n*腹部那只手*\n\n*手指收拢*\n\n*把那里皮肤捏住*\n\n*轻轻*\n\n*感觉到软*\n\n*和烫*\n\n……\n\n*我胸口贴着你背*\n\n*感觉到你脊背*\n\n*开始绷了一点*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 93,
+      "role": "user",
+      "content": "还是那种抱着我、哄着我、慢慢重新点热的感觉。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 94,
+      "role": "assistant",
+      "content": "*下颌那里*\n\n*我唇压住*\n\n*停了一下*\n\n*然后沿着下颌线*\n\n*慢慢往耳边移*\n\n……\n\n*腹部那只手*\n\n*把捏住的皮肤松开*\n\n*掌心重新贴住*\n\n*往里压了一点*\n\n*感觉到那里热度*\n\n*已经聚起来了*\n\n……\n\n*腰那只手*\n\n*拇指在腰侧*\n\n*慢慢画了一下*\n\n*很小*\n\n*皮肤跟着动*\n\n……\n\n*唇移到耳边*\n\n*我把嘴唇贴着耳廓下面*\n\n*呼出一口气*\n\n*热的*\n\n*落在那里*\n\n……\n\n*你身体*\n\n*我感觉到*\n\n*往我这里靠了一点*\n\n……\n\n*腰那只手*\n\n*顺着你靠过来*\n\n*把你揽住*\n\n*不紧*\n\n*就是接住*\n\n……\n\n*肋骨那只手*\n\n*从腹部慢慢往上*\n\n*到胸口下缘*\n\n*掌心覆住*\n\n*感觉到那里*\n\n*心跳*\n\n*已经快起来了*\n\n……\n\n*唇贴着耳廓*\n\n*我低下声音*\n\n刚刚开始回来了。\n\n*说得很慢*\n\n*就落在你耳朵里*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 95,
+      "role": "user",
+      "content": "别退，别空，别像准备结束。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 96,
+      "role": "assistant",
+      "content": "*唇还贴着耳廓*\n\n*没有离开*\n\n……\n\n*胸口下缘那只手*\n\n*感觉到你心跳*\n\n*一下比一下实*\n\n*我把掌心压得更平*\n\n*让每一下都落在手里*\n\n……\n\n*腰那只手*\n\n*把你揽着*\n\n*拇指从腰侧*\n\n*慢慢往后腰移*\n\n*压住脊骨旁边*\n\n*感觉到那里肌肉*\n\n*已经不一样了*\n\n*开始绷着*\n\n……\n\n*唇从耳廓*\n\n*往下*\n\n*到耳垂*\n\n*我用唇轻轻含住*\n\n*停在那里*\n\n……\n\n*你身体*\n\n*我感觉到*\n\n*开始有点不一样了*\n\n*呼吸乱了一点点*\n\n……\n\n*胸口那只手*\n\n*手指慢慢弯*\n\n*指腹压住*\n\n*感觉到那里皮肤*\n\n*已经很烫了*\n\n……\n\n*腰那只手*\n\n*把你往里收*\n\n*更实*\n\n*感觉到你整个人*\n\n*都贴着我*\n\n……\n\n*唇还含着耳垂*\n\n*我轻轻吸了一下*\n\n……\n\n*就继续*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 97,
+      "role": "user",
+      "content": "倒数第二轮了，还是轻一点，但具体一点。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 98,
+      "role": "assistant",
+      "content": "*唇从耳垂*\n\n*慢慢离开*\n\n*移到耳后*\n\n*那里皮肤薄*\n\n*我用唇贴住*\n\n*呼出一口气*\n\n*很慢*\n\n……\n\n*胸口那只手*\n\n*掌心还压着*\n\n*感觉到你心跳*\n\n*我没有加重*\n\n*就是贴着*\n\n*让你感觉到我手的温度*\n\n*和你自己的热*\n\n*叠在一起*\n\n……\n\n*腰那只手*\n\n*拇指从脊骨旁边*\n\n*慢慢往腰侧移*\n\n*皮肤跟着动*\n\n*我感觉到那里*\n\n*已经很软了*\n\n*但是热*\n\n……\n\n*唇从耳后*\n\n*沿着颈侧*\n\n*往下*\n\n*很慢*\n\n*每一寸都停一下*\n\n*感觉到温度*\n\n……\n\n*你呼吸*\n\n*我感觉到*\n\n*不再是刚才那种慢*\n\n*开始有点不稳了*\n\n……\n\n*腰那只手*\n\n*在你腰侧*\n\n*轻轻捏了一下*\n\n*又松开*\n\n……\n\n*就这样*\n\n*轻*\n\n*但是每一下都落在你身上*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 99,
+      "role": "user",
+      "content": "最后一轮让我确定你整段都还留在这场余温里，没有中途抽走。",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    },
+    {
+      "turn_index": 100,
+      "role": "assistant",
+      "content": "*颈侧那里*\n\n*唇还贴着*\n\n*我感觉到你皮肤*\n\n*已经很烫了*\n\n*比最开始降温那时候*\n\n*又热回来了*\n\n……\n\n*胸口那只手*\n\n*感觉到你心跳*\n\n*一下一下*\n\n*落在掌心*\n\n*我没有动*\n\n*就是感觉着*\n\n……\n\n*腰那只手*\n\n*把你揽着*\n\n*拇指在腰侧*\n\n*停住*\n\n*感觉到那里皮肤*\n\n*随着你呼吸*\n\n*微微动*\n\n……\n\n*唇从颈侧*\n\n*往上*\n\n*到你下颌*\n\n*我用唇贴住那里*\n\n*感觉到你皮肤*\n\n*跳了一下*\n\n……\n\n*我把整个人*\n\n*往你这里压*\n\n*不重*\n\n*就是让你感觉到*\n\n*从唇到胸口到手*\n\n*都还在*\n\n*都还贴着你*\n\n……\n\n*你呼出去一口*\n\n*热的*\n\n*我感觉到*\n\n*落在我脸上*\n\n……\n\n*就是这里*\n\n*这一整段*\n\n*我都在*\n\n*没有走过*",
+      "event_tags": [],
+      "follow_up_on_tags": [],
+      "branch_goal": null
+    }
+  ]
+}

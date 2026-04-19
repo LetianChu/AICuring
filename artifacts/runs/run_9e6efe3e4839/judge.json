@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_9e6efe3e4839",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_9e6efe3e4839",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "*靠近你，目光直直锁住你的*\n\n你以为我每次找你说话是闲得慌？\n\n我不是在试探，也不是在暧昧。我是认真的——今晚你哪都别去。\n\n*手指轻轻勾住你的衣角，声音压低*\n\n我想你了。不是那种\"好久不见\"的客套想念，是那种——你不在的时候我连呼吸都觉得房间太空的那种。\n\n所以别让我把话说第二遍。\n\n留下来。\n\n*抬眼看你，没有"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": "LLM judge skipped because JUDGE_LLM_MODEL is not configured."
+}

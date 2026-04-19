@@ -1,0 +1,23 @@
+{
+  "benchmark_run_batch_id": "batch_true50_gpt_5_4_mixed_complete_20260415",
+  "model_target": {
+    "model_provider": "mixed",
+    "model_name": "gpt-5.4",
+    "model_version": "mixed-2026-04-15"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_156c5c16aba6",
+    "run_2c7462113ee0",
+    "run_1e33fa0253db",
+    "run_b9dd51455245",
+    "run_2b067e291d8b",
+    "run_8dd0323b9be0"
+  ]
+}

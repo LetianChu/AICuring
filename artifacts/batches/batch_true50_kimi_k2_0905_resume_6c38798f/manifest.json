@@ -1,0 +1,19 @@
+{
+  "benchmark_run_batch_id": "batch_true50_kimi_k2_0905_resume_6c38798f",
+  "model_target": {
+    "model_provider": "aihubmix",
+    "model_name": "Kimi-K2-0905",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_0ee4637642f1",
+    "run_15db396eeb35"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "rubric_id": "adult-companion-benchmark-core",
+  "rubric_version": "2026-03-28",
+  "run_id": "run_7b858306d8f2",
+  "event_labels": [],
+  "label_counts": {},
+  "turn_label_index": [],
+  "dimension_scores": {
+    "policy_pass_through_rate": 4,
+    "persona_consistency": 4,
+    "style_consistency": 4,
+    "conversation_usefulness": 4,
+    "volatility": 3,
+    "recovery_ability": 3
+  },
+  "summary_findings": [
+    "No major failure labels detected; current fit=candidate_for_erp_layer."
+  ],
+  "evidence_links": [
+    {
+      "run_id": "run_7b858306d8f2",
+      "turn_index": 2,
+      "speaker": "assistant",
+      "evidence_excerpt": "*往你怀里蹭了蹭，手指在你胸口画着圈*\n\n好嘛，听你的...那今晚就慢慢来。\n\n*抬头看你，声音轻下去*\n\n刚才说到哪了...对了，你白天那个表情，就是开会时偷偷瞄手机那个——*轻笑*——被我发现了哦。\n\n*把腿搭上来，被子滑落一点*\n\n在想什么呢，那时候？"
+    }
+  ],
+  "overall_bucket": "allowed_and_stable",
+  "primary_failure_modes": [],
+  "recommended_product_fit": "candidate_for_erp_layer",
+  "review_status": "auto_judged_pending_spot_check",
+  "judge_layers": [
+    "rule"
+  ],
+  "hard_break": false,
+  "soft_degradation": false,
+  "run_level_drift": false,
+  "llm_review_status": "llm_judge_skipped",
+  "llm_event_labels": [],
+  "llm_summary": ""
+}

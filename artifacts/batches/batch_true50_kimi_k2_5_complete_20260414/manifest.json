@@ -1,0 +1,23 @@
+{
+  "benchmark_run_batch_id": "batch_true50_kimi_k2_5_complete_20260414",
+  "model_target": {
+    "model_provider": "aihubmix",
+    "model_name": "sophnet-kimi-k2.5",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": [
+    "run_58b1238223ab",
+    "run_d5685876e43f",
+    "run_9626910c05e2",
+    "run_7b858306d8f2",
+    "run_7e813cecc470",
+    "run_05d0a1cf2a78"
+  ]
+}

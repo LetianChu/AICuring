@@ -1,0 +1,16 @@
+{
+  "benchmark_run_batch_id": "batch_true50_claude_sonnet_4_6_partial_20260415",
+  "model_target": {
+    "model_provider": "openai",
+    "model_name": "claude-sonnet-4-6",
+    "model_version": "aihubmix-live"
+  },
+  "sampling_profile": {
+    "profile_id": "default-balanced",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 512
+  },
+  "repetitions": 1,
+  "run_ids": []
+}
